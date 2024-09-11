@@ -1,4 +1,4 @@
-.### Patrón de Diseño Facade (Fachada)
+### Patrón de Diseño Facade (Fachada)
 
 El patrón de diseño **Facade** pertenece a la categoría de patrones estructurales, que se centran en cómo organizar y ensamblar estructuras complejas en sistemas de software. **Facade** proporciona una interfaz simplificada a un grupo de clases, bibliotecas o subsistemas complejos, permitiendo que el cliente interactúe con ellos de manera más eficiente sin necesidad de conocer los detalles internos de su funcionamiento.
 
