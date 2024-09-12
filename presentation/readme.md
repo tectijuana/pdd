@@ -1,8 +1,8 @@
-Dia 0
+### Dia 0
 
-PATRONES COMPORTAMIENTO: Luis A.
-PATRONES MANIPULACION: Eduardo Rueda
-PATRONES ESTRUCTURALES: Eduardo Campos.
+1.- PATRONES COMPORTAMIENTO: **Luis A.**
+2.- PATRONES MANIPULACION: **Eduardo Rueda**
+3.- PATRONES ESTRUCTURALES: **Eduardo Campos.**
 
 ### Día 1
 1. **Becerra** - Patrón **Singleton**
