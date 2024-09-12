@@ -1,4 +1,8 @@
-!
+Dia 0
+
+PATRONES COMPORTAMIENTO: Luis A.
+PATRONES MANIPULACION: Eduardo Rueda
+PATRONES ESTRUCTURALES: Eduardo Campos.
 
 ### Día 1
 1. **Becerra** - Patrón **Singleton**
@@ -21,7 +25,7 @@
 ### Día 4
 1. **Leon Garcia** - Patrón **Chain of Responsibility**
 2. **Garcia Cordero** - Patrón **Command**
-3. **Motecino** - Patrón **Interpreter**
+3. **Motesino** - Patrón **Interpreter**
 4. **Villegas** - Patrón **Iterator**
 
 ### Día 5
@@ -40,3 +44,5 @@
 
 ### Casos Reales de Patrones de Diseño GoF:
 1. **Perez Marques**
+2. Pros-contras: **Ortiz Garcia, Luis A. Rodriguez**
+3. 
