@@ -1,5 +1,4 @@
 ### Dia 0
-
 1.- PATRONES COMPORTAMIENTO: **Luis A.**
 2.- PATRONES MANIPULACION: **Eduardo Rueda**
 3.- PATRONES ESTRUCTURALES: **Eduardo Campos.**
