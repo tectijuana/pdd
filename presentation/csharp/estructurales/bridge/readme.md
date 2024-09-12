@@ -159,7 +159,7 @@ public class Program
 
 ```
 ## Salida: 
-![Salida](presentation/csharp/estructurales/bridge/imagenes/SQL.PNG)
+![Salida](imagenes/SQL.PNG)
 
 https://www.programiz.com/csharp-programming/online-compiler/
 
