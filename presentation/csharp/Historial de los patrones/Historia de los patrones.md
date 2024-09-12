@@ -10,12 +10,15 @@ Los **patrones de diseño** son soluciones reutilizables a problemas comunes en 
 - Su objetivo era describir soluciones comunes a problemas de diseño en arquitectura y urbanismo de una manera que pudiera ser reutilizada.
 - Aunque su enfoque era físico, sus ideas tuvieron un gran impacto en el ámbito del desarrollo de software.
 
+![Patrones en el desarrollo de software](https://arquitecturayempresa.es/sites/default/files/content/arquitectura_y_empresa_antiarquietctura_pattern.jpg)
+
 ---
 
 ## 3. **Aplicación en Ingeniería de Software**
 - En la **década de 1980**, los ingenieros de software comenzaron a ver las similitudes entre los problemas recurrentes en la construcción de software y las ideas de Alexander.
 - A medida que los sistemas computacionales se volvieron más complejos, surgió la necesidad de soluciones estándar para problemas de diseño comunes.
 - Estas soluciones reutilizables se formalizaron en lo que ahora llamamos **patrones de diseño**.
+
 
 ---
 
@@ -37,6 +40,8 @@ Los **patrones de diseño** son soluciones reutilizables a problemas comunes en 
 - En la década de **2000**, los patrones comenzaron a aplicarse no solo a problemas de diseño a nivel de código, sino también en la **arquitectura de software**.
 - Ejemplos de patrones arquitectónicos incluyen **MVC (Modelo-Vista-Controlador)**, **Microservicios**, **Capas** y **Event-Driven Architecture (EDA)**.
 - Estos patrones ayudaron a los ingenieros a estructurar sistemas complejos de una manera escalable y mantenible.
+
+![Patrones en el desarrollo de software](https://www.desarrollodepaginasweb.com.mx/wp-content/uploads/2018/08/patrones-de-arquitectura-de-software.png)
 
 ---
 
