@@ -44,4 +44,4 @@
 ### Casos Reales de Patrones de Diseño GoF:
 1. **Perez Marques**
 2. Pros-contras: **Ortiz Garcia, Luis A. Rodriguez**
-3. 
+3. Patron MVC: **Rojo Chaidez**
