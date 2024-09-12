@@ -6,7 +6,7 @@ Bridge es un patrón de diseño estructural que te permite dividir una clase gra
 
 ## ¿Problema? :(
 <p align="justify">
-¿Abstracción? ¿Implementación? ¿Asusta?
+¿Abstracción? ¿Implementación?
 </p>
 
 <p align="justify">
