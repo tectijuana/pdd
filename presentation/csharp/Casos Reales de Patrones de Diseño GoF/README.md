@@ -7,7 +7,7 @@ Propósito: Garantiza que una clase tenga una única instancia y proporciona un 
 
 Caso Real: En una aplicación de configuración de sistema, el patrón Singleton se utiliza para asegurar que solo haya una instancia de la clase ConfigurationManager que maneje la configuración global del sistema.
 
-csharp
+```csharp
 Copiar código
 public class ConfigurationManager
 {
@@ -42,6 +42,7 @@ public class ConfigurationManager
         return _config.TryGetValue(key, out var value) ? value : null;
     }
 }
+```
 2. Observer
 Propósito: Define una dependencia de uno a muchos entre objetos, de manera que cuando un objeto cambie de estado, todos sus dependientes sean notificados y actualizados automáticamente.
 
