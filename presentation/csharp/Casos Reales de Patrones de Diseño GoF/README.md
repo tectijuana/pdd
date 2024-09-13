@@ -48,7 +48,7 @@ Propósito: Define una dependencia de uno a muchos entre objetos, de manera que 
 
 Caso Real: En una aplicación de noticias, el patrón Observer se utiliza para permitir que varios usuarios reciban actualizaciones en tiempo real sobre nuevos artículos.
 
-csharp
+```csharp
 Copiar código
 using System;
 using System.Collections.Generic;
@@ -88,12 +88,13 @@ public class NewsReader : IObserver
         Console.WriteLine($"New article published: {article}");
     }
 }
+```
 3. Factory Method
 Propósito: Define una interfaz para crear un objeto, pero permite a las subclases alterar el tipo de objeto que se va a crear.
 
 Caso Real: En una aplicación de pago en línea, el patrón Factory Method se utiliza para crear instancias de diferentes tipos de métodos de pago (por ejemplo, tarjeta de crédito, PayPal) según la elección del usuario.
 
-csharp
+```csharp
 Copiar código
 public abstract class PaymentProcessor
 {
@@ -149,6 +150,7 @@ public class PaymentFactory
         };
     }
 }
+```
 4. Decorator
 Propósito: Permite agregar funcionalidades a un objeto de manera dinámica sin alterar su estructura.
 
