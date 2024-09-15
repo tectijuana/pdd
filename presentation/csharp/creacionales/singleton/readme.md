@@ -15,67 +15,37 @@ El patrón Singleton es útil por varias razones clave que contribuyen a su popu
 
 5. Facilidad de Mantenimiento: Centraliza la gestión de la instancia, simplificando los cambios.
 
+### Analogía en el mundo real
+El gobierno es un ejemplo excelente del patrón Singleton. Un país sólo puede tener un gobierno oficial. Independientemente de las identidades personales de los individuos que forman el gobierno, el título “Gobierno de X” es un punto de acceso global que identifica al grupo de personas a cargo.
+
 ## Ejemplo
+https://dotnetfiddle.net/4KOalS
 ```csharp
 using System;
 
-namespace RefactoringGuru.DesignPatterns.Singleton.Conceptual.NonThreadSafe
+public class Program
 {
-    // The Singleton class defines the `GetInstance` method that serves as an
-    // alternative to constructor and lets clients access the same instance of
-    // this class over and over.
-
-    // EN : The Singleton should always be a 'sealed' class to prevent class
-    // inheritance through external classes and also through nested classes.
-    public sealed class Singleton
+    public static void Main(string[] args)
     {
-        // The Singleton's constructor should always be private to prevent
-        // direct construction calls with the `new` operator.
-        private Singleton() { }
-
-        // The Singleton's instance is stored in a static field. There there are
-        // multiple ways to initialize this field, all of them have various pros
-        // and cons. In this example we'll show the simplest of these ways,
-        // which, however, doesn't work really well in multithreaded program.
-        private static Singleton _instance;
-
-        // This is the static method that controls the access to the singleton
-        // instance. On the first run, it creates a singleton object and places
-        // it into the static field. On subsequent runs, it returns the client
-        // existing object stored in the static field.
-        public static Singleton GetInstance()
-        {
-            if (_instance == null)
-            {
-                _instance = new Singleton();
-            }
-            return _instance;
-        }
-
-        // Finally, any singleton should define some business logic, which can
-        // be executed on its instance.
-        public void someBusinessLogic()
-        {
-            // ...
-        }
-    }
-
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            // The client code.
-            Singleton s1 = Singleton.GetInstance();
-            Singleton s2 = Singleton.GetInstance();
-
-            if (s1 == s2)
-            {
-                Console.WriteLine("Singleton works, both variables contain the same instance.");
-            }
-            else
-            {
-                Console.WriteLine("Singleton failed, variables contain different instances.");
-            }
-        }
+        Singleton instance = Singleton.GetInstance();
+        Console.WriteLine("Singleton instance created.");
     }
 }
+
+public class Singleton
+{
+    private static Singleton instance;
+
+    private Singleton() { }
+
+    public static Singleton GetInstance()
+    {
+        if (instance == null)
+        {
+            instance = new Singleton();
+        }
+
+        return instance;
+    }
+}
+
