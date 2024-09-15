@@ -1,6 +1,7 @@
-❝𝐒𝐈𝐍𝐆𝐋𝐄𝐓𝐎𝐍❞
-
-Ejemplo
+# ❝𝐒𝐈𝐍𝐆𝐋𝐄𝐓𝐎𝐍❞
+Imagina que necesitas un objeto especial en tu programa, pero solo quieres uno. El patrón Singleton te asegura que siempre tengas ese objeto único y que nadie más pueda crear copias. 
+Es como tener un objeto muy especial al que todos pueden acceder, pero solo hay uno en todo el programa.
+## Ejemplo
 ```csharp
 using System;
 
