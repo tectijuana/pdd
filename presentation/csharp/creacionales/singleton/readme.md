@@ -5,7 +5,7 @@ Es como tener un objeto muy especial al que todos pueden acceder, pero solo hay 
 ## Una Instancia, Múltiples Beneficios
 El patrón Singleton es útil por varias razones clave que contribuyen a su popularidad en el desarrollo de software:
 
-1.Única instancia: Asegura que una clase tenga solo un objeto a lo largo de toda la aplicación. 
+1. Única instancia: Asegura que una clase tenga solo un objeto a lo largo de toda la aplicación. 
 
 2. Punto de acceso global: Proporciona un punto de acceso único a esta instancia desde cualquier parte del código.
 
