@@ -1,47 +1,69 @@
-### Dia 0
-1. PATRONES COMPORTAMIENTO: **Luis A.**
-2. PATRONES MANIPULACION: **Eduardo Rueda**
-3. PATRONES ESTRUCTURALES: **Eduardo Campos.**
+Aquí tienes la tabla con la nueva columna de calificación agregada:
+
+### Día 0
+| **Patrón**              | **Nombre**                  | **Calificación** |
+|------------------------|----------------------------|-----------------|
+| PATRONES COMPORTAMIENTO | Luis A.                    |                 |
+| PATRONES MANIPULACION   | Eduardo Rueda             |                 |
+| PATRONES ESTRUCTURALES  | Eduardo Campos             |                 |
 
 ### Día 1
-1. **Becerra** - Patrón **Singleton**
-2. **Gonzalez Aguirre** - Patrón **Factory Method**
-3. **Escobedo** - Patrón **Abstract Factory**
-4. **Paez Beltran** - Patrón **Builder**
+| **Patrón**              | **Nombre**                  | **Calificación** |
+|------------------------|----------------------------|-----------------|
+| Singleton              | Becerra                    |                 |
+| Factory Method         | Gonzalez Aguirre           |                 |
+| Abstract Factory       | Escobedo                   |                 |
+| Builder                | Paez Beltran               |                 |
 
 ### Día 2
-1. **Vargas** - Patrón **Prototype**
-2. **Robles Barragan** - Patrón **Adapter**
-3. **Martinez Garcia** - Patrón **Bridge**
-4. **Luna Hdez** - Patrón **Composite**
+| **Patrón**              | **Nombre**                  | **Calificación** |
+|------------------------|----------------------------|-----------------|
+| Prototype              | Vargas                     |                 |
+| Adapter                | Robles Barragan            |                 |
+| Bridge                 | Martinez Garcia             |                 |
+| Composite              | Luna Hdez                  |                 |
 
 ### Día 3
-1. **Elvirez Davila** - Patrón **Decorator**
-2. **Luna Gomez** - Patrón **Facade**
-3. **Salcedo Beltran** - Patrón **Flyweight**
-4. **Carlos Sanchez** - Patrón **Proxy**
+| **Patrón**              | **Nombre**                  | **Calificación** |
+|------------------------|----------------------------|-----------------|
+| Decorator              | Elvirez Davila             |                 |
+| Facade                 | Luna Gomez                 |                 |
+| Flyweight              | Salcedo Beltran            |                 |
+| Proxy                  | Carlos Sanchez             |                 |
 
 ### Día 4
-1. **Leon Garcia** - Patrón **Chain of Responsibility**
-2. **Garcia Cordero** - Patrón **Command**
-3. **Motesino** - Patrón **Interpreter**
-4. **Villegas** - Patrón **Iterator**
+| **Patrón**              | **Nombre**                  | **Calificación** |
+|------------------------|----------------------------|-----------------|
+| Chain of Responsibility | Leon Garcia                |                 |
+| Command                | Garcia Cordero             |                 |
+| Interpreter            | Motesino                   |                 |
+| Iterator               | Villegas                   |                 |
 
 ### Día 5
-1. **Sanchez Salinas** - Patrón **Mediator**
-2. **Alvarez** - Patrón **Memento**
-3. **L-sac de Haro** - Patrón **Observer**
-4. **Vega** - Patrón **State**
+| **Patrón**              | **Nombre**                  | **Calificación** |
+|------------------------|----------------------------|-----------------|
+| Mediator               | Sanchez Salinas            |                 |
+| Memento                | Alvarez                    |                 |
+| Observer               | Isaac de Haro              |                 |
+| State                  | Vega                       |                 |
 
 ### Día 6
-1. **Salazar** - Patrón **Strategy**
-2. **Garcia Cruz** - Patrón **Template Method**
-3. **Leslie Lizeth** - Patrón **Visitor**
+| **Patrón**              | **Nombre**                  | **Calificación** |
+|------------------------|----------------------------|-----------------|
+| Strategy               | Salazar                    |                 |
+| Template Method        | Garcia Cruz                |                 |
+| Visitor                | Leslie Lizeth              |                 |
 
 ### Refactoring (Equipo de 2):
-1. **Diaz Berumen Ma. Angeles** y **Marquez Santillan Jose Eduardo**
+| **Participantes**       | **Calificación** |
+|------------------------|-----------------|
+| Diaz Berumen Ma. Angeles y Marquez Santillan Jose Eduardo |                 |
 
 ### Casos Reales de Patrones de Diseño GoF:
-1. **Perez Marques**
-2. Pros-contras: **Ortiz Garcia, Luis A. Rodriguez**
-3. Patron MVC: **Rojo Chaidez**
+| **Caso**               | **Nombre**                  | **Calificación** |
+|------------------------|----------------------------|-----------------|
+|                        | Perez Marques              |                 |
+| Pros-contras           | Ortiz Garcia, Luis A. Rodriguez |                 |
+| Patron MVC             | Rojo Chaidez               |                 |
+
+Puedes agregar las calificaciones en la columna correspondiente según lo necesites.
