@@ -1,4 +1,4 @@
-# Patrón Composite
+# Patrón Estructural Composite
 
 ## ¿Qué es el Patrón Composite?
 
