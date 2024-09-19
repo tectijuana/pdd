@@ -61,25 +61,9 @@ public class MySQLImplementor : IDatabaseImplementor
     }
 }
 
-public class SQLServerImplementor : IDatabaseImplementor
-{
-    public void Connect()
-    {
-        Console.WriteLine("Conectado a SQL Server");
-    }
-
-    public void Disconnect()
-    {
-        Console.WriteLine("Desconectado de SQL Server");
-    }
-
-    public void ExecuteQuery(string query)
-    {
-        Console.WriteLine("Ejecutando consulta en SQL Server: {query}");
-    }
-}
 
 // Clase Abstracción
+// Define una base abstracta que otras clases concretas heredan.
 public abstract class Database
 {
     protected IDatabaseImplementor implementor;
@@ -88,17 +72,20 @@ public abstract class Database
     {
         this.implementor = implementor;
     }
-
+	// Métodos abstractos definen lo que debe hacer la abstracción, pero no cómo se hace.
     public abstract void OpenConnection();
     public abstract void CloseConnection();
     public abstract void RunQuery(string query);
 }
 
 // Clases Concretas de Abstracción
+// Hereda de la clase Database y proporciona la implementación de los métodos abstractos.
 public class AbstractionMySQL : Database
 {
     public AbstractionMySQL(IDatabaseImplementor implementor) : base(implementor) { }
-
+	
+	// AbstractionMySQL representa una base de datos MySQL y utiliza el implementor (de tipo IDatabaseImplementor) 
+	// para delegar las operaciones concretas como conectar, desconectar y ejecutar consultas.
     public override void OpenConnection()
     {
         implementor.Connect();
@@ -115,25 +102,6 @@ public class AbstractionMySQL : Database
     }
 }
 
-public class AbstractionSQLServer : Database
-{
-    public AbstractionSQLServer(IDatabaseImplementor implementor) : base(implementor) { }
-
-    public override void OpenConnection()
-    {
-        implementor.Connect();
-    }
-
-    public override void CloseConnection()
-    {
-        implementor.Disconnect();
-    }
-
-    public override void RunQuery(string query)
-    {
-        implementor.ExecuteQuery(query);
-    }
-}
 
 // Uso del Patrón Bridge
 public class Program
@@ -141,25 +109,23 @@ public class Program
     public static void Main()
     {
         // Usar MySQL con la abstracción
+		// Esta línea prepara un objeto que, cuando se use, delegará las operaciones específicas de MySQL
         Database mySQLDatabase = new AbstractionMySQL(new MySQLImplementor());
+		
         mySQLDatabase.OpenConnection();  // Salida: Conectado a MySQL
         mySQLDatabase.RunQuery("SELECT * FROM Users");  // Salida: Ejecutando consulta en MySQL: SELECT * FROM Users
         mySQLDatabase.CloseConnection();  // Salida: Desconectado de MySQL
-
-        // Usar SQL Server con la abstracción
-        Database sqlServerDatabase = new AbstractionSQLServer(new SQLServerImplementor());
-        sqlServerDatabase.OpenConnection();  // Salida: Conectado a SQL Server
-        sqlServerDatabase.RunQuery("SELECT * FROM Products");  // Salida: Ejecutando consulta en SQL Server: SELECT * FROM Products
-        sqlServerDatabase.CloseConnection();  // Salida: Desconectado de SQL Server
     }
 }
+
+
 
 
 ```
 ## Salida: 
 ![Salida](imagenes/salida.png)
 
-(https://dotnetfiddle.net/7s1JOj)
+https://dotnetfiddle.net/7s1JOj
 
 ### Ventajas
 
