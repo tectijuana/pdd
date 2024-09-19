@@ -59,6 +59,8 @@ Principio de abierto/cerrado. Puedes introducir nuevas variantes de productos si
 Puede ser que el código se complique más de lo que debería, ya que se introducen muchas nuevas interfaces y clases junto al patrón.
 
 # Ejemplo
+
+https://dotnetfiddle.net/GCbPZR
 ```
 using System;
 
