@@ -1,6 +1,7 @@
 Aquí tienes la tabla con la nueva columna de calificación agregada:
 
 ### Día 0
+# Historia de los PDD - Lizbeth S.
 | **Patrón**              | **Nombre**                  | **Calificación** |
 |------------------------|----------------------------|-----------------|
 | PATRONES COMPORTAMIENTO | Luis A.                    |                 |
