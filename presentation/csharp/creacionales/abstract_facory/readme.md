@@ -48,15 +48,15 @@ Responsabilidad de la Clase en Diseño: En un diseño adecuado, cada clase debe 
 
 # VENTAJAS
 
-PUEDES TENER LA CERTEZA DE QUE LOS PRODUCTOS QUE OBTIENES DE UNA FÁBRICA SON COMPATIBLES ENTRE SÍ.
-EVITAS UN ACOPLAMIENTO FUERTE ENTRE PRODUCTOS CONCRETOS Y EL CÓDIGO CLIENTE.
-PRINCIPIO DE RESPONSABILIDAD ÚNICA. PUEDES MOVER EL CÓDIGO DE CREACIÓN DE PRODUCTOS A UN SOLO LUGAR, HACIENDO QUE EL CÓDIGO SEA MÁS FÁCIL DE MANTENER.
-PRINCIPIO DE ABIERTO/CERRADO. PUEDES INTRODUCIR NUEVAS VARIANTES DE PRODUCTOS SIN DESCOMPONER EL CÓDIGO CLIENTE EXISTENTE.
+Puedes tener la certeza de que los productos que obtienes de una fábrica son compatibles entre sí.
+Evitas un acoplamiento fuerte entre productos concretos y el código cliente.
+Principio de responsabilidad única. Puedes mover el código de creación de productos a un solo lugar, haciendo que el código sea más fácil de mantener.
+Principio de abierto/cerrado. Puedes introducir nuevas variantes de productos sin descomponer el código cliente existente.
 
 
 # DESVENTAJAS
 
-PUEDE SER QUE EL CÓDIGO SE COMPLIQUE MÁS DE LO QUE DEBERÍA, YA QUE SE INTRODUCEN MUCHAS NUEVAS INTERFACES Y CLASES JUNTO AL PATRÓN.
+Puede ser que el código se complique más de lo que debería, ya que se introducen muchas nuevas interfaces y clases junto al patrón.
 
 # Ejemplo
 ```
