@@ -52,16 +52,11 @@ using System;
 
 namespace GestiónDeEventosOficina
 {
-    // El Mediador (Coordinador de Eventos) declara un método utilizado por los empleados para notificar
-    // al coordinador sobre varios eventos. El Coordinador puede reaccionar a estos eventos y
-    // pasar la ejecución a otros empleados.
     public interface ICoordinadorDeEventos
     {
         void Notificar(object remitente, string evento);
     }
 
-    // El Coordinador de Eventos implementa el comportamiento cooperativo coordinando varios
-    // empleados.
     class CoordinadorDeEventos : ICoordinadorDeEventos
     {
         private Empleado _empleado1;
@@ -91,8 +86,6 @@ namespace GestiónDeEventosOficina
         }
     }
 
-    // La Clase Base proporciona la funcionalidad básica de almacenar una
-    // instancia del coordinador dentro de los objetos empleados.
     class EmpleadoBase
     {
         protected ICoordinadorDeEventos _coordinador;
@@ -108,8 +101,6 @@ namespace GestiónDeEventosOficina
         }
     }
 
-    // Empleados concretos implementan varias funcionalidades. No dependen de otros empleados
-    // directamente. Tampoco dependen de ninguna clase concreta de coordinador.
     class Empleado : EmpleadoBase
     {
         public string Nombre { get; set; }
@@ -121,28 +112,27 @@ namespace GestiónDeEventosOficina
 
         public void PrepararseParaReunion()
         {
-            Console.WriteLine($"{Nombre} se está preparando para la reunión.");
+            Console.WriteLine(Nombre + " se está preparando para la reunión.");
             this._coordinador.Notificar(this, "Reunión");
         }
 
         public void CompilarInforme()
         {
-            Console.WriteLine($"{Nombre} está compilando el informe.");
+            Console.WriteLine(Nombre + " está compilando el informe.");
             this._coordinador.Notificar(this, "InformeCompilado");
         }
 
         public void EnviarInforme()
         {
-            Console.WriteLine($"{Nombre} está enviando el informe.");
+            Console.WriteLine(Nombre + " está enviando el informe.");
             this._coordinador.Notificar(this, "InformeEnviado");
         }
     }
 
-    class Programa
+    public class Programa
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            // El código del cliente.
             Empleado empleado1 = new Empleado("Alice");
             Empleado empleado2 = new Empleado("Bob");
             new CoordinadorDeEventos(empleado1, empleado2);
