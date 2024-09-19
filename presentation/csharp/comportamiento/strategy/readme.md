@@ -30,6 +30,8 @@ modificar los existentes sin cambiar el código de la clase contexto o de otras 
 
 ## Ejemplo Codigo
 
+https://dotnetfiddle.net/yaQN3L
+
 ```c#
 using System;
 using System.Collections.Generic;
