@@ -1,1 +1,3 @@
-.
+Caso real: Manejo de conexión de bases de datos en aplicaciones empresariales.
+Descripción: En muchas aplicaciones, se necesita que solo exista una única instancia de la conexión a la base de datos para evitar múltiples conexiones simultáneas que podrían saturar el servidor o causar inconsistencias.
+Aplicación del patrón: Al usar Singleton, se garantiza que solo haya una instancia de la clase que gestiona la conexión y que cualquier clase que necesite acceder a la base de datos use esa única instancia.
