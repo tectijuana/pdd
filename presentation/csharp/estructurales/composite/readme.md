@@ -135,5 +135,43 @@ public class Program
     }
 }
 ```
+##Corrida del programa
+```
+-Compuesto 2
+--Compuesto 1
+----Hoja 1
+----Hoja 2
+```
+## Explicación del Patrón Composite
 
-[Ejemplo funcional en C# del Patrón Composite](https://dotnetfiddle.net/FfUM6c)
+El Patrón Composite permite que los objetos individuales y compuestos se traten de manera uniforme. En este ejemplo:
+
+1. **Componente**: Es la clase abstracta `Componente`, que define la operación `Mostrar` que debe implementar cualquier hoja o compuesto.
+   
+2. **Hoja**: Representa los objetos simples (en este caso, las hojas). La clase `Hoja` implementa la operación `Mostrar` para imprimir su nombre con un nivel de indentación específico.
+
+3. **Compuesto**: Representa objetos complejos, que pueden contener otros objetos (tanto hojas como compuestos). La clase `Compuesto` contiene una lista de hijos (`_hijos`) y también implementa la operación `Mostrar`, llamando al método `Mostrar` de cada hijo con un nivel de indentación mayor.
+
+### Jerarquía resultante:
+
+En este ejemplo, la jerarquía creada es la siguiente:
+```
+-Compuesto 2
+--Compuesto 1
+----Hoja 1
+----Hoja 2
+```
+
+
+### Detalle del flujo:
+
+1. Se crean dos hojas: `Hoja 1` y `Hoja 2`.
+2. Se crean dos compuestos: `Compuesto 1` y `Compuesto 2`.
+3. `Hoja 1` y `Hoja 2` se agregan a `Compuesto 1`.
+4. `Compuesto 1` se agrega a `Compuesto 2`.
+5. Cuando se llama al método `Mostrar` en `Compuesto 2`, este imprime su nombre, luego llama a `Mostrar` en sus hijos (en este caso, `Compuesto 1`), que a su vez llama a `Mostrar` en sus hojas (`Hoja 1` y `Hoja 2`).
+
+Este patrón es útil cuando quieres representar estructuras jerárquicas como árboles de archivos, menús, o cualquier sistema de componentes que puedan contener otros componentes.
+
+[Ejemplo funcional en C# del Patrón Composite](https://dotnetfiddle.net/FfUM6c) <br>
+[Patrón Composite - Refactoring.Guru](https://refactoring.guru/es/design-patterns/composite)
