@@ -157,9 +157,9 @@ public class Program
 
 ```
 ## Salida: 
-![Salida](imagenes/SQL.PNG)
+![Salida](imagenes/salida.PNG)
 
-[https://www.programiz.com/csharp-programming/online-compiler/](https://dotnetfiddle.net/7s1JOj)
+<iframe width="100%" height="475" src="https://dotnetfiddle.net/Widget/7s1JOj" frameborder="0"></iframe>
 
 ### Ventajas
 
