@@ -159,7 +159,7 @@ public class Program
 ## Salida: 
 ![Salida](imagenes/salida.png)
 
-[<iframe width="100%" height="475" src="https://dotnetfiddle.net/Widget/7s1JOj" frameborder="0"></iframe>](https://dotnetfiddle.net/7s1JOj)
+(https://dotnetfiddle.net/7s1JOj)
 
 ### Ventajas
 
