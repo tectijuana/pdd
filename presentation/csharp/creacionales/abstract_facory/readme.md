@@ -60,127 +60,126 @@ Puede ser que el código se complique más de lo que debería, ya que se introdu
 
 # Ejemplo
 ```
-    using System;
+using System;
 
-    namespace RefactoringGuru.DesignPatterns.AbstractFactory.Conceptual
+namespace AbstractFactoryExample
+{
+    // Interfaces para los productos
+    public interface ICar
     {
-    public interface IAbstractFactory
-    {
-        IAbstractProductA CreateProductA();
-        IAbstractProductB CreateProductB();
-    }
-    class ConcreteFactory1 : IAbstractFactory
-    {
-        public IAbstractProductA CreateProductA()
-        {
-            return new ConcreteProductA1();
-        }
-        
-        public IAbstractProductB CreateProductB()
-        {
-            return new ConcreteProductB1();
-        }
+        void Drive(); // Método que deben implementar todos los carros
     }
 
-    class ConcreteFactory2 : IAbstractFactory
+    public interface IMotorcycle
     {
-        public IAbstractProductA CreateProductA()
-        {
-            return new ConcreteProductA2();
-        }
+        void Ride(); // Método que deben implementar todas las motos
+    }
 
-        public IAbstractProductB CreateProductB()
+    // Interfaces para la fábrica abstracta
+    public interface IVehicleFactory
+    {
+        ICar CreateCar(); // Método para crear un carro
+        IMotorcycle CreateMotorcycle(); // Método para crear una moto
+    }
+
+    // Implementaciones concretas de productos (Gasolina)
+    class GasolineCar : ICar
+    {
+        public void Drive()
         {
-            return new ConcreteProductB2();
+            Console.WriteLine("Conduciendo un carro a gasolina.");
         }
     }
 
-    public interface IAbstractProductA
+    class GasolineMotorcycle : IMotorcycle
     {
-        string UsefulFunctionA();
-    }
-
-    class ConcreteProductA1 : IAbstractProductA
-    {
-        public string UsefulFunctionA()
+        public void Ride()
         {
-            return "The result of the product A1.";
+            Console.WriteLine("Montando una moto a gasolina.");
         }
     }
 
-    class ConcreteProductA2 : IAbstractProductA
+    // Implementaciones concretas de productos (Eléctrico)
+    class ElectricCar : ICar
     {
-        public string UsefulFunctionA()
+        public void Drive()
         {
-            return "The result of the product A2.";
+            Console.WriteLine("Conduciendo un carro eléctrico.");
         }
     }
 
-    public interface IAbstractProductB
+    class ElectricMotorcycle : IMotorcycle
     {
-        string UsefulFunctionB();
-
-        string AnotherUsefulFunctionB(IAbstractProductA collaborator);
-    }
-
-    class ConcreteProductB1 : IAbstractProductB
-    {
-        public string UsefulFunctionB()
+        public void Ride()
         {
-            return "The result of the product B1.";
-        }
-
-        public string AnotherUsefulFunctionB(IAbstractProductA collaborator)
-        {
-            var result = collaborator.UsefulFunctionA();
-
-            return $"The result of the B1 collaborating with the ({result})";
+            Console.WriteLine("Montando una moto eléctrica.");
         }
     }
 
-    class ConcreteProductB2 : IAbstractProductB
+    // Implementaciones concretas de las fábricas
+    class GasolineFactory : IVehicleFactory
     {
-        public string UsefulFunctionB()
+        public ICar CreateCar()
         {
-            return "The result of the product B2.";
+            return new GasolineCar(); // Crea un carro a gasolina
         }
 
-        public string AnotherUsefulFunctionB(IAbstractProductA collaborator)
+        public IMotorcycle CreateMotorcycle()
         {
-            var result = collaborator.UsefulFunctionA();
-
-            return $"The result of the B2 collaborating with the ({result})";
+            return new GasolineMotorcycle(); // Crea una moto a gasolina
         }
     }
 
+    class ElectricFactory : IVehicleFactory
+    {
+        public ICar CreateCar()
+        {
+            return new ElectricCar(); // Crea un carro eléctrico
+        }
+
+        public IMotorcycle CreateMotorcycle()
+        {
+            return new ElectricMotorcycle(); // Crea una moto eléctrica
+        }
+    }
+
+    // Cliente que utiliza las fábricas y productos abstractos
     class Client
     {
-        public void Main()
-        {
-            Console.WriteLine("Client: Testing client code with the first factory type...");
-            ClientMethod(new ConcreteFactory1());
-            Console.WriteLine();
+        private readonly ICar _car;
+        private readonly IMotorcycle _motorcycle;
 
-            Console.WriteLine("Client: Testing the same client code with the second factory type...");
-            ClientMethod(new ConcreteFactory2());
+        // Constructor que recibe una fábrica y crea productos usando esa fábrica
+        public Client(IVehicleFactory factory)
+        {
+            _car = factory.CreateCar(); // Crea un carro usando la fábrica
+            _motorcycle = factory.CreateMotorcycle(); // Crea una moto usando la fábrica
         }
 
-        public void ClientMethod(IAbstractFactory factory)
+        // Método para ejecutar las operaciones de los productos
+        public void Run()
         {
-            var productA = factory.CreateProductA();
-            var productB = factory.CreateProductB();
-
-            Console.WriteLine(productB.UsefulFunctionB());
-            Console.WriteLine(productB.AnotherUsefulFunctionB(productA));
+            _car.Drive(); // Llama al método Drive del carro
+            _motorcycle.Ride(); // Llama al método Ride de la moto
         }
     }
 
-    class Program
+    // Programa principal
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            new Client().Main();
+            Console.WriteLine("Produciendo vehículos a gasolina:");
+            IVehicleFactory gasolineFactory = new GasolineFactory(); // Crea una fábrica de gasolina
+            Client gasolineClient = new Client(gasolineFactory); // Crea un cliente con la fábrica de gasolina
+            gasolineClient.Run(); // Ejecuta las operaciones de los productos a gasolina
+
+            Console.WriteLine("\nProduciendo vehículos eléctricos:");
+            IVehicleFactory electricFactory = new ElectricFactory(); // Crea una fábrica eléctrica
+            Client electricClient = new Client(electricFactory); // Crea un cliente con la fábrica eléctrica
+            electricClient.Run(); // Ejecuta las operaciones de los productos eléctricos
         }
     }
-    }
+}
+
 ```
