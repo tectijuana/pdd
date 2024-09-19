@@ -173,5 +173,9 @@ En este ejemplo, la jerarquía creada es la siguiente:
 
 Este patrón es útil cuando quieres representar estructuras jerárquicas como árboles de archivos, menús, o cualquier sistema de componentes que puedan contener otros componentes.
 
+### Conclusión
+En resumen, el Patrón Composite facilita la gestión de estructuras jerárquicas complejas, permitiendo tratar objetos individuales y compuestos de manera uniforme, lo que simplifica el código y mejora la flexibilidad.<br>
+
+### Referencias<br>
 [Ejemplo funcional en C# del Patrón Composite](https://dotnetfiddle.net/FfUM6c) <br>
 [Patrón Composite - Refactoring.Guru](https://refactoring.guru/es/design-patterns/composite)
