@@ -1,6 +1,8 @@
 # ❝𝐒𝐈𝐍𝐆𝐋𝐄𝐓𝐎𝐍❞
 Imagina que necesitas un objeto especial en tu programa, pero solo quieres uno. El patrón Singleton te asegura que siempre tengas ese objeto único y que nadie más pueda crear copias. 
 Es como tener un objeto muy especial al que todos pueden acceder, pero solo hay uno en todo el programa.
+## ¿Qué es el patrón singleton?
+Es una técnica creacional que garantiza que una clase tenga solamente una instancia, al mismo tiempo que ofrece un acceso global a esa instancia. El patrón de diseño Singleton fue descrito en el libro Dessign Patterns, Elements of Reusable Object-Oriented Software escrito por cuatro autores también conocidos como GoF (“Gang of four”).
 
 ## Una Instancia, Múltiples Beneficios
 El patrón Singleton es útil por varias razones clave que contribuyen a su popularidad en el desarrollo de software:
