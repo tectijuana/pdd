@@ -14,7 +14,7 @@ Aquí tienes la tabla con la nueva columna de calificación agregada:
 | Singleton              | Becerra                    |                 |
 | Factory Method         | Gonzalez Aguirre           |                 |
 | Abstract Factory       | Escobedo                   |                 |
-| Builder                | Paez Beltran               |                 |
+| Builder                | Paez Beltran               |   100              |
 
 ### Día 2
 | **Patrón**              | **Nombre**                  | **Calificación** |
