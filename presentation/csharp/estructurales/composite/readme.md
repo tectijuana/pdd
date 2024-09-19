@@ -171,7 +171,6 @@ En este ejemplo, la jerarquía creada es la siguiente:
 4. `Compuesto 1` se agrega a `Compuesto 2`.
 5. Cuando se llama al método `Mostrar` en `Compuesto 2`, este imprime su nombre, luego llama a `Mostrar` en sus hijos (en este caso, `Compuesto 1`), que a su vez llama a `Mostrar` en sus hojas (`Hoja 1` y `Hoja 2`).
 
-Este patrón es útil cuando quieres representar estructuras jerárquicas como árboles de archivos, menús, o cualquier sistema de componentes que puedan contener otros componentes.
 
 ### Conclusión
 En resumen, el Patrón Composite facilita la gestión de estructuras jerárquicas complejas, permitiendo tratar objetos individuales y compuestos de manera uniforme, lo que simplifica el código y mejora la flexibilidad.<br>
