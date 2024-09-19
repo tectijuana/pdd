@@ -100,8 +100,7 @@ El código que utiliza el método fábrica (a menudo denominado _código cliente
 
   ##Ejemplo
 
-  '''csharp
-  using System;
+ 
 
 namespace RefactoringGuru.DesignPatterns.FactoryMethod.Conceptual
 {
