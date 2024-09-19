@@ -39,12 +39,13 @@ using System;
 // Interfaz de Implementación
 public interface IDatabaseImplementor
 {
-    void Connect();
-    void Disconnect();
-    void ExecuteQuery(string query);
+    void Connect(); // Abre una conexión.
+    void Disconnect(); // Cierra la conexión.
+    void ExecuteQuery(string query); //Ejecuta una consulta, regresa una cadena
 }
 
-// Clases Concretas de Implementación
+// Clases Concretas de Implementación 
+// Estas clases concretas implementan la lógica específica de cómo interactuar con la base de datos
 public class MySQLImplementor : IDatabaseImplementor
 {
     public void Connect()
