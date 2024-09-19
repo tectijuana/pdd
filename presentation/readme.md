@@ -7,7 +7,7 @@ Aquí tienes la tabla con la nueva columna de calificación agregada:
 | Historia de los PDD | Lizbeth S. | 100 |
 | PATRONES COMPORTAMIENTO | Luis A.                    |        0         |
 | PATRONES MANIPULACION   | Eduardo Rueda             |         0        |
-| PATRONES ESTRUCTURALES  | Eduardo Campos             |        0         |
+| PATRONES ESTRUCTURALES  | Alexis Carmona            |                 |
 
 ### Día 1
 | **Patrón**              | **Nombre**                  | **Calificación** |
