@@ -27,6 +27,13 @@ Este patrón es útil cuando quieres controlar quién y cómo utiliza un objeto.
 4. Caché de Datos: Permite almacenar y acceder a datos en memoria, mejorando el rendimiento al evitar consultas repetidas.
 5. Gestión de Recursos Compartidos: Controla el acceso a recursos como impresoras o sistemas de archivos, garantizando una única instancia.
 7. Fábricas y Servicios: Asegura una única instancia de fábricas de objetos o servicios comunes, facilitando su acceso global.
+
+## Desventajas y Consideraciones
+1. Violación del principio de responsabilidad única: El Singleton a menudo se encarga de demasiadas responsabilidades, lo que puede dificultar el mantenimiento y la prueba del código.
+2. Dificultad para probar: Las clases Singleton pueden ser difíciles de probar en aislamiento debido a sus dependencias globales.
+3. Problemas de concurrencia: En entornos multihilo, se pueden producir problemas de concurrencia si no se implementa correctamente la sincronización del acceso a la instancia.
+4. Antipatrón en algunos contextos: En algunos casos, el uso excesivo del patrón Singleton puede llevar a un código rígido y difícil de entender.
+
 # Ejemplo
 https://dotnetfiddle.net/4KOalS
 ```csharp
