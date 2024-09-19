@@ -52,102 +52,117 @@ using System;
 
 namespace GestiónDeEventosOficina
 {
+    // Interfaz que define el mediador
     public interface ICoordinadorDeEventos
     {
         void Notificar(object remitente, string evento);
     }
 
+    // Clase que actúa como el mediador concreto
     class CoordinadorDeEventos : ICoordinadorDeEventos
     {
-        private Empleado _empleado1;
-        private Empleado _empleado2;
+        private Empleado _empleado1; // Primer empleado
+        private Empleado _empleado2; // Segundo empleado
 
+        // Constructor que establece la relación entre los empleados y el mediador
         public CoordinadorDeEventos(Empleado empleado1, Empleado empleado2)
         {
             this._empleado1 = empleado1;
-            this._empleado1.EstablecerCoordinador(this);
+            this._empleado1.EstablecerCoordinador(this); // Asigna el mediador al primer empleado
             this._empleado2 = empleado2;
-            this._empleado2.EstablecerCoordinador(this);
+            this._empleado2.EstablecerCoordinador(this); // Asigna el mediador al segundo empleado
         }
 
+        // Método que reacciona a las notificaciones de los empleados
         public void Notificar(object remitente, string evento)
         {
             if (evento == "Reunión")
             {
                 Console.WriteLine("El coordinador reacciona a la Reunión y desencadena las siguientes operaciones:");
-                this._empleado2.EnviarInforme();
+                this._empleado2.EnviarInforme(); // Hace que el segundo empleado envíe un informe
             }
             if (evento == "Fecha límite")
             {
                 Console.WriteLine("El coordinador reacciona a la Fecha límite y desencadena las siguientes operaciones:");
-                this._empleado1.CompilarInforme();
-                this._empleado2.EnviarInforme();
+                this._empleado1.CompilarInforme(); // Hace que el primer empleado compile un informe
+                this._empleado2.EnviarInforme(); // También hace que el segundo empleado envíe un informe
             }
         }
     }
 
+    // Clase base para los empleados que contiene el coordinador
     class EmpleadoBase
     {
-        protected ICoordinadorDeEventos _coordinador;
+        protected ICoordinadorDeEventos _coordinador; // Referencia al mediador
 
         public EmpleadoBase(ICoordinadorDeEventos coordinador = null)
         {
-            this._coordinador = coordinador;
+            this._coordinador = coordinador; // Inicializa el coordinador
         }
 
+        // Método para establecer el mediador
         public void EstablecerCoordinador(ICoordinadorDeEventos coordinador)
         {
             this._coordinador = coordinador;
         }
     }
 
+    // Clase que representa a un empleado
     class Empleado : EmpleadoBase
     {
-        public string Nombre { get; set; }
+        public string Nombre { get; set; } // Nombre del empleado
 
         public Empleado(string nombre, ICoordinadorDeEventos coordinador = null) : base(coordinador)
         {
-            Nombre = nombre;
+            Nombre = nombre; // Asigna el nombre del empleado
         }
 
+        // Método que simula la preparación para una reunión
         public void PrepararseParaReunion()
         {
             Console.WriteLine(Nombre + " se está preparando para la reunión.");
-            this._coordinador.Notificar(this, "Reunión");
+            this._coordinador.Notificar(this, "Reunión"); // Notifica al mediador
         }
 
+        // Método que simula la compilación de un informe
         public void CompilarInforme()
         {
             Console.WriteLine(Nombre + " está compilando el informe.");
-            this._coordinador.Notificar(this, "InformeCompilado");
+            this._coordinador.Notificar(this, "InformeCompilado"); // Notifica al mediador
         }
 
+        // Método que simula el envío de un informe
         public void EnviarInforme()
         {
             Console.WriteLine(Nombre + " está enviando el informe.");
-            this._coordinador.Notificar(this, "InformeEnviado");
+            this._coordinador.Notificar(this, "InformeEnviado"); // Notifica al mediador
         }
     }
 
+    // Clase que contiene el punto de entrada de la aplicación
     public class Programa
     {
         public static void Main(string[] args)
         {
+            // Creación de los empleados
             Empleado empleado1 = new Empleado("Alice");
             Empleado empleado2 = new Empleado("Bob");
+
+            // Creación del mediador que gestiona a los empleados
             new CoordinadorDeEventos(empleado1, empleado2);
 
+            // Simulación de la preparación para la reunión
             Console.WriteLine("El cliente desencadena la preparación para la reunión.");
             empleado1.PrepararseParaReunion();
 
             Console.WriteLine();
 
+            // Simulación de la compilación del informe por parte de Bob
             Console.WriteLine("El cliente desencadena la fecha límite.");
             empleado2.CompilarInforme();
         }
     }
 }
-
 
 ```
 
