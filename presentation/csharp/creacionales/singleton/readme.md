@@ -17,10 +17,10 @@ El patrón Singleton es útil por varias razones clave que contribuyen a su popu
 
 5. Facilidad de Mantenimiento: Centraliza la gestión de la instancia, simplificando los cambios.
 
-### Analogía en el mundo real
+## Analogía en el mundo real
 El gobierno es un ejemplo excelente del patrón Singleton. Un país sólo puede tener un gobierno oficial. Independientemente de las identidades personales de los individuos que forman el gobierno, el título “Gobierno de X” es un punto de acceso global que identifica al grupo de personas a cargo.
 
-## Ejemplo
+# Ejemplo
 https://dotnetfiddle.net/4KOalS
 ```csharp
 using System;
