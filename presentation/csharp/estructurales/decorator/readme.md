@@ -114,3 +114,6 @@ namespace PatronDecoradorEjemplo
 }
 ```
 https://dotnetfiddle.net/aIibXV
+
+#Referencias
+Decorator. (s. f.). https://refactoring.guru/es/design-patterns/decorator
