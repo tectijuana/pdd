@@ -20,7 +20,7 @@ Aquí tienes la tabla con la nueva columna de calificación agregada:
 | **Patrón**              | **Nombre**                  | **Calificación** |
 |------------------------|----------------------------|-----------------|
 | Prototype              | Vargas                     |                 |
-| Adapter                | Robles Barragan            |                 |
+| Adapter                | Robles Barrera            |                 |
 | Bridge                 | Martinez Garcia             |                 |
 | Composite              | Luna Hdez                  |                 |
 
