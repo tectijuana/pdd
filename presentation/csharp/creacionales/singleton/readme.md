@@ -19,7 +19,14 @@ El patrón Singleton es útil por varias razones clave que contribuyen a su popu
 
 ## Analogía en el mundo real
 El gobierno es un ejemplo excelente del patrón Singleton. Un país sólo puede tener un gobierno oficial. Independientemente de las identidades personales de los individuos que forman el gobierno, el título “Gobierno de X” es un punto de acceso global que identifica al grupo de personas a cargo.
-
+## Casos de Uso Comunes del Patrón Singleton
+Este patrón es útil cuando quieres controlar quién y cómo utiliza un objeto. Es más seguro que usar variables globales, ya que evita que otros partes del código modifiquen accidentalmente el objeto. Además, puedes ajustar este patrón para permitir más de un objeto si lo necesitas
+1. Gestión de Conexiones a Bases de Datos: Asegura una única conexión activa, optimizando recursos y evitando problemas de concurrencia.
+2. Registro de Eventos o Logs: Proporciona un mecanismo centralizado para manejar logs, garantizando consistencia y evitando duplicados.
+3. Configuración de la Aplicación: Almacena parámetros globales y preferencias, asegurando acceso uniforme en toda la aplicación.
+4. Caché de Datos: Permite almacenar y acceder a datos en memoria, mejorando el rendimiento al evitar consultas repetidas.
+5. Gestión de Recursos Compartidos: Controla el acceso a recursos como impresoras o sistemas de archivos, garantizando una única instancia.
+7. Fábricas y Servicios: Asegura una única instancia de fábricas de objetos o servicios comunes, facilitando su acceso global.
 # Ejemplo
 https://dotnetfiddle.net/4KOalS
 ```csharp
