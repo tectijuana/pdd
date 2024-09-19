@@ -85,7 +85,7 @@ public class AbstractionMySQL : Database
     public AbstractionMySQL(IDatabaseImplementor implementor) : base(implementor) { }
 	
 	// AbstractionMySQL representa una base de datos MySQL y utiliza el implementor (de tipo IDatabaseImplementor) 
-	// para delegar las operaciones concretas como conectar, desconectar y ejecutar consultas.
+	// para desplegar las operaciones concretas como conectar, desconectar y ejecutar consultas.
     public override void OpenConnection()
     {
         implementor.Connect();
