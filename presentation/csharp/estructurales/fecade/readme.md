@@ -17,52 +17,107 @@ El Patrón Facade es una técnica de diseño que simplifica el uso de sistemas c
 - **Facilitación del Mantenimiento**: Al desacoplar el sistema cliente del subsistema, los cambios en el subsistema no afectan directamente al cliente.
 - **Facilidad de Uso**: Permite a los desarrolladores y usuarios finales interactuar con el sistema de una manera más intuitiva.
 
-### **Ejemplo en C#: Sistema de Home Theater**
+Claro, aquí tienes un ejemplo sencillo del patrón de diseño **Facade** en C#. Este patrón proporciona una interfaz simplificada para un conjunto de interfaces en un subsistema, lo que facilita su uso.
 
-Imaginemos un sistema de home theater que incluye varios componentes como un reproductor de DVD, un proyector, un sistema de sonido y luces. Sin el Patrón Facade, los usuarios tendrían que manejar cada uno de estos componentes por separado, entendiendo sus interfaces específicas y realizando cada paso manualmente.
+### Ejemplo de Facade en C#
 
-**Con el Patrón Facade**, se crea una clase llamada `HomeTheaterFacade` que proporciona métodos simplificados para operar el sistema completo. Esta clase oculta la complejidad del manejo de cada componente y proporciona métodos de alto nivel como `WatchMovie` y `EndMovie`, que configuran todos los componentes necesarios en el orden adecuado.
+Supongamos que tenemos un sistema de hogar inteligente que controla luces, la calefacción y el sistema de seguridad.
 
 ```csharp
-public class HomeTheaterFacade {
-    private DVDPlayer dvdPlayer;
-    private Projector projector;
-    private SoundSystem soundSystem;
-    private Lights lights;
-
-    public HomeTheaterFacade(DVDPlayer dvd, Projector proj, SoundSystem sound, Lights light) {
-        dvdPlayer = dvd;
-        projector = proj;
-        soundSystem = sound;
-        lights = light;
+// Subsistemas
+public class Luces
+{
+    public void Encender()
+    {
+        Console.WriteLine("Las luces están encendidas.");
     }
 
-    public void WatchMovie(string movie) {
-        lights.Dim(10);
-        projector.On();
-        projector.SetInput("DVD");
-        soundSystem.On();
-        soundSystem.SetVolume(20);
-        dvdPlayer.On();
-        dvdPlayer.Play(movie);
+    public void Apagar()
+    {
+        Console.WriteLine("Las luces están apagadas.");
+    }
+}
+
+public class Calefaccion
+{
+    public void Encender()
+    {
+        Console.WriteLine("La calefacción está encendida.");
     }
 
-    public void EndMovie() {
-        dvdPlayer.Off();
-        soundSystem.Off();
-        projector.Off();
-        lights.On();
+    public void Apagar()
+    {
+        Console.WriteLine("La calefacción está apagada.");
+    }
+}
+
+public class Seguridad
+{
+    public void Activar()
+    {
+        Console.WriteLine("El sistema de seguridad está activado.");
+    }
+
+    public void Desactivar()
+    {
+        Console.WriteLine("El sistema de seguridad está desactivado.");
+    }
+}
+
+// Facade
+public class SistemaHogarInteligente
+{
+    private Luces luces;
+    private Calefaccion calefaccion;
+    private Seguridad seguridad;
+
+    public SistemaHogarInteligente()
+    {
+        luces = new Luces();
+        calefaccion = new Calefaccion();
+        seguridad = new Seguridad();
+    }
+
+    public void ActivarModoNoche()
+    {
+        luces.Apagar();
+        calefaccion.Encender();
+        seguridad.Activar();
+        Console.WriteLine("Modo noche activado.");
+    }
+
+    public void DesactivarModoNoche()
+    {
+        luces.Encender();
+        calefaccion.Apagar();
+        seguridad.Desactivar();
+        Console.WriteLine("Modo noche desactivado.");
+    }
+}
+
+// Uso del Facade
+class Program
+{
+    static void Main(string[] args)
+    {
+        SistemaHogarInteligente sistema = new SistemaHogarInteligente();
+
+        sistema.ActivarModoNoche();
+        Console.WriteLine();
+        sistema.DesactivarModoNoche();
     }
 }
 ```
 
-Con esta fachada, un usuario puede gestionar el sistema de home theater con un simple comando:
+### Explicación
 
-```csharp
-var homeTheater = new HomeTheaterFacade(dvdPlayer, projector, soundSystem, lights);
-homeTheater.WatchMovie("Inception");
-```
+1. **Subsistemas**: Las clases `Luces`, `Calefaccion` y `Seguridad` representan el subsistema que tiene varias funcionalidades.
 
+2. **Facade**: La clase `SistemaHogarInteligente` proporciona métodos simplificados (`ActivarModoNoche` y `DesactivarModoNoche`) que ocultan la complejidad de interactuar con los subsistemas.
+
+3. **Uso**: En el `Main`, creamos una instancia del `SistemaHogarInteligente` y llamamos a sus métodos para activar y desactivar el modo noche, sin tener que interactuar directamente con cada subsistema.
+
+Este patrón ayuda a reducir la complejidad y mejorar la legibilidad del código.
 
 ### **Ejemplo Práctico: Monitor**
 
