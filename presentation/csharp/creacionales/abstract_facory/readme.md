@@ -60,24 +60,22 @@ PUEDE SER QUE EL CÓDIGO SE COMPLIQUE MÁS DE LO QUE DEBERÍA, YA QUE SE INTRODU
 
 # Ejemplo
 
-'''
-using System;
+    using System;
 
-namespace RefactoringGuru.DesignPatterns.AbstractFactory.Conceptual
-{
+    namespace RefactoringGuru.DesignPatterns.AbstractFactory.Conceptual
+    {
     public interface IAbstractFactory
     {
         IAbstractProductA CreateProductA();
         IAbstractProductB CreateProductB();
     }
-
     class ConcreteFactory1 : IAbstractFactory
     {
         public IAbstractProductA CreateProductA()
         {
             return new ConcreteProductA1();
         }
-
+        
         public IAbstractProductB CreateProductB()
         {
             return new ConcreteProductB1();
@@ -184,6 +182,4 @@ namespace RefactoringGuru.DesignPatterns.AbstractFactory.Conceptual
             new Client().Main();
         }
     }
-}
-'''
-
+    }
