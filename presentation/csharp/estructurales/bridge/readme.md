@@ -107,7 +107,7 @@ public class Program
     public static void Main()
     {
         // Usar MySQL con la abstracción
-		// Esta línea prepara un objeto que, cuando se use, delegará las operaciones específicas de MySQL
+		// Esta línea prepara un objeto que, cuando se use, desplegará las operaciones específicas de MySQL
         Database mySQLDatabase = new AbstractionMySQL(new MySQLImplementor());
 		
         mySQLDatabase.OpenConnection();  // Salida: Conectado a MySQL
