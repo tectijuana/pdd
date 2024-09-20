@@ -22,7 +22,7 @@ Aquí tienes la tabla con la nueva columna de calificación agregada:
 |------------------------|----------------------------|-----------------|
 | Prototype              | Vargas                     |      100           |
 | Adapter                | Robles Barrera            |                 |
-| Bridge                 | Martinez Garcia             |                 |
+| Bridge                 | Martinez Garcia             |       100          |
 | Composite              | Luna Hdez                  |      100           |
 
 ### Día 3
