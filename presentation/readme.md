@@ -20,7 +20,7 @@ Aquí tienes la tabla con la nueva columna de calificación agregada:
 ### Día 2
 | **Patrón**              | **Nombre**                  | **Calificación** |
 |------------------------|----------------------------|-----------------|
-| Prototype              | Vargas                     |                 |
+| Prototype              | Vargas                     |      100           |
 | Adapter                | Robles Barrera            |                 |
 | Bridge                 | Martinez Garcia             |                 |
 | Composite              | Luna Hdez                  |                 |
