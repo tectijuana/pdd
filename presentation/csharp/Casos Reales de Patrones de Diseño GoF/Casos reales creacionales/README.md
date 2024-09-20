@@ -1,3 +1,4 @@
+##Singleton
 Caso real: Manejo de conexión de bases de datos en aplicaciones empresariales.
 
 Descripción: En muchas aplicaciones, se necesita que solo exista una única instancia de la conexión a la base de datos para evitar múltiples conexiones simultáneas
