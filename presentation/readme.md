@@ -71,4 +71,11 @@ Aquí tienes la tabla con la nueva columna de calificación agregada:
 | Casos Creacionales*Ejemplos          | Castro Pacheco J.              |                 |
 | Casos Manipulacion*Ejemplos          | Castro Pacheco J.              |                 |
 
-Puedes agregar las calificaciones en la columna correspondiente según lo necesites.
+
+
+###  Patrons combinados GTP :
+| **Participantes**       | **Calificación** |
+|------------------------|-----------------|
+| Mendoza Sangado Jose Miguel |                 |
+
+
