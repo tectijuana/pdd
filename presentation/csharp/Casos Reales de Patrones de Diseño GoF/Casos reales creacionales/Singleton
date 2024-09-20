@@ -6,7 +6,8 @@ que podrían saturar el servidor o causar inconsistencias.
 Aplicación del patrón: Al usar Singleton, se garantiza que solo haya una instancia de la clase que gestiona la conexión y que cualquier clase que necesite acceder 
 a la base de datos use esa única instancia.
 
-#csharp
+## Código en C#
+```C#
 using System;
 
 public class Database
