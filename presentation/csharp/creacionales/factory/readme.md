@@ -98,119 +98,106 @@ El código que utiliza el método fábrica (a menudo denominado _código cliente
 - **Prototype** no se basa en la herencia, por lo que no presenta sus inconvenientes. No obstante, **Prototype** requiere de una inicialización complicada del objeto clonado. **Factory Method** se basa en la herencia, pero no requiere de un paso de inicialización.
 - **Factory Method** es una especialización del **Template Method**. Al mismo tiempo, un **Factory Method** puede servir como paso de un gran **Template Method**.
 
-  ##Ejemplo
+# Ejemplo en c#
 
- 
+Imaginemos que tenemos una aplicación que trabaja con diferentes tipos de notificaciones, como SMS y correos electrónicos. Usaremos el Factory Method para crear estas notificaciones.
 
-namespace RefactoringGuru.DesignPatterns.FactoryMethod.Conceptual
+``` csharp
+
+using System;
+
+namespace PatronFactoryMethod
 {
-    // The Creator class declares the factory method that is supposed to return
-    // an object of a Product class. The Creator's subclasses usually provide
-    // the implementation of this method.
-    abstract class Creator
+    // Paso 1: Definir la interfaz del producto que es la notificación
+    public interface INotificacion
     {
-        // Note that the Creator may also provide some default implementation of
-        // the factory method.
-        public abstract IProduct FactoryMethod();
+        // Método que deben implementar todas las notificaciones
+        void EnviarNotificacion();
+    }
 
-        // Also note that, despite its name, the Creator's primary
-        // responsibility is not creating products. Usually, it contains some
-        // core business logic that relies on Product objects, returned by the
-        // factory method. Subclasses can indirectly change that business logic
-        // by overriding the factory method and returning a different type of
-        // product from it.
-        public string SomeOperation()
+    // Paso 2: Implementar clases concretas que representan diferentes tipos de notificaciones
+
+    // Implementación concreta de notificación por SMS
+    public class SmsNotificacion : INotificacion
+    {
+        public void EnviarNotificacion()
         {
-            // Call the factory method to create a Product object.
-            var product = FactoryMethod();
-            // Now, use the product.
-            var result = "Creator: The same creator's code has just worked with "
-                + product.Operation();
-
-            return result;
+            Console.WriteLine("Enviando notificación por SMS.");
         }
     }
 
-    // Concrete Creators override the factory method in order to change the
-    // resulting product's type.
-    class ConcreteCreator1 : Creator
+    // Implementación concreta de notificación por correo electrónico
+    public class EmailNotificacion : INotificacion
     {
-        // Note that the signature of the method still uses the abstract product
-        // type, even though the concrete product is actually returned from the
-        // method. This way the Creator can stay independent of concrete product
-        // classes.
-        public override IProduct FactoryMethod()
+        public void EnviarNotificacion()
         {
-            return new ConcreteProduct1();
+            Console.WriteLine("Enviando notificación por correo electrónico.");
         }
     }
 
-    class ConcreteCreator2 : Creator
+    // Paso 3: Crear la clase abstracta Factory que define el método Factory
+
+    // Clase abstracta que declara el método Factory para crear objetos de tipo INotificacion
+    public abstract class NotificacionFactory
     {
-        public override IProduct FactoryMethod()
+        // Método abstracto que debe ser implementado por las fábricas concretas
+        public abstract INotificacion CrearNotificacion();
+    }
+
+    // Paso 4: Crear las fábricas concretas que implementan el Factory Method
+
+    // Fábrica concreta que crea una instancia de SmsNotificacion
+    public class SmsNotificacionFactory : NotificacionFactory
+    {
+        public override INotificacion CrearNotificacion()
         {
-            return new ConcreteProduct2();
+            return new SmsNotificacion();
         }
     }
 
-    // The Product interface declares the operations that all concrete products
-    // must implement.
-    public interface IProduct
+    // Fábrica concreta que crea una instancia de EmailNotificacion
+    public class EmailNotificacionFactory : NotificacionFactory
     {
-        string Operation();
-    }
-
-    // Concrete Products provide various implementations of the Product
-    // interface.
-    class ConcreteProduct1 : IProduct
-    {
-        public string Operation()
+        public override INotificacion CrearNotificacion()
         {
-            return "{Result of ConcreteProduct1}";
+            return new EmailNotificacion();
         }
     }
 
-    class ConcreteProduct2 : IProduct
-    {
-        public string Operation()
-        {
-            return "{Result of ConcreteProduct2}";
-        }
-    }
-
-    class Client
-    {
-        public void Main()
-        {
-            Console.WriteLine("App: Launched with the ConcreteCreator1.");
-            ClientCode(new ConcreteCreator1());
-            
-            Console.WriteLine("");
-
-            Console.WriteLine("App: Launched with the ConcreteCreator2.");
-            ClientCode(new ConcreteCreator2());
-        }
-
-        // The client code works with an instance of a concrete creator, albeit
-        // through its base interface. As long as the client keeps working with
-        // the creator via the base interface, you can pass it any creator's
-        // subclass.
-        public void ClientCode(Creator creator)
-        {
-            // ...
-            Console.WriteLine("Client: I'm not aware of the creator's class," +
-                "but it still works.\n" + creator.SomeOperation());
-            // ...
-        }
-    }
+    // Paso 5: Usar el patrón Factory Method en el código cliente
 
     class Program
     {
         static void Main(string[] args)
         {
-            new Client().Main();
+            // Crear una fábrica para notificaciones SMS
+            NotificacionFactory smsFactory = new SmsNotificacionFactory();
+            // Usar la fábrica para crear una instancia de SmsNotificacion
+            INotificacion smsNotificacion = smsFactory.CrearNotificacion();
+            // Enviar la notificación por SMS
+            smsNotificacion.EnviarNotificacion();
+
+            // Crear una fábrica para notificaciones por correo electrónico
+            NotificacionFactory emailFactory = new EmailNotificacionFactory();
+            // Usar la fábrica para crear una instancia de EmailNotificacion
+            INotificacion emailNotificacion = emailFactory.CrearNotificacion();
+            // Enviar la notificación por correo electrónico
+            emailNotificacion.EnviarNotificacion();
         }
     }
+
 }
+
+```
+# Ejecución
+![image](https://github.com/user-attachments/assets/f5396326-364f-4269-a7e6-eac3ed318b80)
+
+# Explicación
+
+- INotificacion es la interfaz que define el contrato para las notificaciones.
+- SmsNotificacion y EmailNotificacion son implementaciones concretas de esa interfaz.
+- NotificacionFactory es la clase abstracta que define el método CrearNotificacion(), el cual es implementado por las subclases concretas.
+- SmsNotificacionFactory y EmailNotificacionFactory son las fábricas concretas que crean instancias de notificaciones específicas.
+Cuando se ejecuta el programa, según la fábrica que uses, se creará y enviará una notificación por SMS o correo electrónico, lo que te permite separar la lógica de creación del uso del objeto.
 
 
