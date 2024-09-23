@@ -1,3 +1,4 @@
+![cooltext466778189035788](https://github.com/user-attachments/assets/da6f7c79-920a-415d-bd0d-2c6094950417)
 
 
 ### **Estructura Revisada de la Actividad**
