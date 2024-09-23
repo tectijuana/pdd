@@ -247,8 +247,13 @@ Desarrollar una aplicación de gestión de pacientes que utiliza el Factory Meth
 5. **Tiempo de Desarrollo:**
    - Considera ajustar el tiempo de desarrollo según la complejidad esperada del producto. Si es necesario, amplía ligeramente el tiempo o divide la actividad en fases para asegurar que los estudiantes puedan completar un producto funcional.
 
-### **Conclusión**
+---
 
-Esta estructura revisada garantiza que las selecciones de las ruletas guíen a los estudiantes de manera efectiva en la elección del patrón de diseño adecuado, promoviendo una comprensión práctica y aplicada de los patrones de diseño GoF. Al proporcionar una guía clara y recursos adecuados, los estudiantes podrán desarrollar productos ejecutables en el tiempo estipulado, consolidando su aprendizaje de una manera lúdica y colaborativa.
+ENTREGA DE REPOSITORIO
 
-¡Espero que esta propuesta te sea de gran ayuda y que la actividad sea un éxito rotundo!
+![Screenshot 2024-09-22 at 8 51 40 p m](https://github.com/user-attachments/assets/5b8eeea4-d498-4813-a504-d7e2ec4d1ae2)
+
+
+A. **Repositorio y equipos**
+https://classroom.github.com/a/D41Pf89o, ahi se formaran los equipos (opcionalmente) puede ser individual.
+
