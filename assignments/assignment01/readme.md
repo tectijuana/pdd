@@ -1,44 +1,15 @@
 ![cooltext466778189035788](https://github.com/user-attachments/assets/da6f7c79-920a-415d-bd0d-2c6094950417)
 
 
-### **Estructura Revisada de la Actividad**
-
-#### **Ruleta 1: Categoría de Patrones de Diseño GoF**
-- **Creacional**
-- **Estructural**
-- **Comportamental**
-
-#### **Ruleta 2: Dominio o Área de Aplicación**
-- **Transporte**
-- **Aviación**
-- **Industrial**
-- **Salud**
-- **Educación**
-- **Entretenimiento**
-- **Finanzas**
-- **Tecnología**
-- **Comercio Electrónico**
-
-#### **Ruleta 3: Requisitos o Escenario Específico**
-- **Necesidad de Flexibilidad en la Creación de Objetos**
-- **Reutilización de Código y Componentes**
-- **Comunicación entre Objetos**
-- **Gestión de Estados y Ciclos de Vida**
-- **Optimización de Recursos**
-- **Extensibilidad y Mantenibilidad**
-- **Manejo de Eventos y Notificaciones**
-- **Encapsulación de Comportamientos**
-- **Control de Acceso a Recursos**
-
-### **Desarrollo de la Actividad**
+### **PRACTICAS DE GOF**
 
 1. **Preparación Previa:**
-   - **Descripción de Patrones por Categoría:** Proporciona a los estudiantes una breve descripción de cada patrón de diseño, organizados por las tres categorías de la primera ruleta. Esto les ayudará a identificar rápidamente qué patrones son relevantes según la categoría seleccionada.
-   - **Ejemplos de Aplicación:** Incluye ejemplos sencillos de cómo se implementa cada patrón en C#, preferiblemente relacionados con algunos de los dominios o requisitos seleccionados en las ruletas 2 y 3.
+   - **Descripción de Patrones por Categoría:** Se proporciona a los estudiantes una breve descripción de cada patrón de diseño, organizados por las tres categorías de la primera ruleta. Esto les ayudará a identificar rápidamente qué patrones son relevantes según la categoría seleccionada.
+   - **Ejemplos de Aplicación:** Incluye ejemplos sencillos de cómo se implementa cada patrón en C#, preferiblemente relacionados con algunos de los dominios o requisitos seleccionados en las ruletas 2 y 3, mismo que son su eBook de referencia de las exposiciones B1.2
 
 2. **Formación de Equipos:**
-   - **Tamaño de los Equipos:** Forma equipos pequeños de 2 a 4 estudiantes para fomentar la colaboración.
-   - **Roles dentro del Equipo:** Asigna roles como desarrollador, diseñador, y presentador para asegurar que todos participen activamente.
+   - **Tamaño de los Equipos:**  Individual o trios para fomentar la colaboración.
+   - **Roles dentro del Equipo:** Asigna roles como desarrollador, diseñador, etc. para asegurar que todos participen activamente.
 
 3. **Proceso de la Actividad:**
    - **Paso 1: Giro de las Ruletas**
@@ -71,8 +42,7 @@
      - Correcta implementación del patrón de diseño.
      - Funcionalidad y usabilidad del producto.
      - Creatividad en la aplicación del patrón al dominio seleccionado.
-     - Trabajo en equipo y presentación.
-   - **Reconocimientos:** Considera otorgar pequeños premios o reconocimientos para los equipos destacados, incentivando así la participación y el esfuerzo.
+     - Trabajo en equipo y repositorio documentado con el conjunto de programas corriendo AWS-DotNetFiddle.
 
 ### **Sugerencias para las Ruletas**
 
@@ -82,11 +52,11 @@
 - **Comportamental:** Patrones que se enfocan en la comunicación entre objetos.
 
 #### **Ruleta 2: Dominio o Área de Aplicación**
-Incluye una variedad de dominios para que los estudiantes puedan aplicar los patrones en contextos diversos. Algunos ejemplos:
+Incluye una variedad de dominios para que los equipos puedan aplicar los patrones en contextos diversos. 
 - **Transporte**
 - **Aviación**
 - **Industrial**
-- **Salud**
+- **Salud**                                                                                       
 - **Educación**
 - **Entretenimiento**
 - **Finanzas**
@@ -94,7 +64,7 @@ Incluye una variedad de dominios para que los estudiantes puedan aplicar los pat
 - **Comercio Electrónico**
 
 #### **Ruleta 3: Requisitos o Escenario Específico**
-Esta ruleta ayuda a definir un escenario concreto que guiará la aplicación del patrón. Algunos ejemplos:
+Esta ruleta ayuda a definir un escenario concreto que guiará la aplicación del patrón.                                                                                                                                                                                                                                                                                                          
 - **Necesidad de Flexibilidad en la Creación de Objetos**
 - **Reutilización de Código y Componentes**
 - **Comunicación entre Objetos**
@@ -105,37 +75,7 @@ Esta ruleta ayuda a definir un escenario concreto que guiará la aplicación del
 - **Encapsulación de Comportamientos**
 - **Control de Acceso a Recursos**
 
-### **Mapeo de Patrones a Categorías y Requisitos**
 
-Presento una tabla de referencia para los estudiantes que incluye todos los **Patrones de Diseño GoF** divididos por categorías, con sus respectivas descripciones y los problemas o requisitos que resuelven. Esta tabla servirá como una guía en la actividad.
-
-### **Tabla de Referencia de Patrones de Diseño GoF**
-
-| **Categoría**       | **Patrón**              | **Descripción**                                                                                                                                              | **Requisitos/Problemas que Resuelve**                                    |
-|---------------------|-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|
-| **Creacional**      | **Singleton**           | Asegura que una clase tenga una única instancia y proporciona un punto de acceso global a ella.                                                              | Control de acceso a recursos, gestión de instancias únicas                |
-| **Creacional**      | **Factory Method**      | Define una interfaz para crear un objeto, pero permite que las subclases decidan qué clase instanciar.                                                       | Flexibilidad en la creación de objetos                                    |
-| **Creacional**      | **Abstract Factory**    | Proporciona una interfaz para crear familias de objetos relacionados sin especificar sus clases concretas.                                                   | Creación de familias de objetos relacionados                               |
-| **Creacional**      | **Builder**             | Separa la construcción de un objeto complejo de su representación para que el mismo proceso de construcción pueda crear diferentes representaciones.           | Construcción de objetos complejos paso a paso                             |
-| **Creacional**      | **Prototype**           | Permite crear nuevos objetos copiando una instancia existente, conocido como prototipo.                                                                        | Creación eficiente de objetos mediante clonación                           |
-| **Estructural**     | **Adapter**             | Permite que clases con interfaces incompatibles trabajen juntas mediante un adaptador que traduce las interfaces.                                               | Integración de sistemas con interfaces diferentes                         |
-| **Estructural**     | **Bridge**              | Desacopla una abstracción de su implementación para que ambas puedan variar independientemente.                                                               | Separación de abstracción e implementación                                 |
-| **Estructural**     | **Composite**           | Compone objetos en estructuras de árbol para representar jerarquías parte-todo.                                                                                   | Tratamiento uniforme de objetos individuales y compuestos                  |
-| **Estructural**     | **Decorator**           | Añade responsabilidades adicionales a un objeto de manera dinámica sin alterar su estructura.                                                                   | Extensibilidad y mantenibilidad                                            |
-| **Estructural**     | **Facade**              | Proporciona una interfaz simplificada a un conjunto de interfaces en un subsistema, facilitando su uso.                                                          | Simplificación de interacciones con sistemas complejos                     |
-| **Estructural**     | **Flyweight**           | Usa el compartimiento para soportar grandes cantidades de objetos de grano fino de manera eficiente en cuanto a memoria.                                          | Optimización de uso de memoria con objetos repetitivos                     |
-| **Estructural**     | **Proxy**               | Proporciona un sustituto o marcador de posición de otro objeto para controlar el acceso a él.                                                                    | Control de acceso, carga perezosa, seguridad                                 |
-| **Comportamental**  | **Chain of Responsibility** | Evita acoplar el emisor de una solicitud a su receptor, dando a más de un objeto la oportunidad de manejar la solicitud.                                       | Desacoplamiento emisor-receptor de solicitudes                             |
-| **Comportamental**  | **Command**             | Encapsula una solicitud como un objeto, permitiendo parametrizar clientes con diferentes solicitudes y soportar operaciones de deshacer.                           | Manejo de solicitudes y operaciones como objetos                            |
-| **Comportamental**  | **Interpreter**         | Dada una gramática para un lenguaje, define un intérprete que usa la representación para interpretar oraciones en el lenguaje.                                   | Interpretación de lenguajes específicos                                     |
-| **Comportamental**  | **Iterator**            | Proporciona una manera de acceder secuencialmente a los elementos de un objeto agregado sin exponer su representación subyacente.                                 | Acceso secuencial a colecciones                                            |
-| **Comportamental**  | **Mediator**            | Define un objeto que encapsula cómo interactúan un conjunto de objetos, promoviendo un acoplamiento débil.                                                       | Simplificación de comunicaciones entre objetos                              |
-| **Comportamental**  | **Memento**             | Sin violar la encapsulación, captura y externaliza el estado interno de un objeto para poder restaurarlo más tarde.                                             | Restauración de estados de objetos                                          |
-| **Comportamental**  | **Observer**            | Define una dependencia de uno a muchos entre objetos para que cuando uno cambie, los demás sean notificados.                                                    | Manejo de eventos y notificaciones                                         |
-| **Comportamental**  | **State**               | Permite a un objeto alterar su comportamiento cuando su estado interno cambia, pareciendo cambiar su clase.                                                     | Gestión de estados y comportamientos cambiantes                              |
-| **Comportamental**  | **Strategy**            | Define una familia de algoritmos, encapsula cada uno y los hace intercambiables.                                                                               | Flexibilidad en la implementación de algoritmos                             |
-| **Comportamental**  | **Template Method**     | Define el esqueleto de un algoritmo en una operación, dejando algunos pasos a las subclases.                                                                    | Reutilización de la estructura de un algoritmo                              |
-| **Comportamental**  | **Visitor**             | Representa una operación a realizar sobre los elementos de una estructura de objetos, permitiendo definir nuevas operaciones sin cambiar las clases de los elementos. | Añadir nuevas operaciones a estructuras existentes sin modificar las clases |
 
 ### **Descripción de los Patrones de Diseño GoF**
 
