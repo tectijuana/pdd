@@ -17,7 +17,6 @@ El Patrón Facade es una técnica de diseño que simplifica el uso de sistemas c
 - **Facilitación del Mantenimiento**: Al desacoplar el sistema cliente del subsistema, los cambios en el subsistema no afectan directamente al cliente.
 - **Facilidad de Uso**: Permite a los desarrolladores y usuarios finales interactuar con el sistema de una manera más intuitiva.
 
-Claro, aquí tienes un ejemplo sencillo del patrón de diseño **Facade** en C#. Este patrón proporciona una interfaz simplificada para un conjunto de interfaces en un subsistema, lo que facilita su uso.
 
 ### Ejemplo de Facade en C#
 
