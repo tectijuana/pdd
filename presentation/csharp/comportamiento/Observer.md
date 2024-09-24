@@ -122,6 +122,13 @@ class Programa
     }
 }
 ```
+### Resultado
+
+Observador 1 ha sido notificado. Nuevo estado: Estado A<br><br>
+Observador 2 ha sido notificado. Nuevo estado: Estado A<br><br>
+Observador 1 ha sido notificado. Nuevo estado: Estado B
+
+
 ## Aplicabilidad
 
 - Utiliza el patrón Observer cuando los cambios en el estado de un objeto puedan necesitar cambiar otros objetos y el grupo de objetos sea desconocido de antemano o cambie dinámicamente.
