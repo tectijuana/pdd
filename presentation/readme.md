@@ -21,7 +21,7 @@ Aquí tienes la tabla con la nueva columna de calificación agregada:
 | **Patrón**              | **Nombre**                  | **Calificación** |
 |------------------------|----------------------------|-----------------|
 | Prototype              | Vargas                     |      100           |
-| Adapter                | Robles Barrera            |        pendiente         |
+| Adapter                | Robles Barrera            |        50         |
 | Bridge                 | Martinez Garcia             |       100          |
 | Composite              | Luna Hdez                  |      100           |
 
