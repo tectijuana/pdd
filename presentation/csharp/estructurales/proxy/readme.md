@@ -7,15 +7,14 @@
 
 ---
 
-### 🎯 **Objetivo**:
-
-Explicar el patrón de diseño **Proxy**, que proporciona un intermediario o marcador de posición para controlar el acceso a un objeto.
-
----
-
 ### 📄 **Descripción**:
 
 El patrón Proxy es un **patrón de diseño estructural** que permite crear un intermediario que controla el acceso a un objeto original. Este intermediario puede realizar acciones adicionales, como validaciones, control de acceso o registro de actividades, antes o después de interactuar con el objeto original.
+
+
+## Objetivo General
+
+El objetivo principal del patrón de diseño **Proxy** es proporcionar un intermediario que controle el acceso a un objeto, permitiendo así optimizar el rendimiento, mejorar la seguridad o gestionar recursos de manera eficiente. A través de este intermediario, se pueden añadir capas adicionales de control, como la carga perezosa, el control de acceso o el registro de operaciones, sin modificar el objeto original.
 
 ---
 # Problema: Control de Acceso a Objetos
