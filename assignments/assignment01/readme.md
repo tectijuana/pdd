@@ -250,8 +250,10 @@ Desarrollar una aplicación de gestión de pacientes que utiliza el Factory Meth
 ---
 
 ENTREGA DE REPOSITORIO
+http://connect.idoceo.net
+Vence el dia 25/9/24 --11pm
+PIN: 69947
 
-![Screenshot 2024-09-22 at 8 51 40 p m](https://github.com/user-attachments/assets/5b8eeea4-d498-4813-a504-d7e2ec4d1ae2)
 
 
 A. **Repositorio y equipos**
