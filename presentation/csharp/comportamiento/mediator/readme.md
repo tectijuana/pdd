@@ -185,3 +185,4 @@ Bob está compilando el informe.
 4. **Empleado:** Implementación concreta de los empleados con diferentes métodos para realizar tareas. Estos métodos notifican al coordinador sobre eventos específicos.
 5. **Programa:** Ejemplo de cliente que crea empleados y un coordinador, y muestra cómo los empleados interactúan a través del coordinador.
 
+https://dotnetfiddle.net/n1FCqU
