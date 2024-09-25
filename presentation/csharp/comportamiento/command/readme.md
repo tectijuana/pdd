@@ -32,6 +32,7 @@ El patrón Command ayuda a rastrear el historial de operaciones ejecutadas y hac
 # Codigo ejemplo
 
 [DotNetFiddle](https://dotnetfiddle.net/Sc5fEM)
+
 ```c#
 using System;
 
@@ -214,5 +215,4 @@ Proceso de venta finalizado.
 
 
 # Referencias
-
-https://refactoring.guru/es/design-patterns/command
+[Refactoring](https://refactoring.guru/es/design-patterns/command)
