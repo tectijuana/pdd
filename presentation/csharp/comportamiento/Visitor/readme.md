@@ -74,4 +74,6 @@ Visitor. (s. f.). https://reactiveprogramming.io/blog/es/patrones-de-diseno/visi
 
 Visitor. (s. f.-b). https://refactoring.guru/es/design-patterns/visitor
 
+## CODIGO:
 
+https://dotnetfiddle.net/4W7JxB
