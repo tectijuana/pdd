@@ -34,10 +34,6 @@ modificar los existentes sin cambiar el código de la clase contexto o de otras 
 > El patrón Strategy te permite alterar indirectamente el comportamiento del objeto durante el tiempo de ejecución asociándolo con distintos subobjetos que pueden realizar subtareas específicas de distintas maneras.
 - Utiliza el patrón Strategy cuando tengas muchas clases similares que sólo se diferencien en la forma en que ejecutan cierto comportamiento.<br>
 > El patrón Strategy te permite extraer el comportamiento variante para ponerlo en una jerarquía de clases separada y combinar las clases originales en una, reduciendo con ello el código duplicado.
-- Utiliza el patrón para aislar la lógica de negocio de una clase, de los detalles de implementación de algoritmos que pueden no ser tan importantes en el contexto de esa lógica.<br>
-> El patrón Strategy te permite aislar el código, los datos internos y las dependencias de varios algoritmos, del resto del código. Los diversos clientes obtienen una interfaz simple para ejecutar los algoritmos y cambiarlos durante el tiempo de ejecución.
-- Utiliza el patrón cuando tu clase tenga un enorme operador condicional que cambie entre distintas variantes del mismo algoritmo. <br>
-> El patrón Strategy te permite suprimir dicho condicional extrayendo todos los algoritmos para ponerlos en clases separadas, las cuales implementan la misma interfaz. El objeto original delega la ejecución a uno de esos objetos, en lugar de implementar todas las variantes del algoritmo.
 
 ## Pros y contras
 ### Pros
@@ -56,109 +52,106 @@ modificar los existentes sin cambiar el código de la clase contexto o de otras 
 
 ## Ejemplo Codigo
 
-https://dotnetfiddle.net/yaQN3L
+https://dotnetfiddle.net/hv6EXK
 
 ```c#
 using System;
-using System.Collections.Generic;
 
-namespace prueba
+// Step 1: Define the Strategy interface (IPaymentStrategy)
+public interface IPaymentStrategy
 {
-    // El Contexto define la interfaz de intereses del cliente.
-    class Context
+    void Pay(decimal amount);
+}
+
+// Step 2: Implement Concrete Strategies (Credit Card, PayPal, Bank Transfer)
+public class CreditCardPayment : IPaymentStrategy
+{
+    private string _cardNumber;
+    private string _cardHolderName;
+
+    public CreditCardPayment(string cardNumber, string cardHolderName)
     {
-        // El Contexto mantiene una referencia de uno de los objetos de Estrategia. El
-        // Contexto no sabe la clase concreta de Estrategia. Debería
-        // trabajar con todas las estrategias a traves de la interfaz Estrategia.
-        private IStrategy _strategy;
-
-        public Context()
-        { }
-
-        //Usualmente, el Contexto acepta una estrategia a traves del constructor, pero
-        // también brinda un setter para cambiarlo en tiempo de ejecución.
-        public Context(IStrategy strategy)
-        {
-            this._strategy = strategy;
-        }
-
-        // Usualmente, el Contexto permite reemplazar un objeto Estrategia en tiempo de ejecución.
-        public void SetStrategy(IStrategy strategy)
-        {
-            this._strategy = strategy;
-        }
-
-        // El Contexto delega algo de trabajo al objeto Estrategia en vez de
-        // implementar multiples versiones del algoritmo por si solo.
-        public void DoSomeBusinessLogic()
-        {
-            Console.WriteLine("Contexto: Ordenando datos usando la estrategia.");
-            var result = this._strategy.DoAlgorithm(new List<string> { "a", "b", "c", "d", "e" });
-
-            string resultStr = string.Empty;
-            foreach (var element in result as List<string>)
-            {
-                resultStr += element + ",";
-            }
-
-            Console.WriteLine(resultStr);
-        }
+        _cardNumber = cardNumber;
+        _cardHolderName = cardHolderName;
     }
 
-    // La interfaz Estrategia declara las operaciones en comun que soporta a todas las 
-    // versiones de algúl algoritmo.
-    //
-    // El Contexto usa esta interfaz para llamar al algortimo definido por concreto.
-    // Estrategias.
-    public interface IStrategy
+    public void Pay(decimal amount)
     {
-        object DoAlgorithm(object data);
-    }
-
-    // Estrategias Concretas implementan el algorigmo mientras siguen la base de la
-    // interfaz Estrategia. La interfaz los hace intercambiables en el Contexto.
-    class ConcreteStrategyA : IStrategy
-    {
-        public object DoAlgorithm(object data)
-        {
-            var list = data as List<string>;
-            list.Sort();
-
-            return list;
-        }
-    }
-
-    class ConcreteStrategyB : IStrategy
-    {
-        public object DoAlgorithm(object data)
-        {
-            var list = data as List<string>;
-            list.Sort();
-            list.Reverse();
-
-            return list;
-        }
-    }
-
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            // El codigo cliente elige una estrategia en concreto y la pasa al
-            // contexto. El cliente debe conocer la diferencia entre las estraregias
-            // para poder escoger la opcioón correcta.
-            var context = new Context();
-
-            Console.WriteLine("Cliente: La Estrategia esta colocada en orden normal.");
-            context.SetStrategy(new ConcreteStrategyA());
-            context.DoSomeBusinessLogic();
-            
-            Console.WriteLine();
-            
-            Console.WriteLine("Cliente: La Estrategia esta colocada en orden reverso.");
-            context.SetStrategy(new ConcreteStrategyB());
-            context.DoSomeBusinessLogic();
-        }
+        Console.WriteLine($"Paid {amount:C} using Credit Card. Card Holder: {_cardHolderName}, Card Number: {_cardNumber}");
     }
 }
+
+public class PayPalPayment : IPaymentStrategy
+{
+    private string _email;
+
+    public PayPalPayment(string email)
+    {
+        _email = email;
+    }
+
+    public void Pay(decimal amount)
+    {
+        Console.WriteLine($"Paid {amount:C} using PayPal. PayPal account: {_email}");
+    }
+}
+
+public class BankTransferPayment : IPaymentStrategy
+{
+    private string _bankAccountNumber;
+
+    public BankTransferPayment(string bankAccountNumber)
+    {
+        _bankAccountNumber = bankAccountNumber;
+    }
+
+    public void Pay(decimal amount)
+    {
+        Console.WriteLine($"Paid {amount:C} using Bank Transfer. Bank Account Number: {_bankAccountNumber}");
+    }
+}
+
+// Step 3: Create the Context class (ShoppingCart)
+public class ShoppingCart
+{
+    private IPaymentStrategy _paymentStrategy;
+
+    public void SetPaymentStrategy(IPaymentStrategy paymentStrategy)
+    {
+        _paymentStrategy = paymentStrategy;
+    }
+
+    public void Checkout(decimal amount)
+    {
+        if (_paymentStrategy == null)
+        {
+            Console.WriteLine("Payment strategy not selected.");
+            return;
+        }
+
+        _paymentStrategy.Pay(amount);
+    }
+}
+
+// Step 4: Demonstrate the Strategy Pattern in action
+class Program
+{
+    static void Main(string[] args)
+    {
+        ShoppingCart cart = new ShoppingCart();
+
+        // Set the payment strategy to Credit Card and checkout
+        cart.SetPaymentStrategy(new CreditCardPayment("1234-5678-9876-5432", "John Doe"));
+        cart.Checkout(100.50m);
+
+        // Set the payment strategy to PayPal and checkout
+        cart.SetPaymentStrategy(new PayPalPayment("john.doe@example.com"));
+        cart.Checkout(75.25m);
+
+        // Set the payment strategy to Bank Transfer and checkout
+        cart.SetPaymentStrategy(new BankTransferPayment("987654321"));
+        cart.Checkout(50.75m);
+    }
+}
+
 ```
