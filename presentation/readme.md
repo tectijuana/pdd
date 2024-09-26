@@ -38,7 +38,7 @@ Aquí tienes la tabla con la nueva columna de calificación agregada:
 |------------------------|----------------------------|-----------------|
 | Chain of Responsibility | Leon Garcia                |    100             |
 | Command                | Garcia Cordero Emiliano            |      100           |
-| Interpreter            | Motesino                   |                 |
+| Interpreter            | Motesino                   |         100        |
 | Iterator               | Villegas                   |       100          |
 
 ### Día 5
