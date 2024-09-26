@@ -36,8 +36,8 @@ Aquí tienes la tabla con la nueva columna de calificación agregada:
 ### Día 4
 | **Patrón**              | **Nombre**                  | **Calificación** |
 |------------------------|----------------------------|-----------------|
-| Chain of Responsibility | Leon Garcia                |                 |
-| Command                | Garcia Cordero             |                 |
+| Chain of Responsibility | Leon Garcia                |    100             |
+| Command                | Garcia Cordero Emiliano            |      100           |
 | Interpreter            | Motesino                   |                 |
 | Iterator               | Villegas                   |                 |
 
