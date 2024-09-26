@@ -128,6 +128,7 @@ Observador 1 ha sido notificado. Nuevo estado: Estado A<br><br>
 Observador 2 ha sido notificado. Nuevo estado: Estado A<br><br>
 Observador 1 ha sido notificado. Nuevo estado: Estado B
 
+https://dotnetfiddle.net/fRbD6x
 
 ## Aplicabilidad
 
