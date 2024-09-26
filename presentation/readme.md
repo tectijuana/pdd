@@ -29,7 +29,7 @@ Aquí tienes la tabla con la nueva columna de calificación agregada:
 | **Patrón**              | **Nombre**                  | **Calificación** |
 |------------------------|----------------------------|-----------------|
 | Decorator              | Elvirez Davila             |       100          |
-| Facade                 | Luna Gomez                 |                 |
+| Facade                 | Luna Gomez                 |           100      |
 | Flyweight              | Salcedo Beltran            |          100       |
 | Proxy                  | Carlos Sanchez             |           100      |
 
