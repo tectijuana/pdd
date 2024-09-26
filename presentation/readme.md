@@ -5,7 +5,7 @@ Aquí tienes la tabla con la nueva columna de calificación agregada:
 | **Patrón**              | **Nombre**                  | **Calificación** |
 |------------------------|----------------------------|-----------------|
 | Historia de los PDD | Lizbeth S. | 100 |
-| PATRONES COMPORTAMIENTO | Luis A.                    |        0         |
+| PATRONES COMPORTAMIENTO | MARDUEÑO ARROYO LUIS ANTONIO                  |        0         |
 | PATRONES MANIPULACION   | Eduardo Rueda             |         0        |
 | PATRONES ESTRUCTURALES  | Alexis Carmona            |                 |
 
