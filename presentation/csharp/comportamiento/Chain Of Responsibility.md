@@ -1,3 +1,4 @@
+
 # Chain of Responsibility
 
 ## Introducción
