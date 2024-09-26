@@ -4,11 +4,11 @@
 
 ### El patrón extrae comportamientos relacionados con el estado, los coloca dentro de clases de estado separadas y fuerza al objeto original a delegar el trabajo de una instancia de esas clases, en lugar de actuar por su cuenta.
 
-### Ejemplo real
+### Ejemplo:
 Los botones e interruptores de tu smartphone se comportan de forma diferente dependiendo del estado actual del dispositivo:
 - Cuando el teléfono está desbloqueado, al pulsar botones se ejecutan varias funciones.
 - Cuando el teléfono está bloqueado, pulsar un botón desbloquea la pantalla.
-- Cuandolabatería del teléfono está baja, pulsar un botón muestra la pantalla de carga
+- Cuando la batería del teléfono está baja, pulsar un botón muestra la pantalla de carga
 
 ### Ejemplo de uso: 
 El patrón State se utiliza habitualmente en C# para convertir las enormes máquinas de estados basadas en switch, en objetos.
