@@ -44,7 +44,7 @@ Aquí tienes la tabla con la nueva columna de calificación agregada:
 ### Día 5
 | **Patrón**              | **Nombre**                  | **Calificación** |
 |------------------------|----------------------------|-----------------|
-| Mediator               | Sanchez Salinas            |                 |
+| Mediator               | Sanchez Salinas            |         100        |
 | Memento                | Alvarez                    |                 |
 | Observer               | Isaac de Haro              |                 |
 | State                  | Vega                       |                 |
