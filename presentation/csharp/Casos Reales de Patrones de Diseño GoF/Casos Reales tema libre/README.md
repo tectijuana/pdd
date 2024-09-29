@@ -76,3 +76,6 @@ Este patrón se asegura de que siempre utilices la misma conexión a la base de 
 
 ### Variaciones del Patrón Singleton en C#:
 En C# hay variaciones como el uso de la **inicialización perezosa con `Lazy<T>`** o asegurando que el patrón funcione en entornos con múltiples hilos (multithreading), pero este ejemplo básico es funcional para muchos casos comunes.
+
+### Corrida del codigo:
+https://dotnetfiddle.net/L7VUt4
