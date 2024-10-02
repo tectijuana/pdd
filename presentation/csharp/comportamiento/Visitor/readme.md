@@ -76,4 +76,4 @@ Visitor. (s. f.-b). https://refactoring.guru/es/design-patterns/visitor
 
 ## CODIGO:
 
-https://dotnetfiddle.net/4W7JxB
+https://dotnetfiddle.net/0xLZI6
