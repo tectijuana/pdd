@@ -93,7 +93,7 @@ Este *playbook* de Ansible automatiza la instalación del entorno necesario en l
 
     - name: Clonar repositorio con código espagueti
       git:
-        repo: 'https://github.com/tu-usuario/app-web-espagueti.git'
+        repo: 'https://github.com/tectijuana/app-web-espagueti.git'
         dest: /home/ubuntu/app-web-espagueti
         version: master
 
