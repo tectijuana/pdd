@@ -2,7 +2,7 @@
 ![Figma-logo](https://github.com/user-attachments/assets/b4a2578d-d817-42e4-834b-838689479025)
 
 
-**Práctica: Creación de una Cheatsheet de Patrones de Diseño GoF usando Figma**
+**Práctica M2.1: Creación de una Cheatsheet de Patrones de Diseño GoF usando Figma**
 
 **Objetivo:**
 Desarrollar una cheatsheet visualmente atractiva que sirva como guía rápida de los patrones de diseño GoF, incluyendo MVC y el framework Nancy, utilizando Figma como herramienta principal.
