@@ -168,7 +168,3 @@ Desarrollar una cheatsheet visualmente atractiva que sirva como guía rápida de
   - Generar ejemplos adicionales o aclarar conceptos complejos.
 
 
-
----
-
-¿Te parece bien si empezamos revisando los textos y ejemplos? De esa manera, podemos asegurarnos de que el contenido sea sólido antes de enfocarnos en el aspecto visual. Estoy aquí para ayudarte a optimizar las explicaciones y garantizar que la información sea clara y precisa.
