@@ -196,7 +196,9 @@ Este *playbook* de Ansible automatiza la instalación del entorno necesario en l
 
 ---
 
-### **Recursos Adicionales**
+
+
+
 
 - **Documentación de .NET Core:** [https://docs.microsoft.com/es-es/dotnet/core/](https://docs.microsoft.com/es-es/dotnet/core/)
 - **Patrones de Diseño GoF:** [Refactoring.Guru en Español](https://refactoring.guru/es/design-patterns)
