@@ -1,6 +1,4 @@
-¡Entiendo! A continuación, ajusto la propuesta para que sea un problema que el estudiante debe resolver: refactorizar código espagueti en una aplicación web en .NET Core sobre Ubuntu. Además, proporcionaremos un *playbook* de Ansible para configurar el entorno necesario en una instancia de Amazon EC2 a través de AWS Academy.
 
----
 
 ### **Descripción de la Actividad para el Estudiante**
 
