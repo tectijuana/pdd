@@ -1,5 +1,8 @@
 ![cooltext466778189035788](https://github.com/user-attachments/assets/da6f7c79-920a-415d-bd0d-2c6094950417)
 
+<img width="347" alt="Screenshot 2024-10-02 at 5 17 41 p m" src="https://github.com/user-attachments/assets/8d5d086d-8a7a-4df2-8431-72a579c24145">
+
+
 
 ### **PRACTICAS DE GOF**
 
@@ -249,10 +252,6 @@ Desarrollar una aplicación de gestión de pacientes que utiliza el Factory Meth
 
 ---
 
-ENTREGA DE REPOSITORIO
-http://connect.idoceo.net
-Vence el dia 25/9/24 --11pm
-PIN: 69947
 
 
 
