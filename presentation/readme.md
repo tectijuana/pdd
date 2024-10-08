@@ -67,7 +67,7 @@ Aquí tienes la tabla con la nueva columna de calificación agregada:
 |                        | Perez Marques              |                 |
 | Pros-contras           | Ortiz Garcia, Luis A. Rodriguez |                 |
 | Patron MVC             | Rojo Chaidez               |                 |
-| Casos Estructurales*Ejemplos          | Garcia Perez B.               |                 |
+| Casos Estructurales*Ejemplos          | Garcia Perez Gabriel.               |                 |
 | Casos Creacionales*Ejemplos          | Castro Pacheco J.              |                 |
 | Casos Manipulacion*Ejemplos          | Castro Pacheco J.              |                 |
 
