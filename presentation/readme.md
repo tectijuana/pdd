@@ -37,7 +37,7 @@ Aquí tienes la tabla con la nueva columna de calificación agregada:
 | **Patrón**              | **Nombre**                  | **Calificación** |
 |------------------------|----------------------------|-----------------|
 | Chain of Responsibility | Leon Garcia                |    100             |
-| Command                | Garcia Cordero Emiliano            |      100           |
+| Command                | Garcia Cordero Emiliano            |      100   |
 | Interpreter            | Motesino                   |         100        |
 | Iterator               | Villegas                   |       100          |
 
@@ -52,7 +52,7 @@ Aquí tienes la tabla con la nueva columna de calificación agregada:
 ### Día 6
 | **Patrón**              | **Nombre**                  | **Calificación** |
 |------------------------|----------------------------|-----------------|
-| Strategy               | Salazar                    |                 |
+| Strategy               | Salazar                    |       100          |
 | Template Method        | Garcia Cruz                |                 |
 | Visitor                | Leslie Lizeth              |                 |
 
@@ -65,17 +65,17 @@ Aquí tienes la tabla con la nueva columna de calificación agregada:
 | **Caso**               | **Nombre**                  | **Calificación** |
 |------------------------|----------------------------|-----------------|
 |                        | Perez Marques              |                 |
-| Pros-contras           | Ortiz Garcia, Luis A. Rodriguez |                 |
-| Patron MVC             | Rojo Chaidez               |      100           |
-| Casos Estructurales*Ejemplos          | Garcia Perez Gabriel.               |                 |
-| Casos Creacionales*Ejemplos          | Castro Pacheco J.              |                 |
-| Casos Manipulacion*Ejemplos          | Castro Pacheco J.              |                 |
+| Pros-contras           | Ortiz Garcia, Luis A. Rodriguez |        |
+| Patron MVC             | Rojo Chaidez               |      100    |
+| Casos Estructurales*Ejemplos          | Garcia Perez Gabriel.     |                 |
+| Casos Creacionales*Ejemplos          | Castro Pacheco J.          |                 |
+| Casos Manipulacion*Ejemplos          | Castro Pacheco J.          |                 |
 
 
 
 ###  Patrons combinados GTP :
 | **Participantes**       | **Calificación** |
 |------------------------|-----------------|
-| Mendoza Sangado Jose Miguel |                 |
+| Mendoza Sangado Jose Miguel |      100           |
 
 
