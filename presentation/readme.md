@@ -53,8 +53,8 @@ Aquí tienes la tabla con la nueva columna de calificación agregada:
 | **Patrón**              | **Nombre**                  | **Calificación** |
 |------------------------|----------------------------|-----------------|
 | Strategy               | Salazar                    |       100          |
-| Template Method        | Garcia Cruz                |                 |
-| Visitor                | Leslie Lizeth              |                 |
+| Template Method        | Garcia Cruz                |       100          |
+| Visitor                | Leslie Lizeth              |        100         |
 
 ### Refactoring (Equipo de 2):
 | **Participantes**       | **Calificación** |
