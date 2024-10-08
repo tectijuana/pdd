@@ -59,14 +59,14 @@ Aquí tienes la tabla con la nueva columna de calificación agregada:
 ### Refactoring (Equipo de 2):
 | **Participantes**       | **Calificación** |
 |------------------------|-----------------|
-| Diaz Berumen Ma. Angeles y Marquez Santillan Jose Eduardo |                 |
+| Diaz Berumen Ma. Angeles y Marquez Santillan Jose Eduardo |      100           |
 
 ### Casos Reales de Patrones de Diseño GoF:
 | **Caso**               | **Nombre**                  | **Calificación** |
 |------------------------|----------------------------|-----------------|
 |                        | Perez Marques              |                 |
 | Pros-contras           | Ortiz Garcia, Luis A. Rodriguez |                 |
-| Patron MVC             | Rojo Chaidez               |                 |
+| Patron MVC             | Rojo Chaidez               |      100           |
 | Casos Estructurales*Ejemplos          | Garcia Perez Gabriel.               |                 |
 | Casos Creacionales*Ejemplos          | Castro Pacheco J.              |                 |
 | Casos Manipulacion*Ejemplos          | Castro Pacheco J.              |                 |
