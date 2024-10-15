@@ -4,7 +4,7 @@
 
 
 
-### **Actividad M2.2: Aplicación de un Patrón de Diseño GoF en una Aplicación Web en C#**
+# **Actividad M2.2: Aplicación de un Patrón de Diseño GoF en una Aplicación Web en C#**
 
 **Objetivo**: Los estudiantes deberán aplicar un patrón de diseño GoF (Gang of Four) a la aplicación web de ventas de celulares en C#. El patrón de diseño debe mejorar la estructura, flexibilidad o escalabilidad del código.
 
