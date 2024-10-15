@@ -17,61 +17,115 @@ El patrón Singleton es un patrón de diseño creacional que asegura que una cla
 
 A continuación se presenta un ejemplo extendido del código del patrón Singleton en Java y cómo se puede representar su diagrama de secuencia en ZenUML.
 
-#### Ejemplo de Código Singleton en Java
+#### Ejemplo de Código Singleton en Csharp
 
-```java
-public class Singleton {
-    // Instancia única de la clase
-    private static Singleton instancia;
+```csharp
+using System;
 
-    // Constructor privado para evitar instanciación externa
-    private Singleton() {
+public class ConfiguracionSistema
+{
+    // Instancia única de la clase, inicializada de manera "lazy" (perezosa).
+    private static ConfiguracionSistema instancia;
+
+    // Bloqueo para asegurar que el acceso a la instancia sea seguro en hilos (thread-safe).
+    private static readonly object bloqueo = new object();
+
+    // Constructor privado para evitar la instanciación externa.
+    private ConfiguracionSistema()
+    {
         // Lógica de inicialización
+        Console.WriteLine("Configuración del sistema inicializada.");
     }
 
-    // Método público para obtener la única instancia
-    public static Singleton getInstancia() {
-        if (instancia == null) {
-            instancia = new Singleton();
+    // Método público para obtener la única instancia, con control de concurrencia.
+    public static ConfiguracionSistema ObtenerInstancia()
+    {
+        // Doble verificación de la instancia
+        if (instancia == null)
+        {
+            lock (bloqueo) // Asegura que solo un hilo puede crear la instancia a la vez.
+            {
+                if (instancia == null)
+                {
+                    instancia = new ConfiguracionSistema();
+                }
+            }
         }
         return instancia;
     }
 
-    // Método de ejemplo
-    public void mostrarMensaje() {
-        System.out.println("¡Hola desde el Singleton!");
+    // Método de ejemplo que utiliza la configuración del sistema.
+    public void MostrarConfiguracion()
+    {
+        Console.WriteLine("Mostrando configuración del sistema...");
     }
 }
+
+public class Cliente
+{
+    public static void Main(string[] args)
+    {
+        // Simulando múltiples solicitudes para la configuración del sistema.
+        ConfiguracionSistema config1 = ConfiguracionSistema.ObtenerInstancia();
+        config1.MostrarConfiguracion();
+
+        ConfiguracionSistema config2 = ConfiguracionSistema.ObtenerInstancia();
+        config2.MostrarConfiguracion();
+
+        // Verificamos si ambas instancias son iguales.
+        Console.WriteLine($"Las instancias son iguales: {config1 == config2}");
+    }
+}
+
 ```
 
 #### Diagrama de Secuencia en ZenUML
 
+![zenuml](https://github.com/user-attachments/assets/5058e977-30c4-4715-a836-c5664aa35a87)
+
+
 En ZenUML, podrías representar el comportamiento del método `getInstancia` para ilustrar cómo se asegura que solo exista una única instancia de la clase `Singleton`.
 
 ```zenuml
-@startuml
-participant Cliente
-participant Singleton
+@ConfiguracionSistema
+@Cliente
 
-Cliente -> Singleton: getInstancia()
-activate Singleton
-alt instancia == null
-    Singleton -> Singleton: new Singleton()
-end
-Cliente <- Singleton: instancia
-@enduml
+Cliente.ObtenerInstancia() {
+    if (instancia == null) {
+        lock (bloqueo) {
+            if (instancia == null) {
+                new ConfiguracionSistema()
+            }
+        }
+    }
+    return instancia
+}
+
+Cliente.MostrarConfiguracion() {
+    ConfiguracionSistema.MostrarConfiguracion()
+}
+Cliente.ObtenerInstancia() {
+    return instancia
+}
+
+Cliente.MostrarConfiguracion() {
+    ConfiguracionSistema.MostrarConfiguracion()
+}
+
 ```
 
-### Explicación del Diagrama
 
-1. **Cliente Llama a `getInstancia()`**: Un cliente (o cualquier clase que necesite la instancia) invoca el método `getInstancia()`.
-2. **Verificación de Instancia Nula**: El diagrama muestra un bloque condicional `alt` que verifica si la instancia ya existe.
-3. **Creación de Instancia**: Si la instancia es `null`, se crea una nueva instancia del Singleton.
-4. **Devolución de Instancia**: Finalmente, el cliente recibe la instancia de la clase `Singleton`.
 
-Este enfoque de visualización permite ilustrar claramente cómo se asegura la única instancia y cómo se gestiona el acceso a ella.
+¿Cómo se refleja en el diagrama?
+El cliente llama al método ObtenerInstancia.
+Se verifica si la instancia es null. Si es así, se entra en una sección crítica con lock para evitar que otro hilo cree la instancia simultáneamente.
+Si la instancia sigue siendo null, se crea una nueva instancia.
+El cliente obtiene la misma instancia y llama a MostrarConfiguracion.
+Este diagrama visualiza claramente cómo se asegura que solo haya una instancia de ConfiguracionSistema.
 
-## Conclusión
-ZenUML proporciona una forma fácil y eficiente de visualizar patrones de diseño como Singleton, permitiendo a los estudiantes entender el flujo y la lógica detrás del código. La capacidad de generar diagramas en tiempo real hace que sea una herramienta ideal para quienes están aprendiendo y enseñando patrones de diseño.
+¿Cómo probarlo?
+Tus estudiantes pueden pegar este DSL en https://app.zenuml.com para ver el diagrama de secuencia renderizado.
 
-¿Listo para comenzar a diagramar tus patrones GoF con ZenUML? ¡Prueba crear tu propio diagrama y observa cómo tus ideas toman forma! 💻🖌️
+Con esto tendrás un ejemplo más práctico, tanto en el código como en el diagrama, que muestra el uso del patrón Singleton en un caso típico de gestión de configuración.
+
+¿Listo para comenzar a diagramar tus patrones GoF con ZenUML? Para la documentacion en GitHub
