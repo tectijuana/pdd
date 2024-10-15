@@ -24,26 +24,25 @@ using System;
 
 public class ConfiguracionSistema
 {
-    // Instancia única de la clase, inicializada de manera "lazy" (perezosa).
+    // Instancia única de la clase, inicializada de manera lazy
     private static ConfiguracionSistema instancia;
 
-    // Bloqueo para asegurar que el acceso a la instancia sea seguro en hilos (thread-safe).
+    // Bloqueo para asegurar que el acceso sea thread-safe
     private static readonly object bloqueo = new object();
 
-    // Constructor privado para evitar la instanciación externa.
+    // Constructor privado para evitar instancias externas
     private ConfiguracionSistema()
     {
-        // Lógica de inicialización
         Console.WriteLine("Configuración del sistema inicializada.");
     }
 
-    // Método público para obtener la única instancia, con control de concurrencia.
+    // Método público para obtener la instancia única
     public static ConfiguracionSistema ObtenerInstancia()
     {
-        // Doble verificación de la instancia
+        // Doble verificación de la instancia para eficiencia
         if (instancia == null)
         {
-            lock (bloqueo) // Asegura que solo un hilo puede crear la instancia a la vez.
+            lock (bloqueo)
             {
                 if (instancia == null)
                 {
@@ -54,7 +53,7 @@ public class ConfiguracionSistema
         return instancia;
     }
 
-    // Método de ejemplo que utiliza la configuración del sistema.
+    // Método de ejemplo que utiliza la configuración del sistema
     public void MostrarConfiguracion()
     {
         Console.WriteLine("Mostrando configuración del sistema...");
@@ -65,14 +64,15 @@ public class Cliente
 {
     public static void Main(string[] args)
     {
-        // Simulando múltiples solicitudes para la configuración del sistema.
+        // Obtener la instancia del Singleton
         ConfiguracionSistema config1 = ConfiguracionSistema.ObtenerInstancia();
         config1.MostrarConfiguracion();
 
+        // Obtener la instancia nuevamente para verificar que es la misma
         ConfiguracionSistema config2 = ConfiguracionSistema.ObtenerInstancia();
         config2.MostrarConfiguracion();
 
-        // Verificamos si ambas instancias son iguales.
+        // Verificar si ambas instancias son la misma
         Console.WriteLine($"Las instancias son iguales: {config1 == config2}");
     }
 }
@@ -81,36 +81,48 @@ public class Cliente
 
 #### Diagrama de Secuencia en ZenUML
 
-![zenuml](https://github.com/user-attachments/assets/5058e977-30c4-4715-a836-c5664aa35a87)
+![zenuml-2](https://github.com/user-attachments/assets/560f552d-2f2f-460d-8b46-8b87fdabc5e3)
+
 
 
 En ZenUML, podrías representar el comportamiento del método `getInstancia` para ilustrar cómo se asegura que solo exista una única instancia de la clase `Singleton`.
 
 ```zenuml
-@ConfiguracionSistema
-@Cliente
-
+// Simulando una solicitud para obtener la configuración del sistema
 Cliente.ObtenerInstancia() {
-    if (instancia == null) {
-        lock (bloqueo) {
-            if (instancia == null) {
-                new ConfiguracionSistema()
-            }
-        }
+  // Verificar si la instancia es nula
+  if (instancia == null) {
+    // Entrar en la sección crítica con lock (para asegurar thread safety)
+    lock (bloqueo) {
+      // Verificar nuevamente la instancia dentro del bloqueo
+      if (instancia == null) {
+        // Crear una nueva instancia de ConfiguracionSistema
+        new ConfiguracionSistema()
+      }
     }
-    return instancia
+  }
+  // Retornar la instancia única
+  return instancia
 }
 
+// Cliente muestra la configuración del sistema
 Cliente.MostrarConfiguracion() {
-    ConfiguracionSistema.MostrarConfiguracion()
+  // Llamada al método que muestra la configuración
+  ConfiguracionSistema.MostrarConfiguracion()
 }
+
+// Cliente vuelve a solicitar la instancia del Singleton
 Cliente.ObtenerInstancia() {
-    return instancia
+  return instancia
 }
 
+// Cliente vuelve a mostrar la configuración del sistema
 Cliente.MostrarConfiguracion() {
-    ConfiguracionSistema.MostrarConfiguracion()
+  ConfiguracionSistema.MostrarConfiguracion()
 }
+
+
+
 
 ```
 
