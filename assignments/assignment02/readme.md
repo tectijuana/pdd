@@ -10,7 +10,7 @@ Desarrollar una cheatsheet visualmente atractiva que sirva como guía rápida de
 ---
 
 - Enlace colaborativo del CheatSheet (acordeon) de PDD GoF
-- https://www.figma.com/board/iRzquaxEarjR1IQB0Ntr0Y/CheatSheet-PDD-GoF?node-id=0-1&t=IlUJiU8yGX883IMx-1
+- [https://www.figma.com/board/iRzquaxEarjR1IQB0Ntr0Y/CheatSheet-PDD-GoF?node-id=0-1&t=IlUJiU8yGX883IMx-1](https://www.figma.com/board/lUsPdWEG3GcfGC7IEvIlX8/Poster-de-Patrones-de-Dise%C3%B1o-GoF?node-id=1-164&t=TzuTNUjUtwaIJImV-1)
 - La clave la tiene el docente, favor de solicitarla.
 
 ---
