@@ -4,181 +4,154 @@ A continuación, te presento un ejemplo de un **Ansible Playbook** que puedes ut
 
 #### Estructura del Proyecto
 
-1. **Directorio del Proyecto:**
-   ```
-   ansible-playbook-dotnet/
-   ├── inventory
-   ├── playbook.yml
-   └── vineyard_app/
-       ├── Program.cs
-       └── vineyard_app.csproj
-   ```
 
-2. **Contenido de `inventory`:**
-   Asegúrate de que tu archivo `inventory` apunte a tu servidor en AWS:
-   ```ini
-   [aws]
-   your_server_ip ansible_ssh_user=ubuntu
-   ```
-
-3. **Contenido de `playbook.yml`:**
+1. **Contenido de `playbook.yml`:**
    Este es el Ansible Playbook para instalar .NET Core 8 y abrir el puerto 5000 en el grupo de seguridad.
-   ```yaml
-   ---
-   - name: Instalar .NET Core 8 y configurar la aplicación de viñedos
-     hosts: aws
-     become: yes
-     tasks:
-       - name: Actualizar el sistema
-         apt:
-           update_cache: yes
-           upgrade: dist
+```yaml
+---
+- name: Instalar .NET Core 8 y configurar la aplicación de viñedos
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Actualizar el sistema
+      apt:
+        update_cache: yes
+        upgrade: dist
 
-       - name: Instalar dependencias necesarias
-         apt:
-           name:
-             - apt-transport-https
-             - ca-certificates
-             - curl
-             - software-properties-common
-           state: present
+    - name: Instalar dependencias necesarias
+      apt:
+        name:
+          - apt-transport-https
+          - ca-certificates
+          - curl
+          - software-properties-common
+        state: present
 
-       - name: Agregar el repositorio de Microsoft
-         apt_repository:
-           repo: "deb [arch=amd64] https://packages.microsoft.com/repos/ubuntu/ $(lsb_release -cs) main"
-           state: present
+    - name: Descargar el paquete de repositorio de Microsoft para Ubuntu 24.04 LTS
+      command: wget https://packages.microsoft.com/config/ubuntu/24.04/packages-microsoft-prod.deb -O /tmp/packages-microsoft-prod.deb
 
-       - name: Importar la clave de Microsoft
-         apt_key:
-           url: https://packages.microsoft.com/keys/microsoft.asc
-           state: present
+    - name: Instalar el paquete de repositorio de Microsoft
+      command: dpkg -i /tmp/packages-microsoft-prod.deb
 
-       - name: Instalar .NET SDK
-         apt:
-           name: dotnet-sdk-8.0
-           state: present
+    - name: Actualizar el caché de apt después de agregar el repositorio
+      apt:
+        update_cache: yes
 
-       - name: Crear directorio para la aplicación
-         file:
-           path: /home/ubuntu/vineyard_app
-           state: directory
+    - name: Instalar .NET SDK
+      apt:
+        name: dotnet-sdk-8.0
+        state: present
 
-       - name: Copiar los archivos de la aplicación
-         copy:
-           src: vineyard_app/
-           dest: /home/ubuntu/vineyard_app/
-           owner: ubuntu
-           group: ubuntu
-           mode: '0755'
+    - name: Crear directorio para la aplicación
+      file:
+        path: /home/ubuntu/vineyard_app
+        state: directory
 
-       - name: Construir la aplicación de viñedos
-         command: dotnet build /home/ubuntu/vineyard_app/vineyard_app.csproj
-         args:
-           chdir: /home/ubuntu/vineyard_app
+    - name: Crear archivo del proyecto
+      copy:
+        dest: /home/ubuntu/vineyard_app/vineyard_app.csproj
+        content: |
+          <Project Sdk="Microsoft.NET.Sdk.Web">
 
-       - name: Ejecutar la aplicación
-         command: dotnet run --urls "http://0.0.0.0:5000" &
-         args:
-           chdir: /home/ubuntu/vineyard_app
+          <PropertyGroup>
+              <TargetFramework>net8.0</TargetFramework>
+          </PropertyGroup>
 
-       - name: Abrir puerto 5000 en el grupo de seguridad
-         ec2_group:
-           name: your_security_group_name
-           region: your_aws_region
-           rules:
-             - proto: tcp
-               from_port: 5000
-               to_port: 5000
-               cidr_ip: 0.0.0.0/0
-           state: present
-   ```
+          </Project>
 
-4. **Contenido de `vineyard_app/Program.cs`:**
-   Aquí tienes un código de ejemplo de un programa "espagueti" que representa una aplicación de viñedos. Se requiere que los estudiantes refactoricen este código utilizando un patrón de diseño de la GoF.
-   ```csharp
-   using System;
-   using System.Collections.Generic;
-   using Microsoft.AspNetCore.Hosting;
-   using Microsoft.Extensions.Hosting;
+    - name: Crear archivo de código fuente
+      copy:
+        dest: /home/ubuntu/vineyard_app/Program.cs
+        content: |
+          using System;
+          using System.Collections.Generic;
+          using Microsoft.AspNetCore.Hosting;
+          using Microsoft.Extensions.Hosting;
+          using Microsoft.AspNetCore.Builder;
+          using Microsoft.Extensions.DependencyInjection;
 
-   namespace VineyardApp
-   {
-       public class Program
-       {
-           public static void Main(string[] args)
-           {
-               CreateHostBuilder(args).Build().Run();
-           }
+          namespace VineyardApp
+          {
+              public class Program
+              {
+                  public static void Main(string[] args)
+                  {
+                      CreateHostBuilder(args).Build().Run();
+                  }
 
-           public static IHostBuilder CreateHostBuilder(string[] args) =>
-               Host.CreateDefaultBuilder(args)
-                   .ConfigureWebHostDefaults(webBuilder =>
-                   {
-                       webBuilder.UseStartup<Startup>();
-                   });
-       }
+                  public static IHostBuilder CreateHostBuilder(string[] args) =>
+                      Host.CreateDefaultBuilder(args)
+                          .ConfigureWebHostDefaults(webBuilder =>
+                          {
+                              webBuilder.UseStartup<Startup>();
+                          });
+              }
 
-       public class Startup
-       {
-           public void ConfigureServices(IServiceCollection services)
-           {
-               services.AddControllers();
-           }
+              public class Startup
+              {
+                  public void ConfigureServices(IServiceCollection services)
+                  {
+                      services.AddControllers();
+                  }
 
-           public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-           {
-               if (env.IsDevelopment())
-               {
-                   app.UseDeveloperExceptionPage();
-               }
-               else
-               {
-                   app.UseExceptionHandler("/Home/Error");
-                   app.UseHsts();
-               }
-               app.UseHttpsRedirection();
-               app.UseRouting();
-               app.UseAuthorization();
-               app.UseEndpoints(endpoints =>
-               {
-                   endpoints.MapControllers();
-               });
-           }
-       }
+                  public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+                  {
+                      if (env.IsDevelopment())
+                      {
+                          app.UseDeveloperExceptionPage();
+                      }
+                      else
+                      {
+                          app.UseExceptionHandler("/Home/Error");
+                          app.UseHsts();
+                      }
+                      app.UseHttpsRedirection();
+                      app.UseRouting();
+                      app.UseAuthorization();
+                      app.UseEndpoints(endpoints =>
+                      {
+                          endpoints.MapControllers();
+                      });
+                  }
+              }
 
-       public class Vineyard
-       {
-           public string Name { get; set; }
-           public string Location { get; set; }
-           public List<string> Grapes { get; set; }
+              public class Vineyard
+              {
+                  public string Name { get; set; }
+                  public string Location { get; set; }
+                  public List<string> Grapes { get; set; }
 
-           public void PrintDetails()
-           {
-               Console.WriteLine($"Vineyard: {Name}, Location: {Location}, Grapes: {string.Join(", ", Grapes)}");
-           }
-       }
+                  public void PrintDetails()
+                  {
+                      Console.WriteLine($"Vineyard: {Name}, Location: {Location}, Grapes: {string.Join(", ", Grapes)}");
+                  }
+              }
 
-       // Sección de código espagueti
-       public class VineyardManager
-       {
-           private List<Vineyard> vineyards = new List<Vineyard>();
+              public class VineyardManager
+              {
+                  private List<Vineyard> vineyards = new List<Vineyard>();
 
-           public void AddVineyard(string name, string location, List<string> grapes)
-           {
-               var vineyard = new Vineyard { Name = name, Location = location, Grapes = grapes };
-               vineyards.Add(vineyard);
-               vineyard.PrintDetails(); // Método que puede mejorarse
-           }
-       }
-   }
-   ```
+                  public void AddVineyard(string name, string location, List<string> grapes)
+                  {
+                      var vineyard = new Vineyard { Name = name, Location = location, Grapes = grapes };
+                      vineyards.Add(vineyard);
+                      vineyard.PrintDetails();
+                  }
+              }
+          }
 
-### Instrucciones para el Estudiante
+    - name: Construir la aplicación de viñedos
+      command: dotnet build /home/ubuntu/vineyard_app/vineyard_app.csproj
+      args:
+        chdir: /home/ubuntu/vineyard_app
 
-1. **Ejecutar el Playbook:**
-   Inicia sesión en el servidor a través de SSH y ejecuta el playbook con el siguiente comando:
-   ```bash
-   ansible-playbook -i inventory playbook.yml
+    - name: Ejecutar la aplicación
+      command: dotnet run --urls "http://0.0.0.0:5000"
+      args:
+        chdir: /home/ubuntu/vineyard_app
+      async: 10
+      poll: 0
+
    ```
 
 2. **Refactorizar el Código:**
@@ -188,4 +161,6 @@ A continuación, te presento un ejemplo de un **Ansible Playbook** que puedes ut
    Una vez que el playbook se ejecute correctamente, el estudiante podrá acceder a la aplicación en el navegador utilizando la dirección `http://your_server_ip:5000`.
 
 ### Notas Finales
-Este ejercicio no solo les enseñará a los estudiantes sobre el uso de Ansible para la automatización de la instalación de software, sino que también les proporcionará la oportunidad de practicar la refactorización de código en C# aplicando patrones de diseño.
+- Recuerde checar su "security groups" para abrie el puerto 5000/tcp
+- Usar sus notas de exposiciones para aplicar GoF a la solución spagetti
+- Ofresco una disculpa por este método de aplicar problemas a resolver, estoy disponible para cualquier mejora para el grupo y la generación.
