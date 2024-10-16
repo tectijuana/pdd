@@ -1,0 +1,2 @@
+[aws]
+your_server_ip ansible_ssh_user=ubuntu
