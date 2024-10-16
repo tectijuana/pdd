@@ -1,0 +1,67 @@
+---
+- name: Instalar .NET Core 8 y configurar la aplicación de viñedos
+  hosts: aws
+  become: yes
+  tasks:
+    - name: Actualizar el sistema
+      apt:
+        update_cache: yes
+        upgrade: dist
+
+    - name: Instalar dependencias necesarias
+      apt:
+        name:
+          - apt-transport-https
+          - ca-certificates
+          - curl
+          - software-properties-common
+        state: present
+
+    - name: Agregar el repositorio de Microsoft
+      apt_repository:
+        repo: "deb [arch=amd64] https://packages.microsoft.com/repos/ubuntu/ $(lsb_release -cs) main"
+        state: present
+
+    - name: Importar la clave de Microsoft
+      apt_key:
+        url: https://packages.microsoft.com/keys/microsoft.asc
+        state: present
+
+    - name: Instalar .NET SDK
+      apt:
+        name: dotnet-sdk-8.0
+        state: present
+
+    - name: Crear directorio para la aplicación
+      file:
+        path: /home/ubuntu/vineyard_app
+        state: directory
+
+    - name: Copiar los archivos de la aplicación
+      copy:
+        src: vineyard_app/
+        dest: /home/ubuntu/vineyard_app/
+        owner: ubuntu
+        group: ubuntu
+        mode: '0755'
+
+    - name: Construir la aplicación de viñedos
+      command: dotnet build /home/ubuntu/vineyard_app/vineyard_app.csproj
+      args:
+        chdir: /home/ubuntu/vineyard_app
+
+    - name: Ejecutar la aplicación
+      command: dotnet run --urls "http://0.0.0.0:5000" &
+      args:
+        chdir: /home/ubuntu/vineyard_app
+
+    - name: Abrir puerto 5000 en el grupo de seguridad
+      ec2_group:
+        name: your_security_group_name
+        region: your_aws_region
+        rules:
+          - proto: tcp
+            from_port: 5000
+            to_port: 5000
+            cidr_ip: 0.0.0.0/0
+        state: present
