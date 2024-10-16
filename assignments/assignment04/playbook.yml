@@ -1,6 +1,6 @@
 ---
 - name: Instalar .NET Core 8 y configurar la aplicación de viñedos
-  hosts: aws
+  hosts: localhost  # Ejecución en la instancia local
   become: yes
   tasks:
     - name: Actualizar el sistema
@@ -37,13 +37,98 @@
         path: /home/ubuntu/vineyard_app
         state: directory
 
-    - name: Copiar los archivos de la aplicación
+    - name: Crear archivo del proyecto
       copy:
-        src: vineyard_app/
-        dest: /home/ubuntu/vineyard_app/
-        owner: ubuntu
-        group: ubuntu
-        mode: '0755'
+        dest: /home/ubuntu/vineyard_app/vineyard_app.csproj
+        content: |
+          <Project Sdk="Microsoft.NET.Sdk.Web">
+
+          <PropertyGroup>
+              <TargetFramework>net8.0</TargetFramework>
+          </PropertyGroup>
+
+          </Project>
+
+    - name: Crear archivo de código fuente
+      copy:
+        dest: /home/ubuntu/vineyard_app/Program.cs
+        content: |
+          using System;
+          using System.Collections.Generic;
+          using Microsoft.AspNetCore.Hosting;
+          using Microsoft.Extensions.Hosting;
+          using Microsoft.AspNetCore.Builder;
+          using Microsoft.Extensions.DependencyInjection;
+
+          namespace VineyardApp
+          {
+              public class Program
+              {
+                  public static void Main(string[] args)
+                  {
+                      CreateHostBuilder(args).Build().Run();
+                  }
+
+                  public static IHostBuilder CreateHostBuilder(string[] args) =>
+                      Host.CreateDefaultBuilder(args)
+                          .ConfigureWebHostDefaults(webBuilder =>
+                          {
+                              webBuilder.UseStartup<Startup>();
+                          });
+              }
+
+              public class Startup
+              {
+                  public void ConfigureServices(IServiceCollection services)
+                  {
+                      services.AddControllers();
+                  }
+
+                  public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+                  {
+                      if (env.IsDevelopment())
+                      {
+                          app.UseDeveloperExceptionPage();
+                      }
+                      else
+                      {
+                          app.UseExceptionHandler("/Home/Error");
+                          app.UseHsts();
+                      }
+                      app.UseHttpsRedirection();
+                      app.UseRouting();
+                      app.UseAuthorization();
+                      app.UseEndpoints(endpoints =>
+                      {
+                          endpoints.MapControllers();
+                      });
+                  }
+              }
+
+              public class Vineyard
+              {
+                  public string Name { get; set; }
+                  public string Location { get; set; }
+                  public List<string> Grapes { get; set; }
+
+                  public void PrintDetails()
+                  {
+                      Console.WriteLine($"Vineyard: {Name}, Location: {Location}, Grapes: {string.Join(", ", Grapes)}");
+                  }
+              }
+
+              public class VineyardManager
+              {
+                  private List<Vineyard> vineyards = new List<Vineyard>();
+
+                  public void AddVineyard(string name, string location, List<string> grapes)
+                  {
+                      var vineyard = new Vineyard { Name = name, Location = location, Grapes = grapes };
+                      vineyards.Add(vineyard);
+                      vineyard.PrintDetails();
+                  }
+              }
+          }
 
     - name: Construir la aplicación de viñedos
       command: dotnet build /home/ubuntu/vineyard_app/vineyard_app.csproj
@@ -51,17 +136,8 @@
         chdir: /home/ubuntu/vineyard_app
 
     - name: Ejecutar la aplicación
-      command: dotnet run --urls "http://0.0.0.0:5000" &
+      command: dotnet run --urls "http://0.0.0.0:5000"
       args:
         chdir: /home/ubuntu/vineyard_app
-
-    - name: Abrir puerto 5000 en el grupo de seguridad
-      ec2_group:
-        name: your_security_group_name
-        region: your_aws_region
-        rules:
-          - proto: tcp
-            from_port: 5000
-            to_port: 5000
-            cidr_ip: 0.0.0.0/0
-        state: present
+      async: 10 # Ejecutar el comando de forma asíncrona para permitir que el proceso siga ejecutándose
+      poll: 0 # No esperar la finalización del comando
