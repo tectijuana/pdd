@@ -1,4 +1,9 @@
-### Ansible Playbook para Instalar .NET Core 8 en Ubuntu 24 LTS
+
+![DALL·E 2024-10-01 20 15 11 - A modern mascot for Ansible, representing software automation and design patterns, not in the form of a robot but as a friendly character with a sleek copy](https://github.com/user-attachments/assets/8790c7a2-a0e7-4be4-b715-732c96026849)
+
+
+
+# Ansible Playbook para Instalar .NET Core 8 en Ubuntu 24 LTS
 
 A continuación, te presento un ejemplo de un **Ansible Playbook** que puedes utilizar para instalar .NET Core 8 en un servidor Ubuntu 24 LTS. Este playbook también incluye los pasos para abrir el puerto 5000 en el grupo de seguridad y crear una aplicación básica que representa un sistema de viñedos.
 
