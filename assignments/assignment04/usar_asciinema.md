@@ -1,6 +1,4 @@
 
-![DALL·E 2024-10-01 20 15 11 - A modern mascot for Ansible, representing software automation and design patterns, not in the form of a robot but as a friendly character with a sleek copy](https://github.com/user-attachments/assets/8790c7a2-a0e7-4be4-b715-732c96026849)
-
 
 
 # Tutorial: Uso de Asciinema en Ubuntu 24.04 LTS para Estudiantes de AWS Academy
