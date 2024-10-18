@@ -14,7 +14,7 @@ A continuación, te presento un ejemplo de un **Ansible Playbook** que puedes ut
    Este es el Ansible Playbook para instalar .NET Core 8 y abrir el puerto 5000 en el grupo de seguridad.
 ```yaml
 ---
-- name: Instalar .NET Core 8 y configurar la aplicación de viñedos
+- name: Instalar .NET Core 8 y configurar la aplicación de viñedos, recuerde grabar todo es ASCIINEMA con su nombre y generales del Ud.
   hosts: localhost
   become: yes
   tasks:
@@ -64,7 +64,7 @@ A continuación, te presento un ejemplo de un **Ansible Playbook** que puedes ut
 
           </Project>
 
-    - name: Crear archivo de código fuente
+    - name: Crear archivo de código fuente esta en espagetti, falta algo, que proceder con sus 25+ tecnicas PDD GoF ?
       copy:
         dest: /home/ubuntu/vineyard_app/Program.cs
         content: |
@@ -150,7 +150,7 @@ A continuación, te presento un ejemplo de un **Ansible Playbook** que puedes ut
       args:
         chdir: /home/ubuntu/vineyard_app
 
-    - name: Ejecutar la aplicación
+    - name: Ejecutar la aplicación, recuerde no necesariamente se debe ver en webserver sino haveces es lógica del programa como una CLASE(), etc.
       command: dotnet run --urls "http://0.0.0.0:5000"
       args:
         chdir: /home/ubuntu/vineyard_app
