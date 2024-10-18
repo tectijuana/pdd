@@ -166,6 +166,6 @@ A continuación, te presento un ejemplo de un **Ansible Playbook** que puedes ut
    Una vez que el playbook se ejecute correctamente, el estudiante podrá acceder a la aplicación en el navegador utilizando la dirección `http://your_server_ip:5000`.
 
 ### Notas Finales
-- Recuerde checar su "security groups" para abrie el puerto 5000/tcp
+- Recuerde checar su "security groups" para abrir el puerto 5000/tcp, en **"Security Groups"** del menu de AWS lado centro-izquierdo
 - Usar sus notas de exposiciones para aplicar GoF a la solución spagetti
 - Ofresco una disculpa por este método de aplicar problemas a resolver, estoy disponible para cualquier mejora para el grupo y la generación.
