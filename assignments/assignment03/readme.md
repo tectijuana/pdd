@@ -63,6 +63,4 @@
 
 ---
 
-### **Fecha de entrega**:
-Los estudiantes deberán entregar el código y la documentación ver: 
 
