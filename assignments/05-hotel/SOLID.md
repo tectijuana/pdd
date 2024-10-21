@@ -2,6 +2,28 @@
 
 Los principios **SOLID** son un conjunto de cinco directrices para escribir código limpio, estructurado y fácil de mantener. Ayudan a evitar el "código espagueti", reduciendo la duplicación, el acoplamiento entre clases y facilitando la distribución adecuada de responsabilidades. A continuación, se explica cada principio y cómo aplicarlo en la refactorización del **Sistema de Reservas de Hotel**.
 
+
+---
+```mermaid
+graph TD
+  A[SOLID] --> B[SRP - Principio de Responsabilidad Única]
+  A --> C[OCP - Principio Abierto/Cerrado]
+  A --> D[LSP - Principio de Sustitución de Liskov]
+  A --> E[ISP - Principio de Segregación de Interfaces]
+  A --> F[DIP - Principio de Inversión de Dependencia]
+
+  B --> G[Cada clase debe tener una única razón para cambiar]
+  C --> H[Abierto para extensión, cerrado para modificación]
+  D --> I[Las subclases deben poder sustituir a las clases base sin problemas]
+  E --> J[No depender de interfaces que no se usan]
+  F --> K[Depender de abstracciones en lugar de implementaciones]
+
+  G --> L[Ejemplo: Clase 'Reservation' separa lógica de búsqueda]
+  H --> M[Ejemplo: Factory Method para creación de habitaciones]
+  I --> N[Ejemplo: Subclases 'LuxuryRoom' y 'EconomyRoom' funcionan sin cambios]
+  J --> O[Ejemplo: Interfaces específicas como 'IBookable' o 'IRoomRepository']
+  K --> P[Ejemplo: Inyección de dependencias con interfaces]
+```
 ---
 
 ## **S - Single Responsibility Principle (SRP) - Principio de Responsabilidad Única**
