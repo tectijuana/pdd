@@ -3,10 +3,10 @@
 ### Contexto
 Un equipo de desarrollo ha implementado un **Sistema de Reservas de Hotel** utilizando C# y .NET 8. Sin embargo, el diseño es **espagueti**, lleno de código duplicado y responsabilidades mal distribuidas. El sistema tiene problemas de mantenimiento y es propenso a errores.
 
-Tu tarea es **reorganizar y mejorar** este sistema aplicando **patrones de diseño GoF** (Gang of Four). Aquí se presenta el **código defectuoso** para que lo puedas analizar y corregir mediante patrones de diseño adecuados.
+La misión es **reorganizar y mejorar** este sistema aplicando **patrones de diseño GoF** (Gang of Four). Aquí se presenta el **código defectuoso** para que lo puedas analizar y corregir mediante patrones de diseño adecuados.
 
 
-
+        
 ---
 
 ### Código Defectuoso en C#
@@ -129,6 +129,7 @@ revisar el Ansible Playbook.
 - **Construye y prueba** la solución refactorizada.
 - **Documenta** los cambios realizados y justifica cada patrón aplicado.
 
+SOLID https://es.wikipedia.org/wiki/SOLID
 ---
 
 Este ejercicio busca mejorar la **calidad del código** y **habilitar la escalabilidad** del sistema aplicando patrones de diseño adecuados.
