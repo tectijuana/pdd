@@ -133,6 +133,20 @@ revisar el Ansible Playbook.
 
 Este ejercicio busca mejorar la **calidad del código** y **habilitar la escalabilidad** del sistema aplicando patrones de diseño adecuados.
 
+# Rúbrica de Evaluación para la Práctica de Patrones de Diseño
+
+| **Categoría**                            | **Excelente (25%)**                                                                                                           | **Bueno (20%)**                                                                                                   | **Regular (15%)**                                                                                            | **Deficiente (10%)**                                                                                      |
+|------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
+| **Aplicación de Patrones de Diseño GoF** | Implementa **todos** los patrones solicitados: Factory Method, Strategy, Singleton y Observer correctamente y con propósito claro. | Implementa **tres** de los cuatro patrones solicitados. Patrones bien aplicados, aportando mejoras significativas. | Implementa **dos** patrones, aunque con algunos errores menores en su uso. Aporta mejoras limitadas.         | Implementa **uno o ninguno** de los patrones o están mal aplicados. No evidencia comprensión de su uso.    |
+| **Calidad y Mantenimiento del Código**   | Código bien estructurado, legible y siguiendo principios SOLID. Elimina duplicación y distribuye responsabilidades correctamente. | Código claro con algunas mejoras posibles. Reduce duplicación y distribuye responsabilidades mejor que el original. | Código con mejoras limitadas en estructura y legibilidad. Algunos problemas de duplicación persisten.         | Código sigue siendo espagueti. No mejora la estructura ni la distribución de responsabilidades.            |
+| **Pruebas y Funcionalidad**              | La aplicación compila y funciona sin errores. Implementa pruebas unitarias/integración y nuevas funcionalidades opcionales.   | La aplicación funciona con mínimas fallas. Realiza algunas pruebas para validar la funcionalidad.                 | La aplicación tiene errores menores o funcionalidad incompleta. Las pruebas son insuficientes.                | La aplicación no compila o no funciona. Falta de pruebas o errores críticos que afectan el funcionamiento. |
+| **Documentación y Justificación de Cambios** | Documentación detallada y clara. Justifica patrones aplicados con argumentos sólidos y aporta diagramas UML actualizados.      | Documentación adecuada pero con oportunidades de profundización. Diagramas presentes pero mejorables.              | Documentación limitada o incompleta. Justificaciones superficiales. Diagramas ausentes o inadecuados.         | No se entrega documentación o es confusa. No hay justificación clara ni diagramas.                         |
+
+---
+
+**Puntuación Total:** Suma de las puntuaciones obtenidas en cada categoría sobre 100%.
+
+
 ---
 
 Csharp GoF https://github.com/tectijuana/design-patterns-csharp/tree/main
