@@ -5,6 +5,8 @@ Un equipo de desarrollo ha implementado un **Sistema de Reservas de Hotel** util
 
 Tu tarea es **reorganizar y mejorar** este sistema aplicando **patrones de diseño GoF** (Gang of Four). Aquí se presenta el **código defectuoso** para que lo puedas analizar y corregir mediante patrones de diseño adecuados.
 
+
+
 ---
 
 ### Código Defectuoso en C#
@@ -100,6 +102,11 @@ namespace HotelBooking
 2. **Strategy Pattern** para definir diferentes estrategias de reserva (p. ej., reservas estándar vs. VIP).
 3. **Singleton** para gestionar la instancia de `Hotel` como recurso global.
 4. **Observer Pattern** para notificar cambios en las reservas a otras partes interesadas (como servicios de limpieza).
+
+---
+
+Solución extendida aplicada en AWSACademy en Ubuntu 24 LTS
+revisar el Ansible Playbook.
 
 ---
 
