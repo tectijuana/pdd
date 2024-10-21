@@ -1,0 +1,137 @@
+---
+- name: Instalar .NET Core 8 y configurar la aplicación de reservas de hotel
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Actualizar el sistema
+      apt:
+        update_cache: yes
+        upgrade: dist
+
+    - name: Instalar dependencias necesarias
+      apt:
+        name:
+          - apt-transport-https
+          - ca-certificates
+          - curl
+          - software-properties-common
+        state: present
+
+    - name: Agregar el repositorio de Microsoft
+      apt_repository:
+        repo: "deb [arch=amd64] https://packages.microsoft.com/repos/ubuntu/ $(lsb_release -cs) main"
+        state: present
+
+    - name: Importar la clave de Microsoft
+      apt_key:
+        url: https://packages.microsoft.com/keys/microsoft.asc
+        state: present
+
+    - name: Instalar .NET SDK
+      apt:
+        name: dotnet-sdk-8.0
+        state: present
+
+    - name: Crear directorio para la aplicación
+      file:
+        path: /home/ubuntu/hotel_app
+        state: directory
+
+    - name: Crear archivo del proyecto
+      copy:
+        dest: /home/ubuntu/hotel_app/hotel_app.csproj
+        content: |
+          <Project Sdk="Microsoft.NET.Sdk">
+            <PropertyGroup>
+              <OutputType>Exe</OutputType>
+              <TargetFramework>net8.0</TargetFramework>
+            </PropertyGroup>
+          </Project>
+
+    - name: Crear archivo de código fuente
+      copy:
+        dest: /home/ubuntu/hotel_app/Program.cs
+        content: |
+          using System;
+          using System.Collections.Generic;
+
+          namespace HotelBooking
+          {
+              public class Hotel
+              {
+                  public string Name { get; set; }
+                  public List<Room> Rooms { get; set; } = new List<Room>();
+
+                  public void AddRoom(string roomType, double price)
+                  {
+                      var room = new Room() { RoomType = roomType, Price = price };
+                      Rooms.Add(room);
+                  }
+
+                  public void PrintAvailableRooms()
+                  {
+                      foreach (var room in Rooms)
+                      {
+                          Console.WriteLine($"Room: {room.RoomType}, Price: {room.Price}");
+                      }
+                  }
+              }
+
+              public class Room
+              {
+                  public string RoomType { get; set; }
+                  public double Price { get; set; }
+              }
+
+              public class Reservation
+              {
+                  public Hotel Hotel { get; set; }
+                  public Room Room { get; set; }
+                  public DateTime StartDate { get; set; }
+                  public DateTime EndDate { get; set; }
+
+                  public void MakeReservation(Hotel hotel, string roomType, DateTime startDate, DateTime endDate)
+                  {
+                      var room = hotel.Rooms.Find(r => r.RoomType == roomType);
+                      if (room != null)
+                      {
+                          Hotel = hotel;
+                          Room = room;
+                          StartDate = startDate;
+                          EndDate = endDate;
+                          Console.WriteLine($"Reservation made for {room.RoomType} from {startDate} to {endDate}.");
+                      }
+                      else
+                      {
+                          Console.WriteLine("Room not available.");
+                      }
+                  }
+              }
+
+              class Program
+              {
+                  static void Main(string[] args)
+                  {
+                      var hotel = new Hotel { Name = "Luxury Inn" };
+                      hotel.AddRoom("Single", 100);
+                      hotel.AddRoom("Double", 200);
+
+                      var reservation = new Reservation();
+                      reservation.MakeReservation(hotel, "Single", DateTime.Now, DateTime.Now.AddDays(2));
+
+                      hotel.PrintAvailableRooms();
+                  }
+              }
+          }
+
+    - name: Construir la aplicación de reservas de hotel
+      command: dotnet build /home/ubuntu/hotel_app/hotel_app.csproj
+      args:
+        chdir: /home/ubuntu/hotel_app
+
+    - name: Ejecutar la aplicación
+      command: dotnet run
+      args:
+        chdir: /home/ubuntu/hotel_app
+      async: 10
+      poll: 0
