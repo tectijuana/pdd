@@ -140,3 +140,7 @@ R -> User: Reservation Made
 ---
 
 Este ejercicio busca mejorar la **calidad del código** y **habilitar la escalabilidad** del sistema aplicando patrones de diseño adecuados.
+
+---
+
+Csharp GoF https://github.com/tectijuana/design-patterns-csharp/tree/main
