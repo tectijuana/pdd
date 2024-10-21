@@ -103,25 +103,10 @@ namespace HotelBooking
 
 ---
 
-### Caso Documentado en Zenuml
+### Caso Documentado en UML
+![zenuml-3](https://github.com/user-attachments/assets/fabb64a0-fbec-4897-9ff6-42e920956e93)
 
-```zenuml
-@startuml
-actor User
-participant "Hotel" as H
-participant "Reservation" as R
-participant "RoomFactory" as F
 
-User -> H: AddRoom("Single", 100)
-H -> F: CreateRoom("Single", 100)
-F -> H: Room
-
-User -> R: MakeReservation(hotel, "Single", startDate, endDate)
-R -> H: FindRoom("Single")
-H -> R: Room
-R -> User: Reservation Made
-@enduml
-```
 
 ---
 
