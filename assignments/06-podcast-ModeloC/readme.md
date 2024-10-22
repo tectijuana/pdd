@@ -23,7 +23,7 @@ Instrucciones para la Actividad:
      4. Cierre: Conclusión y despedida.  
 
 3. **Publicación en Podbean:**  
-   - Crea una cuenta en [www.podbean.com](https://www.podbean.com/).  
+   - Crea una cuenta en [www.podbean.com](https://www.podbean.com/), esta la App para Android y iOS gratis sin publicidad.  
    - Sube tu podcast en Podbean y comparte el enlace en iDoceo Connect.  
    - Asegúrate de que el enlace funcione correctamente y sea accesible para la evaluación.  
 
