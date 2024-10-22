@@ -1,4 +1,6 @@
-### Actividad: Elaboración de un Podcast sobre el Modelo C4 para Arquitectura de Software  
+
+
+# Actividad: Elaboración de un Podcast sobre el Modelo C4 para Arquitectura de Software  
 
 **Descripción:**  
 El propósito de esta actividad es que los estudiantes investiguen, preparen y graben un podcast relacionado con el Modelo C4, un marco para la visualización y documentación de arquitecturas de software. El podcast se alojará en la plataforma **Podbean** para su distribución y publicación. Se recomienda utilizar herramientas para grabación y edición de audio y aprovechar el sitio [Adobe Podcast](https://podcast.adobe.com/), que emplea inteligencia artificial para mejorar la calidad de voz. La aplicación Podbean está disponible tanto en Android como en iPhone para facilitar la subida del audio.  
