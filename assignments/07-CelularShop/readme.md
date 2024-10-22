@@ -5,6 +5,7 @@
     <img width="80%" alt="Screenshot 2024-10-22 at 4 49 01 p m" src="https://github.com/user-attachments/assets/08c02140-ec63-4ba0-b686-dc18e948db01">
 </p>
 
+Esta Actividad BadCode da a resolver un caso de malas practicas en una Tienda de Celulares, el playbook implementa:
 
 
 # Ansible Playbook CellShop
