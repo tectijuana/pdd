@@ -27,7 +27,7 @@ flowchart TD
 ```
 ---
 
-### Explicación de las Malas Prácticas Introducidasa a esta Tienda de Celulares BadCode:
+### Ejercicio a resolver: Explicación de las Malas Prácticas Introducidasa a esta Tienda de Celulares BadCode:
 
 1. **Uso de campos públicos:**
    - En la clase `Mobile`, los atributos `Model`, `Brand`, `Price` y `Features` son públicos, lo cual es una mala práctica que rompe el encapsulamiento.
@@ -61,6 +61,7 @@ Lista las **correcciones propuestas** para reaizar donde cada recomendación inc
 | 9  | **Dependencia directa de clases concretas en `InventoryAndBilling`**, generando acoplamiento fuerte. | Aplicar el patrón **Facade** para proporcionar una interfaz simplificada y reducir el acoplamiento. | **Facade Pattern** |
 | 10 | **Cálculo de descuentos y promociones mezclado con lógica de ventas**, dificultando la escalabilidad. | Separar la lógica de promociones en un sistema independiente y utilizar el patrón **Chain of Responsibility** para manejar múltiples promociones. | **Chain of Responsibility Pattern** |
 
+# Valor 10% cada renglón a resolver.
 
 
-Al abordar estas correcciones, podrán practicar la identificación y aplicación de los patrones de diseño GoF apropiados para resolver problemas comunes en el desarrollo de software. Esto mejorará la calidad del código, facilitará su mantenimiento y les brindará una comprensión más profunda de cómo estructurar aplicaciones de manera efectiva.
+Sse agradece su tiempo e inversion a esta actividad practica, se requier de revisar sus notas de los PPD.
