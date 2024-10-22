@@ -1,4 +1,5 @@
 
+<img width="695" alt="Screenshot 2024-10-22 at 4 49 01 p m" src="https://github.com/user-attachments/assets/08c02140-ec63-4ba0-b686-dc18e948db01">
 
 
 # Ansible Playbook CellShop
