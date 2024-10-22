@@ -1,0 +1,222 @@
+---
+- name: Instalar .NET Core 8 y configurar la aplicación de tienda de celulares
+  hosts: localhost  # Ejecución en la instancia local
+  become: yes
+  tasks:
+    - name: Actualizar el sistema
+      apt:
+        update_cache: yes
+        upgrade: dist
+
+    - name: Instalar dependencias necesarias
+      apt:
+        name:
+          - apt-transport-https
+          - ca-certificates
+          - curl
+          - software-properties-common
+        state: present
+
+    - name: Agregar el repositorio de Microsoft
+      apt_repository:
+        repo: "deb [arch=amd64] https://packages.microsoft.com/repos/ubuntu/ $(lsb_release -cs) main"
+        state: present
+
+    - name: Importar la clave de Microsoft
+      apt_key:
+        url: https://packages.microsoft.com/keys/microsoft.asc
+        state: present
+
+    - name: Instalar .NET SDK
+      apt:
+        name: dotnet-sdk-8.0
+        state: present
+
+    - name: Crear directorio para la aplicación
+      file:
+        path: /home/ubuntu/mobile_store_app
+        state: directory
+
+    - name: Crear archivo del proyecto
+      copy:
+        dest: /home/ubuntu/mobile_store_app/mobile_store_app.csproj
+        content: |
+          <Project Sdk="Microsoft.NET.Sdk.Web">
+
+          <PropertyGroup>
+              <TargetFramework>net8.0</TargetFramework>
+          </PropertyGroup>
+
+          </Project>
+
+    - name: Crear archivo de código fuente
+      copy:
+        dest: /home/ubuntu/mobile_store_app/Program.cs
+        content: |
+          using System;
+          using System.Collections.Generic;
+          using Microsoft.AspNetCore.Hosting;
+          using Microsoft.Extensions.Hosting;
+          using Microsoft.AspNetCore.Builder;
+          using Microsoft.Extensions.DependencyInjection;
+
+          namespace MobileStoreApp
+          {
+              public class Program
+              {
+                  public static void Main(string[] args)
+                  {
+                      CreateHostBuilder(args).Build().Run();
+                  }
+
+                  public static IHostBuilder CreateHostBuilder(string[] args) =>
+                      Host.CreateDefaultBuilder(args)
+                          .ConfigureWebHostDefaults(webBuilder =>
+                          {
+                              webBuilder.UseStartup<Startup>();
+                          });
+              }
+
+              public class Startup
+              {
+                  public void ConfigureServices(IServiceCollection services)
+                  {
+                      services.AddControllers();
+                  }
+
+                  public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+                  {
+                      if (env.IsDevelopment())
+                      {
+                          app.UseDeveloperExceptionPage();
+                      }
+                      else
+                      {
+                          app.UseExceptionHandler("/Home/Error");
+                          app.UseHsts();
+                      }
+                      app.UseHttpsRedirection();
+                      app.UseRouting();
+                      app.UseAuthorization();
+                      app.UseEndpoints(endpoints =>
+                      {
+                          endpoints.MapControllers();
+                      });
+                  }
+              }
+
+              // Código con malas prácticas y código espagueti
+              public class Mobile
+              {
+                  public string Model;
+                  public string Brand;
+                  public double Price;
+                  public List<string> Features = new List<string>();
+
+                  public void PrintDetails()
+                  {
+                      Console.WriteLine($"Model: {Model}, Brand: {Brand}, Price: {Price:C}");
+                      Console.WriteLine("Features:");
+                      foreach (var feature in Features)
+                      {
+                          Console.WriteLine($"- {feature}");
+                      }
+                  }
+              }
+
+              public class StoreManager
+              {
+                  public List<Mobile> mobiles = new List<Mobile>();
+                  public void AddMobile(string model, string brand, double price, List<string> features)
+                  {
+                      var mobile = new Mobile();
+                      mobile.Model = model;
+                      mobile.Brand = brand;
+                      mobile.Price = price;
+                      mobile.Features = features;
+                      mobiles.Add(mobile);
+                      mobile.PrintDetails();
+                  }
+
+                  public void PrintAllMobiles()
+                  {
+                      foreach (var mobile in mobiles)
+                      {
+                          mobile.PrintDetails();
+                      }
+                  }
+
+                  // Método largo y complejo sin modularizar
+                  public void ProcessSale(string model, int quantity)
+                  {
+                      Mobile mobile = null;
+                      foreach (var m in mobiles)
+                      {
+                          if (m.Model == model)
+                          {
+                              mobile = m;
+                              break;
+                          }
+                      }
+                      if (mobile != null)
+                      {
+                          Console.WriteLine($"Processing sale for {quantity} units of {mobile.Model}");
+                          // Código adicional para procesar la venta...
+                      }
+                      else
+                      {
+                          Console.WriteLine("Mobile not found");
+                      }
+                  }
+              }
+
+              // Clase con responsabilidades mixtas (violación del principio de responsabilidad única)
+              public class InventoryAndBilling
+              {
+                  private List<Mobile> inventory = new List<Mobile>();
+                  public void AddToInventory(Mobile mobile)
+                  {
+                      inventory.Add(mobile);
+                  }
+
+                  public void GenerateBill(Mobile mobile, int quantity)
+                  {
+                      double total = mobile.Price * quantity;
+                      Console.WriteLine($"Bill: {mobile.Model} x{quantity} = {total:C}");
+                  }
+              }
+
+              // Código no reutilizable y acoplado
+              public class Promotion
+              {
+                  public void ApplyDiscount(Mobile mobile)
+                  {
+                      if (mobile.Brand == "BrandX")
+                      {
+                          mobile.Price *= 0.9;
+                          Console.WriteLine($"Discount applied to {mobile.Model}. New price: {mobile.Price:C}");
+                      }
+                      else if (mobile.Brand == "BrandY")
+                      {
+                          mobile.Price *= 0.85;
+                          Console.WriteLine($"Discount applied to {mobile.Model}. New price: {mobile.Price:C}");
+                      }
+                      else
+                      {
+                          Console.WriteLine("No discount available for this brand.");
+                      }
+                  }
+              }
+          }
+
+    - name: Construir la aplicación de tienda de celulares
+      command: dotnet build /home/ubuntu/mobile_store_app/mobile_store_app.csproj
+      args:
+        chdir: /home/ubuntu/mobile_store_app
+
+    - name: Ejecutar la aplicación
+      command: dotnet run --urls "http://0.0.0.0:5000"
+      args:
+        chdir: /home/ubuntu/mobile_store_app
+      async: 10  # Ejecutar el comando de forma asíncrona
+      poll: 0  # No esperar la finalización del comando
