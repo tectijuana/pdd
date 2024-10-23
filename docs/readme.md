@@ -68,7 +68,7 @@ Los patrones de diseño son soluciones probadas y reutilizables para problemas c
   - 
  <img width="816" alt="pddbook1" src="https://github.com/user-attachments/assets/1729ea4d-47bf-4c28-aeed-effe8b32510c">
 
-![](<img width="816" alt="pddbook1" src="https://github.com/user-attachments/assets/bf960854-b3f3-402e-8016-b9b739d8ac6f">) descargar via [https://drive.google.com/drive/folders/1MQorL6ILLxfppjf9GmCwYIfeJVHjgwx-?](https://drive.google.com/drive/folders/1MQorL6ILLxfppjf9GmCwYIfeJVHjgwx-?usp=share_link) usp=share_link (Varios)
+![](<img width="816" alt="pddbook1" src="https://github.com/user-attachments/assets/bf960854-b3f3-402e-8016-b9b739d8ac6f">) descargar via [https://drive.google.com/drive/folders/1MQorL6ILLxfppjf9GmCwYIfeJVHjgwx-?](https://drive.google.com/drive/folders/1MQorL6ILLxfppjf9GmCwYIfeJVHjgwx-?usp=share_link)  (Varios)
 
 - **EDITOR EN LINEA**: https://dotnetfiddle.net/# recomendable.
 
