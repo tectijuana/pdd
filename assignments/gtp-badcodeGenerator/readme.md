@@ -8,4 +8,9 @@ El objetivo de este proyecto es desafiar a los estudiantes a identificar y trans
 
 Acceder al GTP via inviatación.
 
+
+
+(Link se esta validando por OpenAI, proximamente)
+
+Explorar GTP: BadCode por Rene Solis
 https://chatgpt.com/g/g-7LNf24dNw-badcode-generator-refactoring-gof-quiz
