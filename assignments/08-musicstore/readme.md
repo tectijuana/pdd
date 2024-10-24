@@ -1,4 +1,5 @@
 
+<img width="851" alt="Screenshot 2024-10-24 at 8 18 15 a m" src="https://github.com/user-attachments/assets/d94ad235-0f81-4aee-b148-4b7fe3a5a02d">
 
 ### Problema de Código Defectuoso para Resolver con Patrones de Diseño GoF
 
@@ -28,7 +29,8 @@ public class Piano
 }
 
 public class MusicStore
-{
+{<img width="1337" alt="Screenshot 2024-10-24 at 4 58 29 p m" src="https://github.com/user-attachments/assets/743e8f40-68f9-40d1-9616-a26a3c136e23">
+
     public void PlayInstrument(string instrumentType)
     {
         if (instrumentType == "Guitar")
