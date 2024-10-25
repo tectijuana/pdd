@@ -78,4 +78,3 @@ public class MusicStore
 ### Siguiente Paso:
 Se espera que el estudiante aplique el **Patrón Factory Method** o **Abstract Factory** para abordar estos problemas. La clase `MusicStore` solo debería interactuar con una interfaz común (por ejemplo, `IInstrument`), y la creación de los objetos específicos debe delegarse a una clase de fábrica.
 
-Si quieres más orientación sobre cómo empezar o necesitas diagramas UML para representar esta solución, dímelo. También puedo generar el código corregido en C# usando .NET 8.
