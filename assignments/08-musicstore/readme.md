@@ -29,8 +29,6 @@ public class Piano
 }
 
 public class MusicStore
-{<img width="1337" alt="Screenshot 2024-10-24 at 4 58 29 p m" src="https://github.com/user-attachments/assets/743e8f40-68f9-40d1-9616-a26a3c136e23">
-
     public void PlayInstrument(string instrumentType)
     {
         if (instrumentType == "Guitar")
