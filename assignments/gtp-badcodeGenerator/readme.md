@@ -16,11 +16,19 @@ Explorar GTP: BadCode Generator por Rene Solis
 
 https://chatgpt.com/g/g-7LNf24dNw-badcode-generator-refactoring-gof-quiz
 
+Opción 1: es para CSharp
+Numero 2: para Python
+Puede Ud. pedir el lenguaje a trabajar como Java
+
 Actualizacion: Se corrige que no de respuestas sino tips de micro codigo para orientarlos.
 
 
 Para trabajar en linea es via:
  1. DotNet Fiddle: http://dotnetefiddle.com
  2. Python Fiddle: http://python-fiddle.com
- 3. Otros lenguajes vian compiladores en linea diversos.
+ 3. [Otros lenguajes vian compiladores en linea diversos.](https://python-fiddle.com/tools/markdown)
+ 4. Gist de GitHub con nombre de archivo exensión .MD logra aceptar imagenes en los bloques inferiores de su propuesta.
+
+Gracias por su tiempo y atenciones.
+
     
