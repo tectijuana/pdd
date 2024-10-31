@@ -12,8 +12,11 @@ Acceder al GTP via inviatación.
 
 (Link se esta validando por OpenAI, proximamente)
 
-Explorar GTP: BadCode por Rene Solis
+Explorar GTP: BadCode Generator por Rene Solis
+
 https://chatgpt.com/g/g-7LNf24dNw-badcode-generator-refactoring-gof-quiz
+
+Actualizacion: Se corrige que no de respuestas sino tips de micro codigo para orientarlos.
 
 
 Para trabajar en linea es via:
