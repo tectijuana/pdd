@@ -14,3 +14,10 @@ Acceder al GTP via inviatación.
 
 Explorar GTP: BadCode por Rene Solis
 https://chatgpt.com/g/g-7LNf24dNw-badcode-generator-refactoring-gof-quiz
+
+
+Para trabajar en linea es via:
+ 1. DotNet Fiddle: http://dotnetefiddle.com
+ 2. Python Fiddle: http://python-fiddle.com
+ 3. Otros lenguajes vian compiladores en linea diversos.
+    
