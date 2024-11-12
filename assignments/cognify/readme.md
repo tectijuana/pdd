@@ -1,7 +1,7 @@
 
-<img width="997" alt="Screenshot 2024-11-11 at 3 57 05 p m" src="https://gist.github.com/user-attachments/assets/9359f048-a667-4901-a5ff-0d07da80f1d0">
+<img width="997" alt="Screenshot 2024-11-11 at 3 57 05 p m" src="https://github.com/user-attachments/assets/80318fd5-2197-497e-8832-36644ea2f40a">
 
-
+Video:  https://youtu.be/YFUv4_lCBLY?si=JkYeOV-8IU6GrJbX
 
 # Proyecto Cognify: Transformación de la Rehabilitación Criminal
 
