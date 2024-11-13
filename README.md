@@ -6,6 +6,9 @@
 
 # Bienvenida al Curso de Patrones de Diseño
 
+Link Grupos: whazappweb
+https://whatsapp.com/channel/0029Vaeb4bf8aKvByZj8U91h
+
 ## Departamento de Sistemas y Computación
 ### Tecnológico Nacional de México, Instituto Tecnológico de Tijuana
 
