@@ -1,3 +1,3 @@
-Ver los encabezados para los factores.
+Fin de curso
 
-Se contemplo el gran promedio final como factor para examen de unica oportunidad
+Aplicados examenes de unica oportunidad
