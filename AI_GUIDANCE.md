@@ -1,4 +1,4 @@
----
+
 ## AI_GUIDANCE.md (Uso responsable de IA)
 
 # Guía de uso responsable de Inteligencia Artificial en el curso
