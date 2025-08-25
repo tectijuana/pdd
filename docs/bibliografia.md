@@ -1,4 +1,4 @@
-```markdown
+
 # Bibliografía Recomendada
 
 
@@ -7,4 +7,4 @@
 3. Gamma, E. et al. (1994). *Design Patterns: Elements of Reusable Object-Oriented Software*.
 4. Richards, M. (2015). *Software Architecture Patterns*. O'Reilly.
 5. Soshin, A. (2018). *Design Patterns with Kotlin*. Packt.
-```
+
