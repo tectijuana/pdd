@@ -54,7 +54,7 @@ El curso se divide en tres módulos principales, organizados por categorías de 
 📄 README.md             → Presentación general del curso
 📄 CONTRIBUTING.md       → Guía para contribuir al repositorio
 📄 LICENSE               → Licencia de uso abierto
-```
+
 💻 Requisitos previos
 
 Conocimientos básicos de programación orientada a objetos
