@@ -54,6 +54,7 @@ El curso se divide en tres módulos principales, organizados por categorías de 
 📄 README.md             → Presentación general del curso
 📄 CONTRIBUTING.md       → Guía para contribuir al repositorio
 📄 LICENSE               → Licencia de uso abierto
+📄 AI_GUIDANCE.md        → Uso academico de la ChatGPT y variantes LLM
 
 💻 Requisitos previos
 
@@ -86,6 +87,9 @@ Freeman, E., & Sierra, K. (2004). Head First Design Patterns. O'Reilly.
 Richards, M. (2015). Software Architecture Patterns. O'Reilly.
 
 Soshin, A. (2018). Design Patterns with Kotlin. Packt.
+
+- Uso reponsable de ChatGPT y otros LLM  Si deseas colaborar, lee la [Guía de uso ChatGPT y otros LLM](./AI_GUIDANCE.md)
+  
 
 🤝 Contribuciones
 
