@@ -1,0 +1,9 @@
+# Archivos comunes a ignorar
+*.class
+*.log
+*.tmp
+*.DS_Store
+node_modules/
+.idea/
+.vscode/
+.env
