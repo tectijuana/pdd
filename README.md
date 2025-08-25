@@ -54,3 +54,39 @@ El curso se divide en tres módulos principales, organizados por categorías de 
 📄 README.md             → Presentación general del curso
 📄 CONTRIBUTING.md       → Guía para contribuir al repositorio
 📄 LICENSE               → Licencia de uso abierto
+
+💻 Requisitos previos
+
+Conocimientos básicos de programación orientada a objetos
+
+Familiaridad con UML (diagrama de clases y de secuencia)
+
+Capacidad de análisis, abstracción y resolución de problemas
+
+🚀 Metodología
+
+Aprendizaje activo: diagramas, codificación y proyectos prácticos.
+
+Evaluación continua: rúbricas para esquemas y listas de cotejo de código.
+
+Proyecto integrador: aplicación progresiva de patrones en un sistema realista.
+
+🛠 Herramientas sugeridas
+
+Lenguajes: Java, C#, PHP, Kotlin, Python
+
+UML: Dia, Umbrello, Microsoft Visio, Enterprise Architect
+
+📚 Bibliografía recomendada
+
+Blancarte, O. J. (2016). Introducción a los patrones de diseño. Un enfoque práctico.
+
+Freeman, E., & Sierra, K. (2004). Head First Design Patterns. O'Reilly.
+
+Richards, M. (2015). Software Architecture Patterns. O'Reilly.
+
+Soshin, A. (2018). Design Patterns with Kotlin. Packt.
+
+🤝 Contribuciones
+
+Este es un proyecto educativo abierto. Si deseas mejorar el contenido, corregir ejemplos o traducir material, consulta la guía CONTRIBUTING.md
