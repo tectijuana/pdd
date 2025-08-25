@@ -1,6 +1,6 @@
 # Curso: Patrones de Diseño en Ingeniería de Software
 
-Repositorio oficial del curso **Patrones de Diseño**, impartido en la carrera de Ingeniería en Informática. Aquí encontrarás todos los recursos necesarios para aprender a identificar, implementar y aplicar patrones de diseño en el desarrollo de software robusto, escalable y mantenible.
+Repositorio oficial del curso **Patrones de Diseño**, impartido en la carrera de Ingeniería en Sistemas Computacionales. Aquí encontrarás todos los recursos necesarios para aprender a identificar, implementar y aplicar patrones de diseño en el desarrollo de software robusto, escalable y mantenible.
 
 ## 🧠 Objetivos del curso
 
