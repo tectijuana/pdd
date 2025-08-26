@@ -55,8 +55,8 @@ El curso se divide en tres módulos principales, organizados por categorías de 
 📄 CONTRIBUTING.md       → Guía para contribuir al repositorio
 📄 LICENSE               → Licencia de uso abierto
 📄 AI_GUIDANCE.md        → Uso academico de la ChatGPT y variantes LLM
-
-💻 Requisitos previos
+```
+## 💻 Requisitos previos
 
 Conocimientos básicos de programación orientada a objetos
 
@@ -64,7 +64,7 @@ Familiaridad con UML (diagrama de clases y de secuencia)
 
 Capacidad de análisis, abstracción y resolución de problemas
 
-🚀 Metodología
+## 🚀 Metodología
 
 Aprendizaje activo: diagramas, codificación y proyectos prácticos.
 
@@ -72,13 +72,13 @@ Evaluación continua: rúbricas para esquemas y listas de cotejo de código.
 
 Proyecto integrador: aplicación progresiva de patrones en un sistema realista.
 
-🛠 Herramientas sugeridas
+## 🛠 Herramientas sugeridas
 
 Lenguajes: Java, C#, PHP, Kotlin, Python
 
 UML: Dia, Umbrello, Microsoft Visio, Enterprise Architect
 
-📚 Bibliografía recomendada
+## 📚 Bibliografía recomendada
 
 Blancarte, O. J. (2016). Introducción a los patrones de diseño. Un enfoque práctico.
 
