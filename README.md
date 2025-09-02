@@ -46,6 +46,7 @@ El curso se divide en tres módulos principales, organizados por categorías de 
 ## 📘 Contenidos del repositorio
 
 ```plaintext
+📁 units/                → Bloques, temas
 📁 docs/                 → Material extendido, apuntes y lecturas recomendadas
 📁 ejemplos/             → Implementaciones en diferentes lenguajes (Java, C#, PHP, Kotlin)
 📁 diagramas/            → Diagramas UML de clases y secuencia por patrón
