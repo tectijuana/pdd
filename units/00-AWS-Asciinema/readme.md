@@ -7,7 +7,7 @@
 ---
 
 
-# Práctica 0: Creación instancia Amazon Web Servicec EC2, gestion básica de la instancia AWS  con grabación de consola del estudiante con Asciinema  2 streams.
+# Práctica 0: Creación instancia Amazon Web Servicec EC2, gestion básica de la instancia AWS  con grabación de consola del estudiante con Asciinema.
 
 **Objetivo:**  
 El estudiante será capaz de crear una instancia EC2 en AWS Academy, instalar Asciinema, grabar una sesión de actualización del sistema operativo con uso comandos básicas de Linux, y finalmente compartir el enlace de la grabación.
@@ -75,16 +75,11 @@ El estudiante será capaz de crear una instancia EC2 en AWS Academy, instalar As
 - Por consecuencia si el docente revisa a los 7 dias con 1 segundo, su trabajo estarà borraro y sera un cero de calificación, **no dejar esta indicacion a la ligera**
 - Sea eficiente de esta indicación, no hay 2das oportunidades debe practicarlo y dominar la base del curso.
 
+# RUBRICA
+
+<img width="1466" height="883" alt="Screenshot 2025-09-02 at 5 42 40 p m" src="https://github.com/user-attachments/assets/01c4ab4a-4fd6-4872-b9cb-63f738e312f1" />
 
 
---- 
-
-
-**RUBRICA UNIFICADA![Screenshot 2025-02-12 at 2 23 43 p m](https://github.com/user-attachments/assets/2417cb93-15a0-4ba6-8ea3-da909b839196)
-**  
-
-# NOTA:
-![Screenshot 2025-02-13 at 2 38 37 p m](https://github.com/user-attachments/assets/f627bc27-337b-47f0-8c50-7e57f47ed97d)
 
 
 
