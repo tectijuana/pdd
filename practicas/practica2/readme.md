@@ -7,6 +7,8 @@
 
 Configurar una instancia **Ubuntu Server en AWS EC2** desde la **Consola web** y preparar el entorno con **7 lenguajes populares (ranking 2025)**, verificando su instalación con un **despliegue de "Hola Mundo"** por cada lenguaje. La evidencia de todo el flujo se registrará y compartirá mediante **Asciinema**.
 
+Es aceptable realice su VS Code con la extensión SSH para la conexión remota, de trabajar en este ambiente, por ser scripts sencillos los estamos apicando directo en la WebConsole de AWS.
+
 ## Unidad / Tema
 
 **Curso:** Patrones de Diseño (TIB-2006)
