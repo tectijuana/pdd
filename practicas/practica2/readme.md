@@ -1,3 +1,6 @@
+
+![IMG_9211](https://github.com/user-attachments/assets/a209310c-d354-454f-94b6-625662f3f389)
+
 # Práctica 2: Instalación de lenguajes en AWS Ubuntu EC2 y despliegue de *Hola Mundo*
 
 > 📚 Esta práctica sigue los lineamientos de uso responsable de IA del TecNM – Campus TecTijuana. Consulta la guía oficial aquí:
