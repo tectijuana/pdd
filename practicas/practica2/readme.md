@@ -38,7 +38,7 @@ Basado en índices/encuestas 2025 (TIOBE y Stack Overflow):
 6. **JavaScript (Node.js)**
 7. **Go (Golang)**
 
-> Nota: Se incluyen 7 lenguajes populares a 2025. Puedes agregar **Rust** o **PHP** como extra opcional si el tiempo lo permite.
+> Nota: Se incluyen 7 lenguajes populares a 2025. Puedes agregar **PHP** como extra opcional si el tiempo lo permite.
 
 ---
 
