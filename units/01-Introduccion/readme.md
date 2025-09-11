@@ -41,3 +41,22 @@ Cada bina se divide en:
 ## Bina 9 – Prototype
 - 🎓 Marco Teórico: **JOCELIN MARIBEL BERNAL**
 - 💻 Práctica: **(Apoyo adicional)**
+
+# 📊 Rúbrica de Evaluación – Exposiciones de Patrones de Diseño
+
+| Criterio                        | Excelente (100%)                                                                 | Satisfactorio (80%)                                                   | Insuficiente (50%)                                         | Nulo (0%)                 |
+|---------------------------------|----------------------------------------------------------------------------------|-----------------------------------------------------------------------|------------------------------------------------------------|---------------------------|
+| **Marco Teórico (50%)**         | Explica con claridad el patrón asignado, define conceptos clave, menciona ventajas, desventajas y aplicaciones reales con ejemplos. | Explica el patrón con algunos detalles omitidos, ejemplos poco claros. | Presenta definiciones incompletas, confusas o sin ejemplos. | No presenta el marco teórico. |
+| **Práctica (30%)**              | Ejemplo funcional en UML o código; demuestra aplicación correcta y explica paso a paso. | Ejemplo presentado con errores menores o explicación parcial.          | Ejemplo incompleto o con errores que impiden su comprensión. | No presenta la práctica. |
+| **Trabajo en Equipo (10%)**     | Evidente coordinación entre ambos integrantes; turnos equilibrados y complementarios. | Coordinación mínima, con participación desigual.                       | Presentación desorganizada, uno de los integrantes domina sin apoyo. | No hay coordinación. |
+| **Comunicación y Claridad (10%)** | Presentación fluida, buen uso de lenguaje técnico, contacto visual y manejo del tiempo. | Presentación entendible, aunque con fallas de ritmo o lenguaje técnico limitado. | Presentación poco clara, con exceso de lectura literal.      | No se comunica la información. |
+
+---
+
+## 🔑 Ponderación
+- Marco Teórico: **50 puntos**
+- Práctica: **30 puntos**
+- Trabajo en Equipo: **10 puntos**
+- Comunicación y Claridad: **10 puntos**
+- **Total: 100 puntos**
+
