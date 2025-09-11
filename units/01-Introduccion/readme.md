@@ -5,6 +5,8 @@ Cada bina se divide en:
 - 💻 **Práctica**: Presenta un ejemplo en UML o código, acompañado de explicación.
 
 ---
+WheelOfNames:   https://wheelofnames.com/ybj-gsn
+----
 
 ## Bina 1 – Patrones Creacionales (Builder)
 - 🎓 Marco Teórico: **ABRAHAM ESTRADA SOLANO**
