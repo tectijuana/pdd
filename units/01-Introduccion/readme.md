@@ -1,3 +1,8 @@
+
+![IMG_9202](https://github.com/user-attachments/assets/f09bc19b-bf5c-4522-9201-06fafe92a636)
+
+
+
 # Asignación de Exposiciones – Patrones de Diseño para expsicion.
 
 Cada bina se divide en:
