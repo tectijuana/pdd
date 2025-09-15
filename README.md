@@ -75,9 +75,9 @@ Proyecto integrador: aplicación progresiva de patrones en un sistema realista.
 
 ## 🛠 Herramientas sugeridas
 
-Lenguajes: Java, C#, PHP, Kotlin, Python
+Lenguajes: Java, C#, PHP, Rust, Python, Go
 
-UML: Dia, Umbrello, Microsoft Visio, Enterprise Architect
+UML: Dia, Umbrello, Visual Paradigm, Enterprise Architect
 
 ## 📚 Bibliografía recomendada
 
@@ -87,7 +87,9 @@ Freeman, E., & Sierra, K. (2004). Head First Design Patterns. O'Reilly.
 
 Richards, M. (2015). Software Architecture Patterns. O'Reilly.
 
-Soshin, A. (2018). Design Patterns with Kotlin. Packt.
+Catalogo de PDD:
+  https://refactoring.guru/es/design-patterns/catalog
+
 
 - Uso reponsable de ChatGPT y otros LLM  Si deseas colaborar, lee la [Guía de uso ChatGPT y otros LLM](./AI_GUIDANCE.md)
   
