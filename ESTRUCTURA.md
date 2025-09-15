@@ -1,4 +1,4 @@
-``plaintext
+```plaintext
 patrones-de-diseno/
 ├── README.md                    ← Presentación del curso
 ├── CONTRIBUTING.md             ← Guía para colaboradores
