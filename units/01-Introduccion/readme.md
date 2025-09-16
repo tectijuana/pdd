@@ -42,7 +42,7 @@ WheelOfNames:   https://wheelofnames.com/ybj-gsn
 - 💻 Práctica: **ISAI MENDOZA VILCHIS**
 
 ## Bina 8 – Facade
-- 🎓 Marco Teórico: **JESUS ANTONIO TRIANA**
+- 🎓 Marco Teórico: ****
 - 💻 Práctica: **JESUS ENRIQUE BARBOZA NORIEGA**
 
 ## Bina 9 – Prototype
