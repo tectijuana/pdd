@@ -15,7 +15,7 @@ WheelOfNames:   https://wheelofnames.com/ybj-gsn
 
 ## Bina 1 – Patrones Creacionales (Builder)
 - 🎓 Marco Teórico: **ABRAHAM ESTRADA SOLANO**
-- 💻 Práctica: **CRUZ EDUARDO VALADEZ**
+- 💻 Práctica: ****
 
 ## Bina 2 – Patrones Estructurales (Adapter / Composite)
 - 🎓 Marco Teórico: **ALEJANDRO ESPINOZA HUERTA**
