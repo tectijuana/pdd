@@ -28,7 +28,7 @@ WheelOfNames:   https://wheelofnames.com/ybj-gsn
 
 ## Bina 4 – Factory Method
 - 🎓 Marco Teórico: **BLANCA YESSENIA MARTINEZ**
-- 💻 Práctica: **BRAYAN OCTAVIO ARELLANES**
+- 💻 Práctica: ****
 
 ## Bina 5 – Singleton
 - 🎓 Marco Teórico: **DANIEL OMAR GONZALEZ MARTINEZ**
