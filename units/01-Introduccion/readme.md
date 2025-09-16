@@ -17,9 +17,10 @@ WheelOfNames:   https://wheelofnames.com/ybj-gsn
 - 🎓 Marco Teórico: **ABRAHAM ESTRADA SOLANO**
 - 💻 Práctica: **RODRIGO SOTELO RUBIO** (PRESENTE)
 
-## Bina 2 – Patrones Estructurales (Adapter / Composite)
+## Bina 2 – Patrones Estructurales (Adapter)
 - 🎓 Marco Teórico: **ALEJANDRO ESPINOZA HUERTA**
 - 💻 Práctica: **ANGEL LUIS CORTES LOPEZ**
+-  Composite **KEVIN ARGENIS ROJAS GARCIA**
 
 ## Bina 3 – Patrones de Comportamiento (Observer / State)
 - 🎓 Marco Teórico: **ANTONIO ALVARADO CARDONA**
