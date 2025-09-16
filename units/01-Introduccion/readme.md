@@ -47,7 +47,7 @@ WheelOfNames:   https://wheelofnames.com/ybj-gsn
 
 ## Bina 9 – Prototype
 - 🎓 Marco Teórico: **JOCELIN MARIBEL BERNAL**
-- 💻 Práctica: **(Apoyo adicional)**
+- 💻 Práctica: **JOEL CUEVAS ESTRADA**
 
 # 📊 Rúbrica de Evaluación – Exposiciones de Patrones de Diseño
 
