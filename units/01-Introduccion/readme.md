@@ -23,7 +23,7 @@ WheelOfNames:   https://wheelofnames.com/ybj-gsn
 
 ## Bina 3 – Patrones de Comportamiento (Observer / State)
 - 🎓 Marco Teórico: **ANTONIO ALVARADO CARDONA**
-- 💻 Práctica: **ANTONIO DE JESUS GALVAN GODINEZ**
+- 💻 Práctica: **LEONEL MIRANDA**
 
 ## Bina 4 – Factory Method
 - 🎓 Marco Teórico: **BLANCA YESSENIA MARTINEZ**
