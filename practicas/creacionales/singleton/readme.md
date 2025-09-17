@@ -1,4 +1,6 @@
 
+https://sdmntprcentralus.oaiusercontent.com/files/00000000-a68c-61f5-b28c-5b6a153c4923/raw?se=2025-09-18T00%3A45%3A07Z&sp=r&sv=2024-08-04&sr=b&scid=f9a8c4b1-fb6a-529c-9fe7-d9b20bf96c33&skoid=e9d2f8b1-028a-4cff-8eb1-d0e66fbefcca&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-17T17%3A37%3A32Z&ske=2025-09-18T17%3A37%3A32Z&sks=b&skv=2024-08-04&sig=hEDo2%2BCErkDf0CEvplekbOPBfMef3VOgewNQ9Ez5cRU%3D<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/c3a906c6-4265-4741-be19-2d34ee5b749a" />
+
 
 ## ☕ Práctica: Refactorización con Singleton en una Cafetería
 
