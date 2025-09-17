@@ -173,4 +173,112 @@ namespace CafeteriaSingleton
 Refactoriza `RegistroPedidos` aplicando el patrón **Singleton (versión thread-safe con lazy initialization)** para que **todos los baristas usen la misma instancia compartida**.
 
 ¿Listo para intentarlo?
-¿Quieres que también te sugiera pasos guía para la refactorización?
+
+---
+
+Perfecto. Aquí tienes una **guía paso a paso para refactorizar el código de la cafetería aplicando el patrón Singleton**. Estos pasos están diseñados para que tú mismo implementes la solución, guiado por los principios GoF.
+
+---
+
+## 🛠️ Guía de Refactorización: Aplicando Singleton a `RegistroPedidos`
+
+---
+
+### 1️⃣ **Detecta el problema**
+
+Hazte estas preguntas:
+
+* ¿Por qué hay múltiples instancias de `RegistroPedidos`?
+* ¿Qué pasa con los pedidos registrados por diferentes baristas?
+* ¿Cuál sería la consecuencia si varios hilos acceden a este objeto?
+
+---
+
+### 2️⃣ **Haz el constructor privado**
+
+Para evitar que otros creen nuevas instancias directamente:
+
+```csharp
+private RegistroPedidos() { }
+```
+
+---
+
+### 3️⃣ **Declara una instancia estática privada**
+
+Esto será el acceso central:
+
+```csharp
+private static RegistroPedidos _instancia;
+```
+
+---
+
+### 4️⃣ **Agrega un mecanismo para controlar el acceso (Lazy y Thread-safe)**
+
+Usa un candado (`lock`) para evitar problemas en entornos multihilo:
+
+```csharp
+private static readonly object _candado = new object();
+```
+
+---
+
+### 5️⃣ **Crea un método público estático para obtener la instancia**
+
+Este método será el **único punto de acceso**:
+
+```csharp
+public static RegistroPedidos ObtenerInstancia()
+{
+    lock (_candado)
+    {
+        if (_instancia == null)
+        {
+            _instancia = new RegistroPedidos();
+        }
+        return _instancia;
+    }
+}
+```
+
+---
+
+### 6️⃣ **Reemplaza todas las creaciones de instancia directas**
+
+En `Main()`, cambia de:
+
+```csharp
+var registro = new RegistroPedidos();
+```
+
+a:
+
+```csharp
+var registro = RegistroPedidos.ObtenerInstancia();
+```
+
+---
+
+### 7️⃣ **Verifica si el estado ahora es compartido**
+
+Al ejecutar `MostrarPedidos()` desde diferentes "baristas", todos deben ver la **misma lista unificada**.
+
+---
+
+### 8️⃣ **Bonus: Protege el estado interno**
+
+Considera si necesitas:
+
+* Validar duplicados.
+* Agregar métodos para borrar, reiniciar o exportar pedidos.
+* Testear usando una interfaz o simulacro (mock).
+
+---
+
+### 9️⃣ **Reflexiona**
+
+* ¿Qué ventajas trajo el Singleton?
+* ¿Hubo alguna limitación?
+* ¿Sería mejor usar Dependency Injection en lugar de Singleton?
+
