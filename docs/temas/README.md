@@ -57,15 +57,16 @@ Este repositorio contiene los temas asignados a cada estudiante del curso, enfoc
 - [ ] Presentación clara del tema asignado (20%)
 - [ ] Uso de ejemplos o comparaciones prácticas (20%)
 - [ ] Relación directa con refactorización, calidad, o patrones (20%)
-- [ ] Originalidad, análisis y reflexión crítica (20%)
-- [ ] Si se usaron LLMs, se debe incluir un `ANEXO.md` con los prompts usados y una reflexión personal sobre su uso ético (20%)
+- [ ] Originalidad, análisis y reflexión crítica enfocado a este curso de PDD (20%)
+- [ ] Si se usaron LLMs, se debe incluir un `ANEXO.md` con los prompts usados y una reflexión personal sobre su uso ético, y/o incluir citas APA de los libros, articulos y depositarlos en su directorio para la consultra del docente, dar numero de página(s) para guiarlo, en ingles de preferencia (20%)
 
 ## Requisitos
-1. Crear una rama con tu número de control.
-2. Crear una carpeta con tu nombre completo.
+1. Clonar el repositorio en su cuenta GitHub.
+2. Crear una carpeta con tu nombre del tema para la indexación dentro de /tectijuana/docs/temas/_______/readme.md
 3. Dentro de la carpeta, colocar:
-   - Tu presentación en Markdown (`TEMA.md`).
-   - (Opcional) Código fuente, referencias o imágenes si aplica.
+   - Tu presentación en Markdown (`readme.md`).
+   - (Opcional) Código fuente con sus extensiones independientes, referencias PDF de articulos o imágenes si aplica.
+   - Noticias en PDF, Articulos y eBooks agregarlos a su directorio del tema
    - `ANEXO.md` si utilizaste ChatGPT u otro LLM.
 4. Enviar un Pull Request al repositorio `http://github.com/tectijuana/pdd`.
 
@@ -74,3 +75,4 @@ Está permitido utilizar herramientas de lenguaje como ChatGPT, siempre que:
 - Se reconozca explícitamente en un `ANEXO.md` los prompts utilizados.
 - Se incluya una reflexión personal crítica sobre su utilidad, limitaciones y valor añadido.
 - No se haga pasar por propio lo generado sin revisión crítica.
+- No tiene nada que ver con CITAS APA ese es contexto clasico de investigación y tampo habra descuento si no usa los LLM.
