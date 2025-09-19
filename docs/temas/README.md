@@ -67,7 +67,7 @@ Este repositorio contiene los temas asignados a cada estudiante del curso, enfoc
    - Tu presentación en Markdown (`readme.md`).
    - (Opcional) Código fuente con sus extensiones independientes, referencias PDF de articulos o imágenes si aplica.
    - Noticias en PDF, Articulos y eBooks agregarlos a su directorio del tema
-   - `ANEXO.md` si utilizaste ChatGPT u otro LLM.
+   - `ANEXO.md` si utilizaste ChatGPT u otro LLM (prompts de recuperación profesionales y su reflexión del material personal).
 4. Enviar un Pull Request al repositorio `http://github.com/tectijuana/pdd`.
 
 ## Ética y Uso de LLMs
