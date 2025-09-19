@@ -48,6 +48,30 @@ El uso de estas herramientas es un pilar fundamental para mejorar la **calidad d
 
 ---
 
+## 4. Ejemplo Práctico: Refactorización "Extraer Método"
+Ejemplo en Java de un problema común en el código: un cálculo se repite en dos métodos diferentes. El objetivo de la refactorización es "extraer" este cálculo a un nuevo método reutilizable.
+```java
+public class CarritoDeCompras {
+
+    public double procesarCompra() {
+        double precioBase = 150.0;
+        double impuesto = precioBase * 0.16;
+        double descuento = precioBase > 100 ? precioBase * 0.10 : 0;
+        double precioFinal = precioBase + impuesto - descuento;
+        return precioFinal;
+    }
+
+    public double procesarCompraConEnvioGratis() {
+        double precioBase = 150.0;
+        double impuesto = precioBase * 0.16;
+        double descuento = precioBase > 100 ? precioBase * 0.10 : 0;
+        double precioFinal = precioBase + impuesto - descuento;
+        return precioFinal;
+    }
+}
+```
+---
+
 ## 5. Reflexión Crítica
 
 La elección entre estas herramientas refleja una decisión filosófica sobre el desarrollo. **JetBrains** ofrece un enfoque "de caja", donde la potencia y la seguridad son máximas, a un costo monetario y de recursos. **Visual Studio Code** representa la flexibilidad y la personalización, ideal para quienes construyen su propio entorno de trabajo. **Eclipse**, por su parte, es la opción robusta y probada para el desarrollo empresarial en Java, respaldada por una comunidad de larga trayectoria.
