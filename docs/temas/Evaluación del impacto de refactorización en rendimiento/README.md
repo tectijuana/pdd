@@ -208,23 +208,12 @@ El script mide:
 
 
 
-## 5. Resultados en Python
+### 5. Resultados en Python
 
-
-
-
-
-| Variante         | Tiempo medio (s) | Desv. (s) | Pico Mem (KB) |
-
-
-|------------------|-----------------:|----------:|--------------:|
-
-
-| baseline_concat  |          1.254321 |   0.045612 |       3021.45 |
-
-
-| refactor_join    |          0.087654 |   0.003781 |        842.32 |
-
+| Variante       | Tiempo medio (s) | Desv. (s)  | Pico Mem (KB) |
+|----------------|------------------|------------|---------------|
+| baseline_concat| 1.254321         | 0.045612   | 3021.45       |
+| refactor_join  | 0.087654         | 0.003781   | 842.32        |
 
 
 
