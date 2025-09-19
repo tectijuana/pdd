@@ -16,7 +16,9 @@
 -   "estos son mis requisitos agrega lo que hace falta de la investigacion"
 -   "agrega mas informacion y ponlo en un readme.md"
 -   "puedes darmelo en codigo markdawn"
-
+-   "dame un ejemplo"
+  
+    
 **Reflexión sobre el uso ético y personal:**
 La inteligencia artificial (IA) fue utilizada como una herramienta de asistencia y no como un reemplazo del trabajo intelectual. Mi función fue la de un arquitecto y editor, proporcionando el contexto inicial, revisando la información generada y asegurando que cumpliera con todos los requisitos de la rúbrica.
 
