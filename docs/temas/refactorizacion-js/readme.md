@@ -1,3 +1,4 @@
+# Alumno: Estrada Solano Abraham 22211899
 # Refactorización de código orientado a eventos en JavaScript
 
 La refactorización es el proceso de mejorar la estructura y el diseño del código sin cambiar su funcionamiento. El objetivo es hacer que el código sea más limpio, fácil de entender y sencillo de mantener. Esto no significa añadir nuevas funciones o corregir errores, sino organizar mejor el código para que sea más eficiente y escalable.
