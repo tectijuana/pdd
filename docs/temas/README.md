@@ -1,3 +1,6 @@
+<img width="525" height="552" alt="image" src="https://github.com/user-attachments/assets/59ebe06d-abf7-4fcd-87da-d6f261e39454" />
+
+
 # Asignación de Temas - DSF-2101 SC8A - Software de Calidad, Refactorización y Patrones Emergentes
 
 Este repositorio contiene los temas asignados a cada estudiante del curso, enfocados en:
@@ -7,7 +10,7 @@ Este repositorio contiene los temas asignados a cada estudiante del curso, enfoc
 - Patrones emergentes en lenguajes no convencionales
 - Uso responsable y ético de LLMs
 
-## Tabla de Asignación
+## Tabla de Asignación de Temas
 | Nombre del Alumno | Tema Asignado |
 |-------------------|---------------|
 | ALVARADO CARDONA ANTONIO | Arquitecturas evolutivas y su relación con refactorización progresiva |
@@ -67,7 +70,7 @@ Este repositorio contiene los temas asignados a cada estudiante del curso, enfoc
    - Tu presentación en Markdown (`readme.md`).
    - (Opcional) Código fuente con sus extensiones independientes, referencias PDF de articulos o imágenes si aplica.
    - Noticias en PDF, Articulos y eBooks agregarlos a su directorio del tema
-   - `ANEXO.md` si utilizaste ChatGPT u otro LLM.
+   - `ANEXO.md` si utilizaste ChatGPT u otro LLM (prompts de recuperación profesionales y su reflexión del material personal).
 4. Enviar un Pull Request al repositorio `http://github.com/tectijuana/pdd`.
 
 ## Ética y Uso de LLMs
