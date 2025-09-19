@@ -11,28 +11,29 @@ En el área de **pruebas de software**, representa una herramienta innovadora pa
 ## ⚙️ Area de aplicacion
 
 ### 📝 Generación de Casos de Prueba
-**Prompt:**  
-> "Genera casos de prueba funcionales para un sistema de login con usuario y contraseña."<
 Genera casos de prueba a partir de requisitos, historias de usuarios o documentacion, se pueden crear prompts para generar casos de prueba de manera automatica. 
+**Prompt:**  
+> "Genera casos de prueba funcionales para un sistema de login con usuario y contraseña."
 
 ---
 
 ### 🧑‍💻 Automatización con PyTest
+Con promps bien diseñados, se pueden generar scripts en herramientas de pruebas como Selenium, Cypress, JUnit, PyTest
 **Prompt:**  
 > "Crea un test en Python usando PyTest para verificar que un formulario de registro rechaza correos sin el símbolo @."
-Con promps bien diseñados, se pueden generar scripts en herramientas de pruebas como Selenium, Cypress, JUnit, PyTest
 ---
 
 ### 🧑‍💻 Revisión de Requisitos
+Se pueden usar modelos para analizar escritos del lenguaje natural y detectar ambigüedades. Por ejemplo: datos extremos, cadenas SQL maliciosas, inputs vacios o muy largos.
 **Prompt:**  
 > "Detecta posibles inconsistencias en este documento de requisitos para una aplicación bancaria."
-Se pueden usar modelos para analizar escritos del lenguaje natural y detectar ambigüedades. Por ejemplo: datos extremos, cadenas SQL maliciosas, inputs vacios o muy largos.
+
 ---
 
 ### 🧑‍💻 Automatización de Scripts de Prueba
+Generar scripts automatizados en frameworks como Selenium, JUnit o PyTest a partir de descripciones.
 **Prompt:**  
 > "Crea un test de Selenium que valide el registro de usuarios en esta página web."
-Generar scripts automatizados en frameworks como Selenium, JUnit o PyTest a partir de descripciones.
 
 ---
 
