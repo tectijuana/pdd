@@ -1,5 +1,8 @@
 # Refactorización de código orientado a datos en Python (Pandas/Numpy)
 
+>**Mendoza Vilchis Isai**
+>**21211996**
+
 ##  Presentación clara del tema asignado
 
 La **refactorización de código orientado a datos** en Python consiste en mejorar la estructura interna del código sin cambiar su comportamiento externo. Este proceso es crucial cuando se trabaja con bibliotecas como **Pandas** y **NumPy**, que son ampliamente utilizadas en análisis de datos y cómputo numérico.
