@@ -1,3 +1,6 @@
+
+![Uploading GitHub Mascor typing.png…]()
+
 # Asignación de Temas - DSF-2101 SC8A - Software de Calidad, Refactorización y Patrones Emergentes
 
 Este repositorio contiene los temas asignados a cada estudiante del curso, enfocados en:
