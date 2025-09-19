@@ -1,6 +1,6 @@
 # Refactorización de código orientado a datos en Python (Pandas/Numpy)
 
-## 1. Presentación clara del tema asignado
+##  Presentación clara del tema asignado
 
 La **refactorización de código orientado a datos** en Python consiste en mejorar la estructura interna del código sin cambiar su comportamiento externo. Este proceso es crucial cuando se trabaja con bibliotecas como **Pandas** y **NumPy**, que son ampliamente utilizadas en análisis de datos y cómputo numérico.
 
@@ -8,7 +8,7 @@ El objetivo principal es hacer que el código sea más **legible, eficiente y ma
 
 ---
 
-## 2. Uso de ejemplos o comparaciones prácticas
+##  Uso de ejemplos o comparaciones prácticas
 
 ### Ejemplo inicial (sin refactorización)
 ```python
@@ -34,7 +34,7 @@ En el segundo ejemplo, se usan directamente los métodos de **Pandas** (`.loc` y
 
 ---
 
-## 3. Relación directa con refactorización, calidad o patrones
+##  Relación directa con refactorización, calidad o patrones
 
 La refactorización en el contexto de Pandas/NumPy está directamente ligada a la **calidad del software** porque:
 
@@ -57,24 +57,10 @@ for v in valores:
 arr = np.array([1, 2, 3, 4, 5])
 cuadrados_vec = arr**2
 ```
+##  Conclusión
 
----
+La refactorización de código orientado a datos en Python, especialmente con bibliotecas como **Pandas** y **NumPy**, es una práctica esencial para mejorar la **calidad, eficiencia y mantenibilidad** del software.  
+Al aplicar patrones como la **vectorización** y el uso de métodos integrados, los desarrolladores pueden reducir la complejidad del código, minimizar errores y trabajar de manera más colaborativa.  
 
-## 4. Originalidad, análisis y reflexión crítica (enfocado a PDD)
-
-En el curso de **PDD (Patrones de Diseño y Desarrollo)**, la refactorización con Pandas/NumPy se puede analizar bajo dos ángulos:
-
-1. **Diseño orientado a eficiencia**: usar operaciones vectorizadas no es solo una optimización, sino un patrón recurrente que prioriza la legibilidad y el rendimiento.  
-2. **Diseño para la colaboración**: equipos que trabajan con grandes volúmenes de datos se benefician al tener código más declarativo y entendible.  
-3. **Crítica**: muchas veces los estudiantes aprenden a programar con bucles y estructuras básicas, pero no se fomenta desde el inicio el pensamiento vectorizado y orientado a datos, lo que puede retrasar su madurez como desarrolladores de software.  
-
-Esto sugiere que la enseñanza debería incorporar más ejemplos de **patrones de refactorización en análisis de datos**, no solo en programación orientada a objetos.
-
----
-
-## 5. Referencias (formato APA)
-
-- McKinney, W. (2017). *Python for Data Analysis: Data Wrangling with Pandas, NumPy, and IPython*. O’Reilly Media. (pp. 45-60)  
-- Van Rossum, G., & Drake, F. L. (2009). *The Python Language Reference Manual*. Network Theory Ltd.  
-- Fowler, M. (2018). *Refactoring: Improving the Design of Existing Code*. Addison-Wesley Professional. (pp. 35-55)  
-- Oliphant, T. E. (2015). *A Guide to NumPy*. Continuum Press. (pp. 102-120)  
+En el contexto del curso de **PDD (Patrones de Diseño y Desarrollo)**, esta práctica no solo optimiza el rendimiento técnico, sino que también refleja un enfoque disciplinado hacia el diseño de software.  
+La refactorización, entonces, no es un proceso opcional, sino un componente clave en la formación de profesionales capaces de enfrentar proyectos de **gran escala** y **alta demanda de datos**, promoviendo buenas prácticas de programación y un pensamiento crítico en el desarrollo orientado a datos.
