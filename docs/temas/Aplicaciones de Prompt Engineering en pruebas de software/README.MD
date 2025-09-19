@@ -12,7 +12,7 @@ En el área de **pruebas de software**, representa una herramienta innovadora pa
 
 ### 📝 Generación de Casos de Prueba
 **Prompt:**  
-> "Genera casos de prueba funcionales para un sistema de login con usuario y contraseña."
+> "Genera casos de prueba funcionales para un sistema de login con usuario y contraseña."<
 Genera casos de prueba a partir de requisitos, historias de usuarios o documentacion, se pueden crear prompts para generar casos de prueba de manera automatica. 
 
 ---
