@@ -91,3 +91,12 @@ class OrderController {
     }
 }
 ````
+## Bibliografia
+
+Fowler, M. (2015). Microservices: a definition of this new architectural term. MartinFowler.com. https://martinfowler.com/articles/microservices.html
+
+Balalaie, A., Heydarnoori, A., & Jamshidi, P. (2016). Microservices architecture enables DevOps: Migration to a cloud-native architecture. IEEE Software, 33(3), 42–52. https://doi.org/10.1109/MS.2016.64
+
+Vogel, A. (2019). Migrating from Monolith to Microservices. InfoQ. https://www.infoq.com/articles/migrating-monolith-microservices/
+
+PHP-FIG. (2020). PHP Standards Recommendations (PSR). PHP Framework Interop Group. https://www.php-fig.org/psr/
