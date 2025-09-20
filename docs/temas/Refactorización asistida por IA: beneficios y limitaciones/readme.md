@@ -1,12 +1,15 @@
 Refactorización asistida por IA: beneficios y limitaciones
-1. Introducción
+
+Campos Rivas Ruben 21211926
+
+## 1. Introducción
 La evolución del desarrollo de software exige mantener la calidad del código mientras se reducen tiempos de entrega y errores. La refactorización asistida por IA surge como una solución que combina técnicas de refactorización tradicionales con modelos de inteligencia artificial capaces de sugerir, automatizar y optimizar cambios en el código.
 
 Este enfoque permite abordar sistemas grandes y complejos, donde la intervención manual resulta lenta y propensa a errores. Herramientas basadas en IA analizan patrones, detectan código duplicado, optimizan estructuras y sugieren mejoras que el desarrollador puede validar o ajustar.
 
 El propósito de este trabajo es analizar los beneficios y limitaciones de la refactorización asistida por IA, mostrando aplicaciones prácticas, resultados observables y consideraciones críticas para su uso responsable.
 
-2. Objetivos
+## 2. Objetivos
 Objetivo general
 Analizar cómo la refactorización asistida por IA mejora la calidad del software y evaluar sus limitaciones en entornos reales de desarrollo.
 Objetivos específicos
@@ -15,7 +18,8 @@ Explorar herramientas y plataformas que ofrecen soporte de IA para refactorizaci
 Implementar ejemplos prácticos de refactorización asistida y compararlos con enfoques manuales.
 Evaluar resultados en términos de eficiencia, consistencia y reducción de errores.
 Reflexionar críticamente sobre ventajas, riesgos y buenas prácticas en su aplicación.
-3. Marco conceptual
+
+## 3. Marco conceptual
 3.1 Refactorización asistida por IA
 La refactorización asistida por IA combina algoritmos de análisis de código, aprendizaje automático y procesamiento de lenguaje natural para generar recomendaciones de cambios en el código.
 
