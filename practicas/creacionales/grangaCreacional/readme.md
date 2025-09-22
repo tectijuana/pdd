@@ -63,10 +63,6 @@ public class FeedingSystem
 
 ---
 
-Perfecto, aquí tienes el escenario completo que integra los **5 patrones creacionales GoF** dentro de una estructura en `.NET 8` **listo para refactorizar**. Este archivo `Program.cs` será incluido en un `playbook.yml` compatible con **Ubuntu 24.04** y grabación `asciinema`.
-
----
-
 ## 🧪 Estructura del Código Mal Diseñado (`Program.cs`)
 
 Este es el código que los estudiantes deben refactorizar, integrando los patrones **Factory Method**, **Abstract Factory**, **Builder**, **Prototype** y **Singleton**:
