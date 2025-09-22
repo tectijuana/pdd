@@ -1,4 +1,6 @@
 
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/318d860e-2b7f-49d7-9b89-964198fb0507" />
+
 ## 🐄 Práctica Integral: **Sistema de Alimentación Automatizada para Granja Inteligente**
 
 ### 🎯 Objetivo General:
