@@ -1,46 +1,71 @@
+# AI_GUIDANCE.md  
+**Uso responsable y profesional de Inteligencia Artificial en el curso**
 
-## AI_GUIDANCE.md (Uso responsable de IA)
-
-# Guía de uso responsable de Inteligencia Artificial en el curso
-
-Este documento orienta a los estudiantes sobre cómo aprovechar herramientas de Inteligencia Artificial (IA), como **ChatGPT**, de forma ética y responsable durante el curso de *Patrones de Diseño*.
-
-## 🎯 Objetivo
-Promover el uso de IA como apoyo al aprendizaje, sin sustituir la comprensión personal ni comprometer la integridad académica.
-
-## ✅ Usos recomendados
-- Pedir explicaciones de conceptos complejos (ej. diferencias entre patrones creacionales y estructurales).
-- Solicitar sugerencias de refactorización y buenas prácticas de programación.
-- Generar ejemplos adicionales de código para comparar con los propios.
-- Apoyarse en la IA para practicar preguntas de repaso o quizzes.
-- Traducir documentación o resumir artículos técnicos.
-
-## 🚫 Usos no permitidos
-- Entregar código generado automáticamente como propio sin comprenderlo.
-- Presentar soluciones completas a prácticas o proyectos creadas solo por IA.
-- Usar IA para evadir el trabajo de análisis, diseño o documentación requerido en la asignatura.
-
-## 📋 Recomendaciones prácticas
-1. **Transparencia**: Declara en tus entregas qué parte fue asistida por IA.
-2. **Crítica**: Evalúa y prueba todo código generado, no lo aceptes sin validarlo.
-3. **Aprendizaje activo**: Usa la IA como tutor, no como atajo.
-4. **Documenta**: Al final de cada práctica, incluye una nota:
-
-```text
-Asistencia de IA: Describa qué pidió, qué recibió y qué cambios realizó.
-Herramienta: (ChatGPT u otra)
-Fecha:
-Versión de código relevante:
-```
-
-## 📌 Ejemplo de declaración
-```text
-Asistencia de IA: Pedí a ChatGPT que explicara el patrón Factory Method y sugiriera un ejemplo en Java. Tomé el código generado, lo adapté y documenté con comentarios propios.
-Herramienta: ChatGPT (GPT-5)
-Fecha: 2025-08-25
-Versión de código relevante: practica_01_factory_method
-```
+## 📘 Guía para estudiantes  
+Esta guía orienta sobre cómo utilizar herramientas de Inteligencia Artificial (IA), como **ChatGPT**, de forma **ética, crítica y profesional** en el curso de *Patrones de Diseño*.
 
 ---
 
-> ℹ️ El uso correcto de IA **enriquece el aprendizaje**; el uso indebido afecta la honestidad académica y la calidad del trabajo.
+## 🎯 Objetivo
+
+Promover el uso consciente de IA como **aliado en el aprendizaje profundo**, incentivando la **reflexión**, la **documentación clara** y el **pensamiento profesional**, sin comprometer la integridad académica.
+
+---
+
+## ✅ Usos permitidos y valorados
+- Solicitar **explicaciones detalladas** de conceptos técnicos complejos.
+- Explorar **variantes de implementación** y comparar estilos de codificación.
+- Pedir ayuda para **refactorizar código con buenas prácticas**.
+- Usar IA como **simulador de entrevistas** o generador de **preguntas tipo examen**.
+- Traducir y resumir artículos técnicos con análisis crítico posterior.
+
+---
+
+## 🚫 Usos prohibidos
+- Entregar código o soluciones **generadas por IA sin modificación ni comprensión**.
+- Usar IA para **evadir procesos cognitivos clave** como el diseño, análisis o documentación.
+- Copiar respuestas sin **evaluación crítica ni revisión personal**.
+
+---
+
+## 🧠 Buenas prácticas recomendadas
+
+1. **Transparencia profesional**  
+   Declara **explícitamente** el uso de IA en cada entrega.
+
+2. **Prompting ético y técnico**  
+   Documenta los *prompts* utilizados, mostrando capacidad para formular consultas técnicas precisas.
+
+3. **Crítica y validación**  
+   Evalúa, prueba y ajusta todo contenido generado. No delegues tu aprendizaje.
+
+4. **Exploración consciente de agentes**  
+   Si usas múltiples herramientas (ChatGPT, GitHub Copilot, Gemini, etc.), **registra su uso y propósito**.
+
+5. **Reflexión personal final**  
+   Incluye una sección donde describas **qué aprendiste**, **cómo contrastaste la información**, y **qué decisiones tomaste como autor/a del trabajo**.
+
+---
+
+## 📝 Formato obligatorio para declarar asistencia de IA
+
+```markdown
+### Asistencia de Inteligencia Artificial
+
+- **Prompts utilizados**:
+  - "Explica el patrón Observer con un ejemplo en JavaScript moderno."
+  - "Sugiere refactorización para una clase Singleton en C++."
+  
+- **Agentes usados**:
+  - ChatGPT (GPT-4o)
+  - GitHub Copilot (Visual Studio Code)
+  
+- **Cambios y evaluación**:
+  - Comparé el ejemplo generado con el patrón visto en clase. Reescribí partes críticas para cumplir con la arquitectura del proyecto.  
+  - Detecté una mala práctica en el uso de observers anónimos y la corregí.
+
+- **Reflexión personal**:
+  Este ejercicio me ayudó a entender mejor la diferencia entre Observer y Pub/Sub. Validé el código con pruebas unitarias y reforcé mis criterios de cohesión y acoplamiento.
+
+- **Fecha**: 2025-09-18  
+- **Versión del trabajo**: practica_02_observer  
