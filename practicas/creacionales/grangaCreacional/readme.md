@@ -148,7 +148,7 @@ namespace GranjaInteligente
 | 💡 Creatividad en la Solución                        | Integra múltiples patrones con fluidez y originalidad                         | Aplica combinaciones de patrones coherentes                     | Uso mecánico de patrones, sin adaptación contextual               | Aplicación forzada o sin conexión con el problema      |
 | 📝 Documentación y Comentarios                       | Comentarios claros, en español, explicando cada patrón aplicado              | Comentarios adecuados pero escuetos                             | Comentarios mínimos o ambiguos                                    | Sin documentación o confusa                           |
 | 💻 Compilación y Ejecución en .NET 8                | Proyecto compila y corre perfectamente en .NET 8                              | Corre con advertencias menores                                  | Requiere ajustes o dependencias externas                          | No compila o falla al ejecutar                         |
-| 🎥 Grabación con Asciinema                          | Grabación completa del proceso con claridad y orden                          | Grabación incompleta pero suficiente para evaluación             | Grabación confusa o desordenada                                    | No se entrega grabación                               |
+| 🎥 Grabación con Asciinema   AWS                       | Grabación completa del proceso con claridad y orden                          | Grabación incompleta pero suficiente para evaluación             | Grabación confusa o desordenada                                    | No se entrega grabación                               |
 
 **Puntaje Máximo:** 50 puntos  
 **Nota Final:**  
