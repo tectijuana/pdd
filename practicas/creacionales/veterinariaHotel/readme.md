@@ -1,3 +1,4 @@
+<img width="466" height="312" alt="image" src="https://github.com/user-attachments/assets/5ecb9fb6-4c67-4bb8-bed1-6f280a0b7f03" />
 
 
 ## 🐾 Clínica Veterinaria y Hotel de Mascotas - Práctica de Patrones de Diseño Creacionales
