@@ -135,3 +135,27 @@ namespace GranjaInteligente
 ---
 
 
+## 🧾 Rúbrica de Evaluación – Refactorización con Patrones Creacionales
+
+| Criterio                                             | Excelente (5)                                                                 | Bueno (4)                                                        | Aceptable (3)                                                     | Insuficiente (1-2)                                     |
+|------------------------------------------------------|--------------------------------------------------------------------------------|------------------------------------------------------------------|------------------------------------------------------------------|--------------------------------------------------------|
+| 🧠 Identificación de Problemas en el Código          | Identifica y documenta correctamente los 5 errores clave en el diseño inicial | Identifica la mayoría de los errores relevantes                  | Menciona algunos problemas pero no los relaciona bien             | No identifica errores significativos                   |
+| 🏗️ Aplicación de Factory Method                     | Implementa correctamente el patrón y lo explica con claridad                  | Implementa el patrón pero con errores menores                    | Implementa parcialmente, falta cohesión o justificación            | No aplica el patrón o lo hace incorrectamente          |
+| 🏭 Aplicación de Abstract Factory                   | Crea familias de productos completas y coherentes                             | Aplica el patrón con algunas omisiones                          | Implementa con errores estructurales                               | No aplica el patrón o hay confusión conceptual         |
+| 🧱 Uso del Builder                                   | Usa correctamente el patrón para construir rutinas complejas                 | Aplica el patrón, pero le falta modularidad o claridad           | Estructura débil, pasos mal definidos                             | No logra construir objetos paso a paso                 |
+| 🧬 Uso de Prototype                                  | Clona correctamente objetos para reutilizar estructuras                      | Aplica el patrón pero sin aprovechar sus ventajas                | Clonación incompleta o errónea                                     | No aplica clonación, uso erróneo de referencias        |
+| 🔒 Implementación de Singleton (correcta)           | Implementación segura, thread-safe, bien documentada                         | Implementación funcional pero no segura para concurrencia        | Patrón aplicado sin encapsulamiento ni validación                 | Código rígido o Singleton mal implementado             |
+| 💡 Creatividad en la Solución                        | Integra múltiples patrones con fluidez y originalidad                         | Aplica combinaciones de patrones coherentes                     | Uso mecánico de patrones, sin adaptación contextual               | Aplicación forzada o sin conexión con el problema      |
+| 📝 Documentación y Comentarios                       | Comentarios claros, en español, explicando cada patrón aplicado              | Comentarios adecuados pero escuetos                             | Comentarios mínimos o ambiguos                                    | Sin documentación o confusa                           |
+| 💻 Compilación y Ejecución en .NET 8                | Proyecto compila y corre perfectamente en .NET 8                              | Corre con advertencias menores                                  | Requiere ajustes o dependencias externas                          | No compila o falla al ejecutar                         |
+| 🎥 Grabación con Asciinema                          | Grabación completa del proceso con claridad y orden                          | Grabación incompleta pero suficiente para evaluación             | Grabación confusa o desordenada                                    | No se entrega grabación                               |
+
+**Puntaje Máximo:** 50 puntos  
+**Nota Final:**  
+- 46-50 → 🌟 Excelente  
+- 40-45 → ✅ Bueno  
+- 30-39 → ⚠️ Regular  
+- <30 → ❌ Necesita mejorar
+
+
+
