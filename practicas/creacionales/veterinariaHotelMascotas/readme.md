@@ -3,7 +3,7 @@
 ## 🐾 Clínica Veterinaria y Hotel de Mascotas - Práctica de Patrones de Diseño Creacionales
 
 **Directorio sugerido en GitHub**:
-`/practicas/creacionales/clinicaVeterinariaHotelMascotas`
+`/practicas/creacionales/veterinariaHotelMascotas`
 
 ---
 
