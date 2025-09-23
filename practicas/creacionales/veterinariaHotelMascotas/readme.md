@@ -172,3 +172,240 @@ Una aplicación espagueti que gestiona:
 * Libro: *Software Engineering with UML* – Bhuvan Unhelkar (capítulos sobre Use Cases y clases)
 * Libro: *Peeling Design Patterns* – Narasimha Karumanchi (capítulos de Factory y Singleton)
 
+---
+
+¡Excelente! A continuación, te presento:
+
+1. ✅ Una rúbrica de evaluación para esta práctica.
+2. 📄 Un `README.md` listo para publicar en GitHub o Gist.
+3. 📎 Un Gist generado con todo el contenido (incluyendo código + rúbrica + instrucciones).
+
+---
+
+## ✅ Rúbrica de Evaluación – Clínica Veterinaria y Hotel de Mascotas
+
+| Criterio                       | Excelente (5 pts)                                                                                        | Bueno (3 pts)                                           | Insuficiente (1 pt)                                       | Puntos  |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- | --------------------------------------------------------- | ------- |
+| Aplicación de Patrones GoF     | Usa al menos 3 patrones correctamente: Factory Method, Abstract Factory, Singleton, Builder o Prototype. | Usa 1–2 patrones pero con errores menores.              | No se aplican patrones correctamente o no se identifican. |         |
+| Refactorización                | Código completamente limpio y modularizado, sin duplicaciones.                                           | Parcialmente refactorizado, con algunos métodos largos. | Código espagueti sin mejoras significativas.              |         |
+| Estructura del Proyecto        | Separación clara entre lógica de clínica, hotel y servicios. Buen uso de clases y namespaces.            | Estructura aceptable pero acoplada.                     | Mezcla responsabilidades y no sigue estructura limpia.    |         |
+| Comentarios y buenas prácticas | Código comentado en español, buenas prácticas de C#.                                                     | Comentarios escasos o poco claros.                      | Sin comentarios, código difícil de entender.              |         |
+| Documentación y entrega        | `README.md` completo con explicación, instrucciones de ejecución y dependencias.                         | Documentación incompleta o sin formato.                 | No hay documentación clara.                               |         |
+| **Total**                      |                                                                                                          |                                                         |                                                           | **/25** |
+
+---
+
+## 📄 Contenido del `README.md`
+
+````markdown
+# 🐾 Clínica Veterinaria y Hotel de Mascotas - Patrones Creacionales
+
+Este proyecto es una simulación sencilla de una aplicación de clínica veterinaria y hotel de mascotas, escrita en C# con .NET 8.0, diseñada para ser **refactorizada** y para aplicar **patrones de diseño GoF** del tipo creacional.
+
+---
+
+## 🎯 Objetivo
+
+Refactorizar un proyecto inicial espagueti aplicando patrones como:
+
+- 🏭 Factory Method
+- 🧱 Abstract Factory
+- 🧑‍🎨 Builder
+- 👤 Singleton
+- 🧬 Prototype
+
+---
+
+## 🧪 Actividades sugeridas
+
+1. Identificar responsabilidades mal asignadas.
+2. Aplicar patrón `Abstract Factory` para crear mascotas.
+3. Usar `Singleton` para controlar la instancia del hotel.
+4. Reorganizar clases usando SRP y DIP.
+5. Documentar los cambios realizados.
+
+---
+
+## ⚙️ Requisitos
+
+- [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+- Editor recomendado: Visual Studio Code o Rider
+
+---
+
+## ▶️ Ejecución
+
+```bash
+cd clinica_mascotas_app
+dotnet build
+dotnet run
+````
+
+---
+
+## 📚 Referencias
+
+* Refactoring.Guru: [https://refactoring.guru/es/design-patterns](https://refactoring.guru/es/design-patterns)
+* Dive Into Design Patterns – Alexander Shvets
+* Patrones de diseño - ITT Tijuana
+
+---
+
+## 📏 Rúbrica de Evaluación
+
+Ver [rúbrica completa aquí](#).
+
+---
+
+> ✍️ Recuerda grabar un video de tu refactorización o subir screenshots del antes/después si así lo solicita el docente.
+
+```
+
+---
+
+## 📎 GIST Generado
+
+Estoy generando el Gist ahora. Un momento...
+```
+
+
+Aquí tienes una propuesta de **Gist** con toda la entrega: código base, instrucciones, rúbrica, README. Puedes copiar este contenido y subirlo como Gist en GitHub/Gist.
+
+---
+
+## 🧾 Contenido del Gist (archivos propuestos)
+
+---
+
+### Archivo: `Program.cs` (código base inicial)
+
+```csharp
+using System;
+using System.Collections.Generic;
+
+namespace ClinicaMascotas
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            // Aquí hay una mezcla de responsabilidades: hotel, veterinaria, facturación...
+            var dog = new Mascota("Firulais", "Perro");
+            var cat = new Mascota("Mishi", "Gato");
+
+            var servicio = new ServicioVeterinario();
+            servicio.RegistrarConsulta(dog.Nombre);
+            servicio.RegistrarVacuna(cat.Nombre);
+
+            var hotel = new HotelMascotas();
+            hotel.AsignarHabitacion(dog.Nombre);
+            hotel.AsignarHabitacion(cat.Nombre);
+        }
+    }
+
+    public class Mascota
+    {
+        public string Nombre;
+        public string Tipo;
+
+        public Mascota(string nombre, string tipo)
+        {
+            Nombre = nombre;
+            Tipo = tipo;
+        }
+    }
+
+    public class ServicioVeterinario
+    {
+        public void RegistrarConsulta(string mascota)
+        {
+            Console.WriteLine($"Consulta registrada para {mascota}");
+        }
+
+        public void RegistrarVacuna(string mascota)
+        {
+            Console.WriteLine($"Vacuna aplicada a {mascota}");
+        }
+    }
+
+    public class HotelMascotas
+    {
+        public void AsignarHabitacion(string mascota)
+        {
+            Console.WriteLine($"Habitación asignada a {mascota}");
+        }
+    }
+}
+```
+
+---
+
+### Archivo: `README.md`
+
+````markdown
+# 🐾 Clínica Veterinaria y Hotel de Mascotas - Patrones Creacionales
+
+Este proyecto es una simulación sencilla de una aplicación de clínica veterinaria y hotel de mascotas, escrita en C# con .NET 8.0, diseñada para ser **refactorizada** y para aplicar **patrones de diseño GoF** del tipo creacional.
+
+---
+
+## 🎯 Objetivo
+
+Refactorizar un proyecto inicial espagueti aplicando patrones como:
+
+- 🏭 Factory Method  
+- 🧱 Abstract Factory  
+- 🧑‍🎨 Builder  
+- 👤 Singleton  
+- 🧬 Prototype  
+
+---
+
+## 🧪 Actividades sugeridas
+
+1. Identificar responsabilidades mal asignadas.  
+2. Aplicar patrón `Abstract Factory` para crear mascotas.  
+3. Usar `Singleton` para controlar la instancia del hotel.  
+4. Reorganizar clases usando SRP y DIP.  
+5. Documentar los cambios realizados.
+
+---
+
+## ⚙️ Requisitos
+
+- [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)  
+- Editor recomendado: Visual Studio Code o Rider
+
+---
+
+## ▶️ Ejecución
+
+```bash
+cd clinica_mascotas_app
+dotnet build
+dotnet run
+````
+
+---
+
+## 📚 Referencias
+
+* Refactoring.Guru: [https://refactoring.guru/es/design-patterns](https://refactoring.guru/es/design-patterns)
+* Dive Into Design Patterns – Alexander Shvets
+* Patrones de diseño - Recursos de la materia
+
+---
+
+## 📏 Rúbrica de Evaluación
+
+| Criterio                       | Excelente (5 pts)                                                                                        | Bueno (3 pts)                                           | Insuficiente (1 pt)                                       | Puntos  |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- | --------------------------------------------------------- | ------- |
+| Aplicación de Patrones GoF     | Usa al menos 3 patrones correctamente: Factory Method, Abstract Factory, Singleton, Builder o Prototype. | Usa 1–2 patrones pero con errores menores.              | No se aplican patrones correctamente o no se identifican. |         |
+| Refactorización                | Código completamente limpio y modularizado, sin duplicaciones.                                           | Parcialmente refactorizado, con algunos métodos largos. | Código espagueti sin mejoras significativas.              |         |
+| Estructura del Proyecto        | Separación clara entre lógica de clínica, hotel y servicios. Buen uso de clases y namespaces.            | Estructura aceptable pero acoplada.                     | Mezcla responsabilidades y no sigue estructura limpia.    |         |
+| Comentarios y buenas prácticas | Código comentado en español, buenas prácticas de C#.                                                     | Comentarios escasos o poco claros.                      | Sin comentarios, código difícil de entender.              |         |
+| Documentación y entrega        | `README.md` completo con explicación, instrucciones de ejecución y dependencias.                         | Documentación incompleta o sin formato.                 | No hay documentación clara.                               |         |
+| **Total**                      |                                                                                                          |                                                         |                                                           | **/25** |
+
+---
+
