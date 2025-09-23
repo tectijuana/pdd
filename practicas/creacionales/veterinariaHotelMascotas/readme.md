@@ -1,6 +1,4 @@
-¡Perfecto! Vamos a crear una nueva práctica al estilo de la granja creacional pero ahora tematizada como una **clínica veterinaria y hotel de mascotas**, ideal para trabajar patrones de diseño GoF (creacionales), refactorización y buenas prácticas en C# con .NET 8.
 
----
 
 ## 🐾 Clínica Veterinaria y Hotel de Mascotas - Práctica de Patrones de Diseño Creacionales
 
