@@ -1,10 +1,4 @@
 
----
-
-### Archivo: `ANSIBLE-PLAYBOOK.yml` (como punto de partida)
-
-```yaml
----
 - name: Instalar .NET 8 y preparar entorno para Clínica Veterinaria y Hotel de Mascotas
   hosts: localhost
   become: yes
