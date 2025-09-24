@@ -29,7 +29,7 @@ Durante los 50 minutos de clase, debes:
 2. Crear una nueva rama con tu nombre:
    ```bash
    git checkout -b fix/refactor-TuNombre
-````
+   ```
 
 3. Analizar el código y detectar **al menos 3 problemas graves de diseño** relacionados con los patrones creacionales.
 4. Modificar solo lo necesario para mejorar la legibilidad, la cohesión y la reutilización usando un patrón correcto.
