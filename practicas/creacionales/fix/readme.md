@@ -44,7 +44,7 @@ Durante los 50 minutos de clase, debes:
 
 ## 📝 Formato del Pull Request
 
-```markdown
+
 ### 🔍 Problemas detectados
 1. Clase `X` viola el principio de responsabilidad única.
 2. Se detecta una instancia directa que debería ser manejada por un Factory.
@@ -137,7 +137,7 @@ Estos son ejemplos de situaciones o prácticas comunes que pueden conducir a mal
 
 **¡Buena suerte! Refactoriza con intención y diseña con elegancia.**
 
-```
+
 ### 🔍 Clasificación por Patrón
 
 #### 🧱 Singleton (items relacionados):
