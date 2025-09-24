@@ -1,3 +1,6 @@
+<img width="525" height="552" alt="image" src="https://github.com/user-attachments/assets/59ebe06d-abf7-4fcd-87da-d6f261e39454" />
+
+
 # Asignación de Temas - DSF-2101 SC8A - Software de Calidad, Refactorización y Patrones Emergentes
 
 Este repositorio contiene los temas asignados a cada estudiante del curso, enfocados en:
@@ -7,7 +10,7 @@ Este repositorio contiene los temas asignados a cada estudiante del curso, enfoc
 - Patrones emergentes en lenguajes no convencionales
 - Uso responsable y ético de LLMs
 
-## Tabla de Asignación
+## Tabla de Asignación de Temas
 | Nombre del Alumno | Tema Asignado |
 |-------------------|---------------|
 | ALVARADO CARDONA ANTONIO | Arquitecturas evolutivas y su relación con refactorización progresiva |
