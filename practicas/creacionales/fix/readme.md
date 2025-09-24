@@ -35,7 +35,7 @@ Durante los 50 minutos de clase, debes:
 4. Modificar solo lo necesario para mejorar la legibilidad, la cohesión y la reutilización usando un patrón correcto.
 5. **Crear un Pull Request** con el título:
 
-   ```
+   ```bash
    Refactor Creacional - TuNombre
    ```
 6. Incluir en el cuerpo del PR lo siguiente:
@@ -63,17 +63,6 @@ Mejoramos:
 ### 🔄 Impacto
 Se asegura el cumplimiento del principio de inversión de dependencias y se prepara la arquitectura para facilitar pruebas unitarias.
 
-
----
-
-## 📌 Evaluación
-
-| Criterio                       | Puntos |
-| ------------------------------ | ------ |
-| Identificación de problemas    | 30%    |
-| Aplicación correcta del patrón | 30%    |
-| Justificación técnica          | 30%    |
-| Claridad y formato del PR      | 10%    |
 
 ---
 
@@ -171,3 +160,14 @@ Estos son ejemplos de situaciones o prácticas comunes que pueden conducir a mal
   *Problemas de responsabilidad única, separación de concerns, anti-patrones, mal diseño conceptual.*
 
 ---
+
+---
+
+## 📌 Evaluación
+
+| Criterio                       | Puntos |
+| ------------------------------ | ------ |
+| Identificación de problemas    | 30%    |
+| Aplicación correcta del patrón | 30%    |
+| Justificación técnica          | 30%    |
+| Claridad y formato del PR      | 10%    |
