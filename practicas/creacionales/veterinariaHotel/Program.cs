@@ -7,50 +7,78 @@ namespace ClinicaMascotas
     {
         public static void Main(string[] args)
         {
-            // Aquí hay una mezcla de responsabilidades: hotel, veterinaria, facturación...
-            var dog = new Mascota("Firulais", "Perro");
-            var cat = new Mascota("Mishi", "Gato");
-
+            var factory = new MascotaFactory();
             var servicio = new ServicioVeterinario();
-            servicio.RegistrarConsulta(dog.Nombre);
-            servicio.RegistrarVacuna(cat.Nombre);
-
             var hotel = new HotelMascotas();
-            hotel.AsignarHabitacion(dog.Nombre);
-            hotel.AsignarHabitacion(cat.Nombre);
+
+            var dog = factory.Crear("Perro", "Firulais");
+            var cat = factory.Crear("Gato", "Mishi");
+
+            servicio.RegistrarConsulta(dog);
+            servicio.RegistrarVacuna(dog);
+            servicio.RegistrarConsulta(cat);
+            servicio.RegistrarVacuna(cat);
+
+            hotel.AsignarHabitacion(dog);
+            hotel.AsignarHabitacion(cat);
         }
     }
 
-    public class Mascota
+    public abstract class Mascota
     {
-        public string Nombre;
-        public string Tipo;
+        public string Nombre { get; }
+        public string Tipo { get; }
 
-        public Mascota(string nombre, string tipo)
+        protected Mascota(string nombre, string tipo)
         {
+            if (string.IsNullOrWhiteSpace(nombre))
+                throw new ArgumentException("El nombre es obligatorio");
+            if (string.IsNullOrWhiteSpace(tipo))
+                throw new ArgumentException("El tipo es obligatorio");
+
             Nombre = nombre;
             Tipo = tipo;
         }
     }
 
+    public sealed class Perro : Mascota
+    {
+        public Perro(string nombre) : base(nombre, "Perro") { }
+    }
+
+    public sealed class Gato : Mascota
+    {
+        public Gato(string nombre) : base(nombre, "Gato") { }
+    }
+
+    // Factory Method: punto único de creación por Tipo 
+    public interface IMascotaFactory
+    {
+        Mascota Crear(string tipo, string nombre);
+    }
+
+    public sealed class MascotaFactory : IMascotaFactory
+    {
+        public Mascota Crear(string tipo, string nombre) => tipo switch
+        {
+            "Perro" => new Perro(nombre),
+            "Gato"  => new Gato(nombre),
+            _       => throw new NotSupportedException($"Tipo no soportado: {tipo}")
+        };
+    }
+
     public class ServicioVeterinario
     {
-        public void RegistrarConsulta(string mascota)
-        {
-            Console.WriteLine($"Consulta registrada para {mascota}");
-        }
+        public void RegistrarConsulta(Mascota m) =>
+            Console.WriteLine($"Consulta registrada para {m.Nombre} ({m.Tipo})");
 
-        public void RegistrarVacuna(string mascota)
-        {
-            Console.WriteLine($"Vacuna aplicada a {mascota}");
-        }
+        public void RegistrarVacuna(Mascota m) =>
+            Console.WriteLine($"Vacuna aplicada a {m.Nombre} ({m.Tipo})");
     }
 
     public class HotelMascotas
     {
-        public void AsignarHabitacion(string mascota)
-        {
-            Console.WriteLine($"Habitación asignada a {mascota}");
-        }
+        public void AsignarHabitacion(Mascota m) =>
+            Console.WriteLine($"Habitación asignada a {m.Nombre} ({m.Tipo})");
     }
 }
