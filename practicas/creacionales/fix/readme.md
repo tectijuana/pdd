@@ -28,7 +28,7 @@ Durante los 50 minutos de clase, debes:
 1. **Clonar este repositorio** en tu equipo local.
 2. Crear una nueva rama con tu nombre:
    
-    donde será la recepción via https://github.com/tectijuana/pdd/tree/main/practicas/creacionales/fix/_________/readme.md
+    donde será la recepción via **.../practicas/creacionales/fix/_________/readme.md**
 
 4. Analizar el problema redactandlo hacia el caso, argumente su código y detectar **al menos 3 problemas graves de diseño** relacionados con los patrones creacionales.
 5. Modificar solo lo necesario para mejorar la legibilidad, la cohesión y la reutilización usando un patrón correcto.
