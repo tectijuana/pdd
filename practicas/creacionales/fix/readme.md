@@ -30,12 +30,13 @@ Durante los 50 minutos de clase, debes:
    
     donde será la recepción via https://github.com/tectijuana/pdd/tree/main/practicas/creacionales/fix/_________/readme.md
 
-4. Analizar el código y detectar **al menos 3 problemas graves de diseño** relacionados con los patrones creacionales.
+4. Analizar el problema redactandlo hacia el caso, argumente su código y detectar **al menos 3 problemas graves de diseño** relacionados con los patrones creacionales.
 5. Modificar solo lo necesario para mejorar la legibilidad, la cohesión y la reutilización usando un patrón correcto.
 6. **Crear un Pull Request** con el título:
 
    ```bash
    Refactor Creacional - nombre del problema
+     (despues su nombre, y algun comentario como anexo LLM, etc.=
    ```
 7. Incluir en el cuerpo del PR lo siguiente:
 
