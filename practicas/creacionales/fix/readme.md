@@ -40,7 +40,7 @@ Durante los 50 minutos de clase, debes:
    ```
 7. Incluir en el cuerpo del PR lo siguiente:
 
-   Redacción del problema ambientado en l
+   Nombre del problema-
 
 ---
 
