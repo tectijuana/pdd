@@ -21,7 +21,7 @@ El código presenta **malas prácticas intencionadas**, errores comunes, y anti-
 
 ---
 
-## ✅ Tu tarea
+## ✅ Actividad es dar "inversa" a como practica, generando el problema y resolverlo, puede usar temas como: vehiculos, celulares, etc para comprenda mejor el evento.
 
 Durante los 50 minutos de clase, debes:
 
