@@ -1,11 +1,6 @@
 # Refactorización de Vehículos con Patrones Creacionales
 
----
-
-🪪 **Datos Personales**
-- Barboza Noriega Jesús Enrique - 21211913
-
----
+## 🪪 Barboza Noriega Jesús Enrique - 21211913
 
 Este documento analiza los problemas encontrados en la versión inicial (*BadCode*) del programa de vehículos y describe los patrones aplicados en la refactorización para mejorar la arquitectura.
 
@@ -43,7 +38,9 @@ Con la refactorización se mejora:
 - La arquitectura queda preparada para **pruebas unitarias** y escenarios de extensión (nuevos tipos de vehículos, paquetes adicionales).  
 - Se elimina el riesgo de errores humanos por orden incorrecto de parámetros, mejorando la **robustez y mantenibilidad** del sistema.
 
-## 📌 Código con malas prácticas (BadCode)
+---
+
+📌 **Código con malas prácticas (BadCode)**
 
 ```csharp
 using System;
@@ -134,7 +131,7 @@ namespace BadVehicles
 
 ---
 
-## ✅ Código refactorizado con patrones (Builder + Factory Method + Prototype)
+✅ **Código refactorizado con patrones (Builder + Factory Method + Prototype)**
 
 ```csharp
 using System;
