@@ -1,101 +1,120 @@
-# Refactor Creacional - Vehículos monolíticos y Logger global
+# Refactor Creacional - Crear objetos sin validar estado
 
 ## 🔍 Problemas detectados
-1. **Clase `Vehiculo` viola SRP (Single Responsibility Principle)**  
-   - Tiene múltiples responsabilidades: define atributos, lógica de construcción y validaciones.  
-   - Esto genera dificultad para mantener y extender la clase.
+1. **Clase `Celular` permite instancias inválidas**  
+   - El constructor acepta parámetros nulos o vacíos (marca, modelo, sistema operativo).  
+   - Esto provoca objetos en estado inconsistente.
 
-2. **Instancias creadas con `new` directamente en controladores**  
-   - Rompe la idea de Factory Method.  
-   - Si se cambia la forma de instanciar un vehículo, hay que modificar todos los lugares donde se hace `new Vehiculo(...)`.
+2. **Uso de `new` directamente en el cliente**  
+   - Se crean objetos `Celular` sin ningún mecanismo de validación.  
+   - Esto rompe el encapsulamiento y genera duplicación de lógica de validación en distintos lugares.
 
-3. **Singleton `Logger` inseguro en entornos multihilo**  
-   - Implementación actual no controla la concurrencia.  
-   - Puede provocar múltiples instancias simultáneas y pérdida de trazas en logs.
+3. **Falta de separación entre creación y uso**  
+   - El cliente decide qué valores asignar y cómo construir el objeto.  
+   - Esto viola SRP, ya que la validación de estado está mezclada con la lógica de negocio.
 
 ---
 
 ## 🛠 Patrones aplicados
-- ✅ **Builder**: Separa la construcción compleja de objetos `Vehiculo` (motor, color, puertas).  
-- ✅ **Factory Method**: Permite crear instancias de vehículos sin depender de `new`.  
-- ✅ **Singleton (thread-safe)**: Se refactoriza el `Logger` usando `Lazy<T>` para garantizar una única instancia segura en multihilo.
+- ✅ **Builder con validación interna**: Garantiza que un `Celular` solo se cree si tiene un estado válido.  
+- ✅ **Factory Method**: Centraliza la creación de celulares evitando el uso de `new` disperso.  
+- ✅ **Singleton (Logger seguro en multihilo)**: Registra errores o intentos de creación inválidos.
 
 ---
 
 ## 💡 Justificación del cambio
-- Aumenta la **cohesión interna** al dividir responsabilidades.  
-- Incrementa la **testabilidad**, ya que las dependencias pueden ser simuladas fácilmente.  
-- Se gana **flexibilidad ante cambios futuros**, pues ahora se pueden extender las familias de vehículos sin modificar el código cliente.  
+- Se asegura que **ningún objeto inválido pueda existir** en el sistema.  
+- Se mejora la **cohesión** al centralizar la lógica de construcción.  
+- Se aumenta la **robustez y mantenibilidad** evitando validaciones duplicadas.  
 
 ---
 
 ## 🔄 Impacto
-- Cumplimiento del **Principio de Inversión de Dependencias (DIP)**.  
-- Reducción del **acoplamiento** entre cliente y productos concretos.  
-- Arquitectura lista para **pruebas unitarias** y **mantenimiento ágil**.  
+- Los objetos `Celular` ahora siempre son **válidos por construcción**.  
+- El código cliente queda **más limpio** y desacoplado del proceso de validación.  
+- Se prepara la arquitectura para **pruebas unitarias** y **extensión futura** (por ejemplo, distintos tipos de celulares).
 
 ---
 
 ## 📌 Ejemplo de Código Refactorizado
 
-### 🚗 Builder para Vehículos
+### 📱 Clase Producto
 ```csharp
-// Producto
-public class Vehiculo
+public class Celular
 {
-    public string Motor { get; set; }
-    public string Color { get; set; }
-    public int Puertas { get; set; }
+    public string Marca { get; private set; }
+    public string Modelo { get; private set; }
+    public string SistemaOperativo { get; private set; }
+
+    internal Celular(string marca, string modelo, string sistemaOperativo)
+    {
+        Marca = marca;
+        Modelo = modelo;
+        SistemaOperativo = sistemaOperativo;
+    }
 
     public override string ToString()
-        => $"Motor: {Motor}, Color: {Color}, Puertas: {Puertas}";
+        => $"Celular {Marca} {Modelo} con {SistemaOperativo}";
 }
 
-// Builder
-public interface IVehiculoBuilder
+🏗️ Builder con Validación
+public class CelularBuilder
 {
-    void SetMotor(string motor);
-    void SetColor(string color);
-    void SetPuertas(int puertas);
-    Vehiculo Build();
-}
+    private string _marca;
+    private string _modelo;
+    private string _sistemaOperativo;
 
-// Implementación concreta del Builder
-public class VehiculoBuilder : IVehiculoBuilder
-{
-    private Vehiculo _vehiculo = new Vehiculo();
-
-    public void SetMotor(string motor) => _vehiculo.Motor = motor;
-    public void SetColor(string color) => _vehiculo.Color = color;
-    public void SetPuertas(int puertas) => _vehiculo.Puertas = puertas;
-
-    public Vehiculo Build()
+    public CelularBuilder ConMarca(string marca)
     {
-        var result = _vehiculo;
-        _vehiculo = new Vehiculo(); // reinicia para siguiente construcción
-        return result;
+        _marca = marca;
+        return this;
+    }
+
+    public CelularBuilder ConModelo(string modelo)
+    {
+        _modelo = modelo;
+        return this;
+    }
+
+    public CelularBuilder ConSistemaOperativo(string so)
+    {
+        _sistemaOperativo = so;
+        return this;
+    }
+
+    public Celular Build()
+    {
+        if (string.IsNullOrWhiteSpace(_marca) ||
+            string.IsNullOrWhiteSpace(_modelo) ||
+            string.IsNullOrWhiteSpace(_sistemaOperativo))
+        {
+            Logger.Instancia.Log("Intento de crear celular inválido.");
+            throw new InvalidOperationException("El celular debe tener marca, modelo y sistema operativo válidos.");
+        }
+
+        return new Celular(_marca, _modelo, _sistemaOperativo);
     }
 }
 
-##🏭 Factory Method
-public abstract class VehiculoFactory
+🏭 Factory Method
+public abstract class CelularFactory
 {
-    public abstract Vehiculo CrearVehiculo();
+    public abstract Celular CrearCelular(string marca, string modelo, string so);
 }
 
-public class SedanFactory : VehiculoFactory
+public class AndroidFactory : CelularFactory
 {
-    public override Vehiculo CrearVehiculo()
+    public override Celular CrearCelular(string marca, string modelo, string so)
     {
-        var builder = new VehiculoBuilder();
-        builder.SetMotor("1.6L");
-        builder.SetColor("Azul");
-        builder.SetPuertas(4);
-        return builder.Build();
+        return new CelularBuilder()
+            .ConMarca(marca)
+            .ConModelo(modelo)
+            .ConSistemaOperativo(so)
+            .Build();
     }
 }
 
-👤 Singleton (thread-safe)
+👤 Singleton (Logger thread-safe)
 public sealed class Logger
 {
     private static readonly Lazy<Logger> _instancia =
@@ -114,17 +133,26 @@ class Program
 {
     static void Main()
     {
-        VehiculoFactory factory = new SedanFactory();
-        Vehiculo auto = factory.CrearVehiculo();
+        CelularFactory factory = new AndroidFactory();
 
-        Console.WriteLine(auto);
+        try
+        {
+            // ✅ Objeto válido
+            Celular celular = factory.CrearCelular("Samsung", "Galaxy S24", "Android 14");
+            Console.WriteLine(celular);
 
-        Logger.Instancia.Log("Vehículo creado correctamente.");
+            // ❌ Objeto inválido (lanza excepción y se registra en Logger)
+            Celular invalido = factory.CrearCelular("", "", "");
+        }
+        catch (Exception ex)
+        {
+            Logger.Instancia.Log($"Error: {ex.Message}");
+        }
     }
 }
 
 ✅ Conclusión
 
-El código inicial presentaba problemas de cohesión, acoplamiento y seguridad en el Singleton.
-Con la aplicación de Builder, Factory Method y Singleton thread-safe, se logró una arquitectura más clara, reutilizable y mantenible, alineada con los principios SOLID.
+El código inicial permitía crear objetos inconsistentes, lo cual representaba un grave riesgo de diseño.
+Con la aplicación de Builder con validación, Factory Method y un Logger Singleton thread-safe, se garantiza que cada Celular creado siempre esté en un estado válido, se mejora la cohesión y se refuerza la mantenibilidad del sistema.
 
