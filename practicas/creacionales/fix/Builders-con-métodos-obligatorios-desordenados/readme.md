@@ -237,4 +237,4 @@ Es posible probar distintos escenarios (válidos e inválidos) de manera control
 * Flexibilidad ante cambios:
 Si mañana se agregan nuevos campos obligatorios (ej. dirección de envío), solo se debe actualizar el `Builder` sin afectar la clase `Orden`.
 
-
+<img width="442" height="772" alt="image" src="https://github.com/user-attachments/assets/966c880c-e5e6-489d-b565-401b0690aef8" />
