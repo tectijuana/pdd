@@ -19,6 +19,8 @@ El repositorio contiene clases implementadas incorrectamente con:
 
 El código presenta **malas prácticas intencionadas**, errores comunes, y anti-patrones frecuentes.
 
+Compilador En linea: https://dotnetfiddle.net
+
 ---
 
 ## ✅ Actividad es dar "inversa" a como practica, generando el problema y resolverlo, puede usar temas como: vehiculos, celulares, etc para comprenda mejor el evento.
