@@ -257,6 +257,24 @@ namespace Practica.Vehiculos.Refactor
 
 ---
 
+## Evidencia de ejecución
+
+A continuación se muestran capturas de pantalla del código ejecutado en el compilador en línea:
+
+### Código con antipatrón (BadCode.cs)
+El sistema genera un vehículo directamente desde el constructor, con lógica pesada y sin separación de responsabilidades:
+
+<img width="1332" height="944" alt="image" src="https://github.com/user-attachments/assets/6e6dd7f7-051b-48be-a596-dce9a6b2f9e5" />
+
+
+### Código refactorizado (GoodCode.cs)
+El sistema utiliza `Builder`, `Factory Method` y un `Singleton` seguro para crear objetos consistentes y extensibles:
+
+<img width="1288" height="1012" alt="image" src="https://github.com/user-attachments/assets/1e432bbc-618c-4e9a-9975-f343499c83d8" />
+
+
+---
+
 ## Conclusión
 
 El antipatrón surge cuando un constructor concentra demasiadas responsabilidades, generando acoplamiento, baja cohesión y dificultad para realizar pruebas.  
