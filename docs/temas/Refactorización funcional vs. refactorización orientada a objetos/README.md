@@ -1,6 +1,5 @@
-Joshua Isaias Ruiz Lopez 21212363
 # Refactorización Funcional vs. Refactorización Orientada a Objetos
-
+#Joshua Isaias Ruiz Lopez 21212363
 ## 📌 Introducción
 La refactorización es una práctica fundamental en el desarrollo de software. Su objetivo es **mejorar la calidad interna del código** sin alterar su funcionalidad externa.  
 Este proceso no busca añadir nuevas características, sino **hacer que el código existente sea más claro, eficiente, mantenible y escalable**.
