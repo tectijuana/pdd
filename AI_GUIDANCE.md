@@ -1,5 +1,5 @@
 # AI_GUIDANCE.md  
-**Uso responsable y profesional de Inteligencia Artificial en el curso de *Sistemas Embebidos***
+**Uso responsable y profesional de Inteligencia Artificial en el curso
 
 ## 📘 Guía para estudiantes  
 Este documento establece las pautas para el uso ético, reflexivo y técnicamente riguroso de herramientas de **Inteligencia Artificial (IA)** en el contexto del desarrollo de software y hardware embebido.
