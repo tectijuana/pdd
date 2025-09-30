@@ -19,26 +19,31 @@ El repositorio contiene clases implementadas incorrectamente con:
 
 El código presenta **malas prácticas intencionadas**, errores comunes, y anti-patrones frecuentes.
 
+Compilador En linea: https://dotnetfiddle.net
+
 ---
 
-## ✅ Tu tarea
+## ✅ Actividad es dar "inversa" a como practica, generando el problema y resolverlo, puede usar temas como: vehiculos, celulares, etc para comprenda mejor el evento.
 
 Durante los 50 minutos de clase, debes:
 
 1. **Clonar este repositorio** en tu equipo local.
 2. Crear una nueva rama con tu nombre:
-   ```bash
-   git checkout -b fix/refactor-TuNombre
-   ```
+   
+> Donde será la recepción via **.../practicas/creacionales/fix/___(nombre del tema a tratar, sin su nombre)______/readme.md**
+> y no olvide el anexo.md (prompts y reflexión OPCIONAL para eBOOKS)
 
-3. Analizar el código y detectar **al menos 3 problemas graves de diseño** relacionados con los patrones creacionales.
-4. Modificar solo lo necesario para mejorar la legibilidad, la cohesión y la reutilización usando un patrón correcto.
-5. **Crear un Pull Request** con el título:
+4. Analizar el problema redactandlo hacia el caso, argumente su código y detectar **al menos 3 problemas graves de diseño** relacionados con los patrones creacionales.
+5. Modificar solo lo necesario para mejorar la legibilidad, la cohesión y la reutilización usando un patrón correcto.
+6. **Crear un Pull Request** con el título:
 
    ```bash
-   Refactor Creacional - TuNombre
+   Refactor Creacional - nombre del problema
+     (despues su nombre, y algun comentario como anexo LLM, etc.=
    ```
-6. Incluir en el cuerpo del PR lo siguiente:
+7. Incluir en el cuerpo del PR lo siguiente:
+
+   Nombre del problema-
 
 ---
 
