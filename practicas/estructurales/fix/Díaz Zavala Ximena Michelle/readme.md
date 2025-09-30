@@ -217,3 +217,13 @@ namespace BridgeGoodExample
 
 ```
 ---
+## 📝 Reflexión de la Práctica
+
+Durante esta práctica aprendí a identificar problemas comunes de diseño en código orientado a objetos, como el **acoplamiento fuerte**, la falta de abstracciones y la violación del principio de extensión sin modificación.  
+Al analizar el código original, comprendí cómo estos errores dificultan la reutilización y el mantenimiento del software.
+
+Implementar el patrón **Bridge** me permitió separar la **abstracción** (controles remotos) de la **implementación** (dispositivos), haciendo que el sistema sea más flexible y escalable.  
+Ahora puedo crear nuevos tipos de controles o dispositivos sin modificar el código existente, lo que demuestra la importancia de aplicar correctamente los **patrones de diseño GoF**.
+
+En general, esta práctica me ayudó a entender cómo los patrones estructurales no solo resuelven problemas de código, sino que también mejoran la **mantenibilidad** y **extensibilidad** de los sistemas, reforzando buenas prácticas de programación orientada a objetos.
+
