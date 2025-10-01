@@ -107,13 +107,27 @@ namespace PaymentSystem
 4. **Métodos privados que no son parte del rol de Adapter**
    "SaveTransactionHistory" y "SendEmailNotification" no deberían existir ahí.
 
-## Aplicación del patrón adecuado
+## Aplicación del patrón Adapter
+El patrón Adapter se aplica para adaptar una interfaz antigua (OldPaymentSystem) a una interfaz nueva esperada por el cliente (INewPaymentProcessor).
+En este caso, el sistema viejo procesa pagos con un string (e.g., "$100.00"), mientras que el nuevo sistema trabaja con decimal. 
 
 ## Refactor funcional
+El código refactorizado es completamente funcional:
+•	El adaptador funciona correctamente adaptando el viejo sistema de pagos.
+•	Se puede usar tanto con el constructor simplificado como con inyección de dependencias personalizada.
+•	También maneja correctamente casos de error como montos inválidos.
 
 ## Justificación técnica
+El uso del patrón Adapter está justificado porque:
+1.	Permite reutilizar código existente (el sistema viejo de pagos) sin modificarlo.
+2.	Hace que el sistema viejo sea compatible con la nueva interfaz esperada.
+3.	Permite una transición progresiva entre sistemas (de uno viejo a uno nuevo).
+
 
 ## Calidad del código refactorizado
+1.	Código limpio y legible: Los nombres son descriptivos y el flujo es fácil de seguir.
+2.	Reutilización y extensibilidad: Es fácil cambiar la implementación de alguna dependencia (por ejemplo, usar un logger diferente o guardar en base de datos real en vez de memoria).
+3.	Pruebas y mantenimiento: Gracias a la inyección de dependencias y separación de responsabilidades, el código es fácil de testear y mantener.
 
 ---
 
