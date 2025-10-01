@@ -1,36 +1,110 @@
-# 🎨 Refactorización con Patrón Decorator
+# 🎨 Práctica: Refactorización con Patrón Decorator
 
 ## 📌 Contexto
-Este proyecto corresponde a la práctica de **Calidad de Software**, en la cual se realiza una **refactorización de código mal estructurado** aplicando el patrón **Decorator** en C# (.NET 8).  
+En el código base proporcionado existía un problema con el uso del patrón **Decorator**:  
+algunos decoradores **no llamaban al componente base** al ejecutar sus operaciones, lo que generaba pérdida de funcionalidad y rompía la cadena de responsabilidades.
 
-El **Code Smell detectado** fue:  
-👉 *Decoradores que no llaman al componente base*, lo cual rompe la cadena de responsabilidades y hace que las funcionalidades decoradas no se ejecuten correctamente.
-
----
-
-## 📊 Rúbrica de Evaluación
-Actividad: Refactorización de Patrones Estructurales (GoF)  
-Modalidad: Individual  
-Duración estimada: 50 minutos  
-Formato de entrega: Pull Request en Git con justificación y refactor parcial  
-Lenguaje: **C# (.NET 8)**  
-
-| Criterio | Descripción | Puntos |
-|----------|-------------|--------|
-| 1. Identificación de Code Smells | Detecta correctamente el problema: Decoradores que no llaman al componente base. | 25 |
-| 2. Aplicación del patrón adecuado | Se aplica correctamente el patrón **Decorator** resolviendo el problema. | 20 |
-| 3. Refactor funcional | El código refactorizado compila y el decorador mantiene la lógica base más la añadida. | 20 |
-| 4. Justificación técnica en Pull Request | El PR explica el problema y los beneficios del patrón aplicado. | 15 |
-| 5. Calidad del código refactorizado | Código legible, nombres coherentes, buena separación de responsabilidades. | 10 |
-| 6. Uso correcto de Git | Rama `fix/nombre-alumno`, commit semántico y PR bien formado. | 5 |
-| 7. Profesionalismo y presentación | Redacción clara y entendible para otros desarrolladores. | 5 |
-
-**Total máximo: 100 pts**
+El objetivo de esta práctica fue **refactorizar** ese problema aplicando correctamente el patrón **Decorator** en **C# (.NET 8)**.
 
 ---
 
-## 🚀 Instrucciones de Ejecución
-1. Clonar el repositorio:
-   ```bash
-   git clone <url-del-repo>
-   cd <carpeta-del-proyecto>
+## 🧩 Problema Detectado
+El **Code Smell** fue:
+
+- **Decoradores que no llaman al componente base.**
+
+Esto provocaba que, al usar varios decoradores encadenados, algunos comportamientos desaparecieran en lugar de sumarse.
+
+### ❌ Ejemplo del código con error
+```csharp
+public interface INotificacion
+{
+    void Enviar(string mensaje);
+}
+
+public class NotificacionBase : INotificacion
+{
+    public void Enviar(string mensaje)
+    {
+        Console.WriteLine($"Enviando notificación: {mensaje}");
+    }
+}
+
+public class NotificacionEmail : INotificacion
+{
+    private INotificacion _base;
+
+    public NotificacionEmail(INotificacion baseNotificacion)
+    {
+        _base = baseNotificacion;
+    }
+
+    public void Enviar(string mensaje)
+    {
+        Console.WriteLine("Enviando copia por Email"); 
+        // ❌ No llama al _base.Enviar(mensaje)
+    }
+}
+
+
+🔧 Refactor Aplicado
+
+El refactor consistió en corregir los decoradores para que siempre invocaran al componente base antes o después de añadir su lógica extra.
+
+public class NotificacionEmail : INotificacion
+{
+    private INotificacion _base;
+
+    public NotificacionEmail(INotificacion baseNotificacion)
+    {
+        _base = baseNotificacion;
+    }
+
+    public void Enviar(string mensaje)
+    {
+        _base.Enviar(mensaje); // ✅ Se mantiene la funcionalidad base
+        Console.WriteLine("Enviando copia por Email");
+    }
+}
+
+public class NotificacionSMS : INotificacion
+{
+    private INotificacion _base;
+
+    public NotificacionSMS(INotificacion baseNotificacion)
+    {
+        _base = baseNotificacion;
+    }
+
+    public void Enviar(string mensaje)
+    {
+        _base.Enviar(mensaje); // ✅ Cadena continua
+        Console.WriteLine("Enviando notificación por SMS");
+    }
+}
+
+📬 Justificación Técnica
+
+Problema: Decoradores que no llamaban al componente base interrumpían la cadena de ejecución.
+
+Solución aplicada: Patrón Decorator implementado correctamente.
+
+Beneficios:
+
+Se preserva el comportamiento original de la clase base.
+
+Cada decorador añade funcionalidad de forma flexible.
+
+Se cumple el principio de Open/Closed (abierto a extensión, cerrado a modificación).
+
+Código más mantenible y escalable.
+
+🎯 Conclusiones
+
+Identifiqué y corregí un Code Smell estructural relacionado con el patrón Decorator.
+
+Logré que la cadena de decoradores se ejecutara correctamente.
+
+El refactor demuestra cómo un detalle (no invocar al componente base) puede romper la intención del patrón.
+
+Esta práctica refuerza la importancia de aplicar patrones de diseño con responsabilidad y disciplina.
