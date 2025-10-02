@@ -1,4 +1,4 @@
-# 📖 Refactorización de Componentes Gráficos con Patrón Composite
+# 📖 Refactorización de Componentes Gráficos con Patrón Composite.
 
 ## 📝 Formato del Pull Request
 
