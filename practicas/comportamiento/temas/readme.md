@@ -5,6 +5,15 @@
 
 ---
 
+## 📘 ¿Cómo usar esta lista?
+
+* Elige por lista ya conocida el numero de problemas para resolver en la sesión.
+* Ahora que **identifiquen el patrón ausente** y que **justifiquen su elección con GoF**.
+* Exige que implementen solo una **parte funcional** del refactor, no el sistema completo.
+* Estamos trabajando con http://dotnetfiddle.net para compartir funcionamiento y validar el caso de manera breve.
+---
+
+
 ### 🔍 Problemas Generadores de Code Smells
 
 1. **Lógica de descuentos con 7 `if` anidados**, donde cada tipo de cliente aplica una condición diferente. ❌ → ¿Strategy o Chain of Responsibility?
@@ -142,14 +151,3 @@
     ❌ → Command + Memento ayudarían a desacoplar y encapsular.
 
 ---
-
-## 📘 ¿Cómo usar esta lista?
-
-* Elige por lista ya conocida el numero de problemas para resolver en la sesión.
-* Ahora que **identifiquen el patrón ausente** y que **justifiquen su elección con GoF**.
-* Exige que implementen solo una **parte funcional** del refactor, no el sistema completo.
-* Estamos trabajando con http://dotnetfiddle.net para compartir funcionamiento y validar el caso de manera breve.
----
-
-## 🚀 ¿Deseas que preparemos ejercicios con código mal hecho (spaghetti) para que los alumnos lo refactoricen aplicando esta lista?
-
