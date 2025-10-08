@@ -40,8 +40,8 @@ Esta actividad tiene como objetivo **revisar el Pull Request (PR)** y brindar re
 
 Puedes:
 
-- **Comentar directamente en el PR** con `Add Review Comment`, o  
-- Copiar la plantilla de abajo (`peer-review-template`) y completarla en un archivo dentro del repositorio, por ejemplo:  
+- **Comentar directamente en el directorio** 
+-  en un archivo dentro del repositorio, por ejemplo:  
   `/reviews/mi-review.md`.
 
 Completa todos los apartados con observaciones técnicas y sugerencias.
