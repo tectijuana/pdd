@@ -2,7 +2,7 @@
 
 👤 **Revisor:** Marcos Ulises Montaño Zaragoza
 
-📌 **PR Revisado:** `tema/El código intenta implementar una "máquina de estados", pero con switch por todos lados.`
+📌 **PR Revisado:** `tema/fix/El código intenta implementar una "máquina de estados", pero con switch por todos lados.`
 
 ---
 
