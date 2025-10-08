@@ -114,8 +114,8 @@ _Link al Pull Request o nombre de la rama (`fix/_____`)._
 
 | Ítem | ¿Cumple? | Comentarios |
 |------|-----------|-------------|
-| **1. Identifica al menos un code smell estructural real** | [ ] Sí / [ ] No | _¿Cuál fue? ¿Se justifica bien?_ |
-| **2. Aplica un patrón estructural adecuado** | [ ] Sí / [ ] No | _¿Cuál patrón usó? ¿Es el más apropiado?_ |
+| **1. Identifica al menos un code smell comportamiento real** | [ ] Sí / [ ] No | _¿Cuál fue? ¿Se justifica bien?_ |
+| **2. Aplica un patrón comportamiento adecuado** | [ ] Sí / [ ] No | _¿Cuál patrón usó? ¿Es el más apropiado?_ |
 | **3. La solución es coherente y mejora el diseño** | [ ] Sí / [ ] No | _¿Hay redundancias o errores aún?_ |
 | **4. El código es legible y está bien estructurado** | [ ] Sí / [ ] No | _¿Se entiende fácilmente?_ |
 | **5. El PR está bien documentado y argumentado** | [ ] Sí / [ ] No | _¿Explica claramente el cambio?_ |
@@ -124,14 +124,14 @@ _Link al Pull Request o nombre de la rama (`fix/_____`)._
 
 ## 🧠 Observaciones Técnicas
 
-_Describe lo que se hizo bien, con base en principios de diseño estructural._  
+_Describe lo que se hizo bien, con base en principios de diseño comportamiento._  
 _Por ejemplo: “El patrón Adapter fue implementado correctamente para desacoplar la clase Cliente del servicio externo.”_
 
 ---
 
 ## 🛠️ Sugerencias de Mejora
 
-_Incluye al menos una recomendación específica sobre nombres, estructura, SRP, dependencias o claridad de diseño._
+_Incluye al menos una recomendación específica sobre nombres, comportamiento, SRP, dependencias o claridad de diseño._
 
 ---
 
@@ -139,7 +139,7 @@ _Incluye al menos una recomendación específica sobre nombres, estructura, SRP,
 
 _Un resumen general como revisor:_
 
-> “Buen trabajo aplicando el patrón Composite. Se nota una mejora clara respecto a la versión anterior, aunque podrías considerar simplificar la estructura jerárquica de clases. Sigue así.”
+> “Buen trabajo aplicando el patrón Composite. Se nota una mejora clara respecto a la versión anterior.”
 
 ---
 
