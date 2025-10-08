@@ -1,4 +1,4 @@
-# 📄 Declaración de Asistencia de Inteligencia Artificial
+# 📄 Declaración de Asistencia de Inteligencia Artificial.
 
 Completa esta sección de forma honesta y reflexiva. Esta declaración forma parte de la evaluación del trabajo.
 
