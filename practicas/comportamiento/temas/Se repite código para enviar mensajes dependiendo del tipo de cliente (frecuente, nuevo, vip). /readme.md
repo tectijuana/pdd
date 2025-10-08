@@ -2,6 +2,10 @@
 
 Repetición de código al enviar mensajes según tipo de cliente (frecuente, nuevo, VIP).
 
+Montaño Zaragoza Marcos Ulises 
+
+21211998
+
 ## Análisis del Problema
 
 El código original presenta **repetición** y **violación del principio de abierto/cerrado (OCP)**, ya que cada nuevo tipo de cliente obliga a modificar el método `EnviarMensaje`.  
