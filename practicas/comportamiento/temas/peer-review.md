@@ -78,7 +78,7 @@ Completa todos los apartados con observaciones técnicas y sugerencias.
 
 ## 🧠 Buenas Prácticas para Revisores
 
-- 📚 Consulta la rúbrica y la lista de *code smells estructurales*.  
+- 📚 Consulta la rúbrica y la lista de *code smells comportamiento*.  
 - 🙋 Pregunta si no entiendes un patrón antes de juzgarlo.  
 - 🤝 Sé claro, respetuoso y profesional en tu retroalimentación.  
 
@@ -100,7 +100,7 @@ Usa esta plantilla dentro de tu archivo `/reviews/peer-review.md` o como comenta
 
 ---
 
-## 🧑‍💻 Revisión de Código - Patrones Estructurales (GoF)
+## 🧑‍💻 Revisión de Código - Patrones comportamiento (GoF)
 
 ### 👤 Revisor:
 _Nombre completo del estudiante que revisa._
