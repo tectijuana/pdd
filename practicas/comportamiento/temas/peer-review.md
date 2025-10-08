@@ -1,112 +1,106 @@
-# 🧑‍💻 Peer Review - Patrones Comportamiento (GoF)
+# 🧑‍💻 Peer Review - Patrones de Comportamiento (GoF)
 
 ## 📘 Descripción General
 
-Esta actividad tiene como objetivo **revisar el Pull Request (PR)** y brindar retroalimentación técnica sobre el uso e implementación de **patrones comportamiento (GoF)** en su código.
+Esta actividad tiene como objetivo **revisar un Pull Request (PR)** y brindar **retroalimentación técnica** sobre el uso e implementación de **patrones de diseño de comportamiento (GoF)** en el código de un compañero.
 
 ---
 
 ## 🎯 Objetivo
 
-- Evaluar si el código refactorizado aplica correctamente un patrón comportamiento.
-- Detectar posibles *code smells* y sugerir mejoras.
-- Desarrollar habilidades de análisis y comunicación técnica.
+- Evaluar si el código refactorizado aplica correctamente un **patrón de comportamiento**.  
+- Detectar posibles *code smells* y sugerir mejoras.  
+- Desarrollar habilidades de **análisis crítico** y **comunicación técnica** en revisiones de código.
 
 ---
 
-## 🧭 PASOS PARA REALIZAR LA REVISIÓN
+## 🧭 Pasos para Realizar la Revisión
+
+### 🟢 1. Clonar o Navegar al Repositorio
+
+- Accede al repositorio compartido por el docente.  
+- Entra a la pestaña **“Pull Requests”**.  
+- Elige un PR que **no sea el tuyo**.  
+- Lee atentamente el **título** y la **descripción del PR** para entender su propósito.
 
 ---
 
-### 🟢 1. Clona o navega al repositorio del compañero
+### 🟡 2. Leer y Comprender el Código
 
-- Accede al repositorio compartido por el docente.
-- Entra a la pestaña **"Pull Requests"**.
-- Elige un PR que **no sea el tuyo**.
-- Lee atentamente el **título y la descripción del PR**.
-
----
-
-### 🟡 2. Lee y comprende el código
-
-- Revisa el **diff** del PR (las líneas modificadas).
-- Analiza qué patrón ral fue implementado.
-- Observa si el cambio **resuelve un code smell** o genera nuevos.
-- Piensa en la intención de diseño y en la claridad del código.
+- Revisa el **diff del PR** (las líneas agregadas o modificadas).  
+- Analiza **qué patrón de comportamiento fue implementado**.  
+- Observa si el cambio **resuelve un code smell existente** o introduce uno nuevo.  
+- Considera la **intención del diseño** y la **claridad del código resultante**.
 
 ---
 
-### 🟠 3. Usa la plantilla de revisión
+### 🟠 3. Usa esta Plantilla para tu Revisión
 
-Puedes:
-
-- **Comentar directamente en el PR** con `Add Review Comment`, o  
-- Copiar la plantilla de abajo (`peer-review-template`) y completarla en un archivo dentro del repositorio, por ejemplo:  
-  `/reviews/mi-review.md`.
-
-Completa todos los apartados con observaciones técnicas y sugerencias.
+Crea o edita el archivo `/reviews/review.md`  
+y completa **todos los apartados** con tus observaciones técnicas y sugerencias.  
+También puedes dejar comentarios directamente dentro del PR.
 
 ---
 
-### 🔵 4. Ofrece sugerencias constructivas
+### 🔵 4. Ofrece Sugerencias Constructivas
 
-✅ Sé específico y útil:
+✅ Sé **específico y útil**:
 
-> “Podrías extraer la lógica del constructor a un método privado para simplificar el decorador.”
+> “Podrías extraer la lógica del método `update()` a una clase Command para separar responsabilidades.”
 
-❌ Evita vaguedades o juicios personales:
+❌ Evita comentarios vagos o personales:
 
 > “Esto está mal.” o “No entiendo nada.”
 
-🎯 El objetivo es **ayudar a mejorar el código y la comprensión del patrón.**
+🎯 El objetivo es **mejorar la calidad del código y la comprensión del patrón aplicado.**
 
 ---
 
-### 🟣 5. Marca tu revisión como completa
+### 🟣 5. Marca tu Revisión como Completa
 
-- Si trabajas en GitHub/GitLab: marca el PR como **"Reviewed"**.
-- Si usas archivo `.md`: súbelo con un commit o entrégalo según las instrucciones del docente.
-
----
-
-### 🟤 6. Respeta tiempos y formato
-
-- ⏰ Entrega tu revisión **antes de que termine la clase**.  
-- 👥 Si trabajas en pareja, **cada uno debe revisar un PR diferente**.
+- En GitHub/GitLab: marca el PR como **“Reviewed”**.  
+- Si trabajas con archivo `.md`: súbelo al repositorio o entrégalo según las instrucciones del docente.
 
 ---
 
-## 🧠 Buenas Prácticas para Revisores
+### 🟤 6. Respeta Tiempos y Formato
 
-- 📚 Consulta la rúbrica y la lista de *code smells comportamiento*.  
-- 🙋 Pregunta si no entiendes un patrón antes de juzgarlo.  
-- 🤝 Sé claro, respetuoso y profesional en tu retroalimentación.  
+- ⏰ Entrega tu revisión **antes de que termine la clase.**  
+- 👥 Si trabajas en pareja, **cada integrante revisa un PR distinto.**
+
+---
+
+## 🧠 Buenas Prácticas del Revisor
+
+- 📚 Consulta la **rúbrica de evaluación** y la lista de *code smells de comportamiento*.  
+- 🙋 Si no entiendes un patrón, **pregunta antes de juzgarlo**.  
+- 🤝 Sé **claro, respetuoso y profesional** en tu retroalimentación.  
 
 ---
 
 ## 🎓 Resultado Esperado
 
-Completar este proceso te brinda:
+Completar esta revisión te ayudará a:
 
-- Puntos por participación activa.
-- Experiencia real en revisión de código.
-- Mejora en tus habilidades de comunicación técnica y análisis de diseño.
+- Obtener **puntos por participación activa**.  
+- Ganar **experiencia práctica** en revisión de código profesional.  
+- Mejorar tu **pensamiento de diseño** y tus habilidades de análisis técnico.
 
 ---
 
 # 🧩 Plantilla de Revisión Técnica
 
-Usa esta plantilla dentro de tu archivo `/reviews/peer-review.md` o como comentario en el PR.
+Usa esta plantilla dentro del archivo `/reviews/review.md`.
 
 ---
 
-## 🧑‍💻 Revisión de Código - Patrones comportamiento (GoF)
+## 🧑‍💻 Revisión de Código - Patrones de Comportamiento (GoF)
 
 ### 👤 Revisor:
-_Nombre completo del estudiante que revisa._
+_Nombre completo del estudiante que realiza la revisión._
 
 ### 📌 PR Revisado:
-_Link al Pull Request o nombre de la rama (`fix/_____`)._
+_Link al Pull Request o nombre de la rama (por ejemplo: `feature/observer-pattern`)._
 
 ---
 
@@ -114,40 +108,44 @@ _Link al Pull Request o nombre de la rama (`fix/_____`)._
 
 | Ítem | ¿Cumple? | Comentarios |
 |------|-----------|-------------|
-| **1. Identifica al menos un code smell comportamiento real** | [ ] Sí / [ ] No | _¿Cuál fue? ¿Se justifica bien?_ |
-| **2. Aplica un patrón comportamiento adecuado** | [ ] Sí / [ ] No | _¿Cuál patrón usó? ¿Es el más apropiado?_ |
-| **3. La solución es coherente y mejora el diseño** | [ ] Sí / [ ] No | _¿Hay redundancias o errores aún?_ |
-| **4. El código es legible y está bien estructurado** | [ ] Sí / [ ] No | _¿Se entiende fácilmente?_ |
-| **5. El PR está bien documentado y argumentado** | [ ] Sí / [ ] No | _¿Explica claramente el cambio?_ |
+| **1. Identifica al menos un code smell de comportamiento** | [ ] Sí / [ ] No | _¿Cuál fue y cómo lo aborda?_ |
+| **2. Aplica un patrón de comportamiento adecuado** | [ ] Sí / [ ] No | _¿Qué patrón usó? ¿Es el más apropiado?_ |
+| **3. La solución mejora la estructura del diseño** | [ ] Sí / [ ] No | _¿Reduce acoplamiento? ¿Aumenta cohesión?_ |
+| **4. El código es legible y está bien estructurado** | [ ] Sí / [ ] No | _¿El flujo es claro y entendible?_ |
+| **5. El PR está bien documentado y argumentado** | [ ] Sí / [ ] No | _¿Explica claramente las decisiones de diseño?_ |
 
 ---
 
 ## 🧠 Observaciones Técnicas
 
-_Describe lo que se hizo bien, con base en principios de diseño comportamiento._  
-_Por ejemplo: “El patrón Adapter fue implementado correctamente para desacoplar la clase Cliente del servicio externo.”_
+_Describe lo que se implementó correctamente en relación con el patrón de comportamiento._  
+_Por ejemplo:_  
+> “El patrón Strategy se aplicó correctamente para permitir intercambiar algoritmos sin modificar el cliente.”
 
 ---
 
 ## 🛠️ Sugerencias de Mejora
 
-_Incluye al menos una recomendación específica sobre nombres, comportamiento, SRP, dependencias o claridad de diseño._
+_Añade al menos una recomendación concreta sobre:_  
+- Nombres de clases o métodos  
+- Responsabilidad única (SRP)  
+- Manejo de dependencias  
+- Claridad del flujo de comportamiento  
+
+_Por ejemplo:_  
+> “Considera utilizar el patrón Command en lugar de Template Method para lograr un mejor desacoplamiento entre acciones.”
 
 ---
 
-## 🎯 Entrega Final
+## 🎯 Conclusión del Revisor
 
-_Un resumen general como revisor:_
+_Resumen final de tu evaluación:_
 
-> “Buen trabajo aplicando el patrón Composite. Se nota una mejora clara respecto a la versión anterior.”
-
----
-
-🔚 **Gracias por compartir tu código. Todo feedback busca mejorar nuestra práctica como desarrolladores.**
+> “Buena implementación del patrón Observer. Se logra una clara separación entre sujetos y observadores, aunque podría mejorarse la nomenclatura para mayor claridad.”
 
 ---
 
-## 📎 Cómo usar esta plantilla
+🔚 **Gracias por compartir tu código.**  
+Tu revisión contribuye al aprendizaje colaborativo y al fortalecimiento de las prácticas de diseño profesional.
 
-- Sube el archivo completado en `/reviews/` con el nombre `peer-review-[tu-nombre].md`.  
-- O pega tus observaciones directamente como comentario dentro del Pull Request revisado.
+---
