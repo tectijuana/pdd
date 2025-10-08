@@ -1,7 +1,8 @@
 # El botón "Deshacer" de una aplicación solo borra el último cambio con un undo() sin saber qué comando se ejecutó. ❌ → Command sin historial. ¡Falta Command con Undo!
 ## Joel Cuevas Estrada - 22210298
 
-```c#// === Código Espagueti (sin patrón Command) ===
+```c#
+// === Código Espagueti (sin patrón Command) ===
 using System;
 
 class Editor
