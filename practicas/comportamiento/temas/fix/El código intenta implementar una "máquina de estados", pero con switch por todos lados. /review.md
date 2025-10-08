@@ -45,7 +45,3 @@ La refactorización mejora de forma clara la mantenibilidad y escalabilidad del 
 
 Solo se sugiere tipar los eventos y considerar un manejo de errores más explícito para completar el ciclo de estados.  
 En general, una implementación sólida y bien argumentada.
-
-## Ejecucuon
-
-<img width="994" height="592" alt="image" src="https://github.com/user-attachments/assets/99636b39-559d-48fd-8192-c3c3332afe48" />
