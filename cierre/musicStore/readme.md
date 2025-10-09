@@ -1,80 +1,119 @@
 <img width="2446" height="1444" alt="image" src="https://github.com/user-attachments/assets/c3dd4a28-0863-4f4f-be0d-1eaf120ca39f" />
 
+---
 
-### Problema de Código Defectuoso para Resolver con Patrones de Diseño GoF, adaptarlo a su Lenguage Favorito.
+# 🧠 Refactorización de Código Defectuoso con Patrones de Diseño GoF
 
-**Escenario:**  
-Una tienda de música en línea administra su catálogo de instrumentos musicales (guitarras, pianos, baterías) con lógica codificada en múltiples clases, pero actualmente la implementación es rígida y presenta duplicación de código al gestionar distintos productos. Cada vez que se añade un nuevo tipo de instrumento, es necesario modificar varias clases, lo que rompe con el principio *Open/Closed* de SOLID y aumenta la deuda técnica. El código actual también tiene problemas de **alta acoplamiento** y **baja cohesión**.
+## 🎯 Objetivo de la práctica
 
-### Código Defectuoso Actual:
-Este es un ejemplo de cómo se implementó inicialmente (con problemas de diseño):
-
-```csharp
-using System;
-
-public class Guitar
-{
-    public void Play()
-    {
-        Console.WriteLine("Playing a guitar.");
-    }
-}
-
-public class Piano
-{
-    public void Play()
-    {
-        Console.WriteLine("Playing a piano.");
-    }
-}
-
-public class MusicStore
-    public void PlayInstrument(string instrumentType)
-    {
-        if (instrumentType == "Guitar")
-        {
-            var guitar = new Guitar();
-            guitar.Play();
-        }
-        else if (instrumentType == "Piano")
-        {
-            var piano = new Piano();
-            piano.Play();
-        }
-        else
-        {
-            Console.WriteLine("Instrument not available.");
-        }
-    }
-}
-```
-
-### Problemas Identificados:
-1. **Uso excesivo de `if-else`:** Cada nuevo instrumento requiere cambios en múltiples lugares del código.
-2. **Alta acoplamiento:** La clase `MusicStore` depende de implementaciones específicas (Guitar, Piano).
-3. **Dificultad para escalar:** Agregar nuevos instrumentos significa modificar código existente.
-4. **No se aplica el principio Open/Closed:** Las clases deben estar abiertas para extensión, pero cerradas para modificación.
-5. **Falta de abstracción:** La gestión de instrumentos podría beneficiarse de una interfaz o clase base común.
+Aplicar patrones de diseño del catálogo GoF para **refactorizar un diseño rígido, acoplado y poco escalable**, mejorando su arquitectura mediante el uso de abstracciones, principios SOLID y creación de objetos mediante fábricas.
 
 ---
 
-### Objetivos a Resolver con Patrones GoF:
+## 🎵 Escenario: Tienda de Música Digital
 
-| **Objetivo** | **Descripción** |
-|--------------|-----------------|
-| 1. Refactorización | Eliminar los bloques de `if-else` y utilizar un patrón para mejorar la escalabilidad. |
-| 2. Abstracción | Crear una interfaz común para todos los instrumentos. |
-| 3. Reducción del acoplamiento | Asegurar que `MusicStore` no conozca implementaciones específicas. |
-| 4. Aplicar Open/Closed | Permitir agregar nuevos instrumentos sin modificar código existente. |
-| 5. Escalabilidad | Facilitar la inclusión de nuevos tipos de instrumentos sin romper la arquitectura. |
-| 6. Aplicación del patrón Factory Method | Usar este patrón para la creación de instancias dinámicas. |
-| 7. Pruebas más sencillas | Hacer que las pruebas unitarias sean más fáciles gracias a la desacoplación. |
-| 8. Implementación de Inversión de Dependencias | Inyectar dependencias en lugar de crearlas dentro de las clases. |
-| 9. Cohesión | Asegurar que cada clase tenga una responsabilidad clara. |
-| 10. Reutilización | Hacer que los instrumentos puedan ser utilizados en otros módulos si es necesario. |
+Una tienda de música en línea administra un catálogo de instrumentos musicales (como guitarras, pianos, baterías, etc.). El sistema actual permite reproducir sonidos de instrumentos, pero **cada nuevo tipo de instrumento requiere modificar múltiples partes del código existente**.
 
 ---
 
-### Siguiente Paso:
-Se espera que el estudiante aplique el **Patrón Factory Method** o **Abstract Factory** para abordar estos problemas. La clase `MusicStore` solo debería interactuar con una interfaz común (por ejemplo, `IInstrument`), y la creación de los objetos específicos debe delegarse a una clase de fábrica.
+## 📋 Comportamiento Actual del Sistema
 
+Actualmente, la tienda funciona así:
+
+1. Tiene clases concretas como `Guitar`, `Piano`, etc., que contienen un método `Play()` para ejecutar el sonido del instrumento.
+2. Existe una clase principal, llamada `MusicStore`, que decide **qué instrumento crear** basándose en una cadena de texto (`"Guitar"`, `"Piano"`, etc.).
+3. Esta clase contiene condicionales (`if`, `else`, `switch`, etc.) para crear y usar los instrumentos.
+
+---
+
+### 💣 Problemas Identificados
+
+| Problema                                | Descripción                                                                      |
+| --------------------------------------- | -------------------------------------------------------------------------------- |
+| ❌ Uso excesivo de condicionales         | Cada nuevo instrumento requiere modificar `MusicStore`.                          |
+| ❌ Alto acoplamiento                     | `MusicStore` depende directamente de clases concretas (`Guitar`, `Piano`, etc.). |
+| ❌ No se aplica el principio Open/Closed | No se puede extender el sistema sin modificar código existente.                  |
+| ❌ Sin abstracción                       | No hay interfaz o clase base común entre los instrumentos.                       |
+| ❌ Baja escalabilidad                    | Difícil de mantener cuando se agregan más instrumentos.                          |
+
+---
+
+## 🧪 Actividad del Estudiante: Refactorizar con GoF
+
+Se te pide refactorizar el sistema aplicando principios de diseño y patrones GoF. Específicamente:
+
+### 🎯 Objetivos de la Refactorización
+
+| #  | Objetivo                       | Acción esperada                                                                   |
+| -- | ------------------------------ | --------------------------------------------------------------------------------- |
+| 1  | Eliminar condicionales         | Usar una fábrica para crear instrumentos.                                         |
+| 2  | Introducir abstracción         | Crear una interfaz común (por ejemplo, `Instrument`) con un método como `Play()`. |
+| 3  | Reducir acoplamiento           | `MusicStore` no debe conocer clases concretas.                                    |
+| 4  | Aplicar Open/Closed            | Agregar nuevos instrumentos sin modificar `MusicStore`.                           |
+| 5  | Usar patrón de creación        | Aplicar el patrón `Factory Method` o `Abstract Factory`.                          |
+| 6  | Mejorar cohesión               | Cada clase debe tener una única responsabilidad.                                  |
+| 7  | Facilitar pruebas unitarias    | Permitir pruebas con objetos simulados o falsos.                                  |
+| 8  | Preparar para expansión        | Añadir nuevos instrumentos sin duplicar lógica.                                   |
+| 9  | Usar inversión de dependencias | Permitir inyección de dependencias si el lenguaje lo permite.                     |
+| 10 | Fomentar reutilización         | Que los instrumentos puedan ser usados en otros contextos.                        |
+
+---
+
+## 📎 Requerimientos
+
+* La solución **debe implementarse en el lenguaje de tu elección.**
+* Debes usar al menos un **patrón de creación** del catálogo GoF:
+
+  * `Factory Method`
+  * `Abstract Factory` (si aplicas una solución más general)
+* Aplica principios de diseño como:
+
+  * **Open/Closed**
+  * **Single Responsibility**
+  * **Inversión de dependencias**
+
+---
+
+## 🧠 Pistas para el Desarrollo
+
+* ¿Qué patrón te ayuda a delegar la creación de objetos según un identificador?
+* ¿Qué clase no debería cambiar cuando agregas un nuevo instrumento?
+* ¿Qué ventajas trae tener una interfaz común para todos los instrumentos?
+
+---
+
+## 📦 Entregables Esperados
+
+1. 🧪 Código fuente refactorizado, en el lenguaje que elijas.
+2. 📄 Un archivo `README.md` con:
+
+   * Descripción del problema original.
+   * Qué problemas detectaste.
+   * Qué patrón(es) aplicaste y por qué.
+   * Cómo tu solución respeta principios SOLID.
+3. ✅ (Opcional) Pruebas unitarias de las clases desacopladas.
+4. 🧩 (Opcional) Diagrama UML de tu solución final.
+
+---
+
+## 📚 Recursos Recomendados
+
+* 🔗 [Refactoring Guru – Factory Method](https://refactoring.guru/design-patterns/factory-method)
+* 🔗 [Principios SOLID](https://solidprinciples.com/)
+* 📘 *Design Patterns* (Gamma, Helm, Johnson, Vlissides – GoF)
+
+---
+
+## 🚦Criterios de Evaluación
+
+| Criterio                                     | Puntaje |
+| -------------------------------------------- | ------- |
+| Refactorización correcta del diseño original | 25%     |
+| Aplicación de patrones GoF adecuados         | 25%     |
+| Principios SOLID aplicados correctamente     | 20%     |
+| Código limpio, mantenible y extensible       | 20%     |
+| Documentación clara y concisa                | 10%     |
+
+---
+
+¿
