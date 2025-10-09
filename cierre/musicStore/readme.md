@@ -1,5 +1,4 @@
 
-<img width="1223" alt="Screenshot 2024-10-24 at 4 59 30 p m" src="https://github.com/user-attachments/assets/3df1dedc-9729-4b72-99fd-12f4a14f9603">
 
 ### Problema de Código Defectuoso para Resolver con Patrones de Diseño GoF, adaptarlo a su Lenguage Favorito.
 
