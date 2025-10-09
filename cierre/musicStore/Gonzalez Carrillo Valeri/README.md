@@ -230,8 +230,9 @@ if __name__ == "__main__":
 <img width="711" height="227" alt="image" src="https://github.com/user-attachments/assets/33fe83bd-d3e0-4e49-81d9-51b6d5f678fc" />
 
 ## 🧩Diagrama UML de tu solución final.
-<img width="505" height="654" alt="Screenshot 2025-10-09 161313" src="https://github.com/user-attachments/assets/93dcb317-1cde-4743-841d-378162b074c5" />
+<img width="552" height="652" alt="image" src="https://github.com/user-attachments/assets/aa7baca5-183b-445f-a813-3cd5b4c1d903" />
 
+---
 ## 💭 Reflexión personal
 
 Esta práctica me permitió comprender de manera más profunda cómo aplicar principios SOLID y patrones de diseño, como el Factory Method, para mejorar la calidad y mantenibilidad del software. El código original presentaba alto acoplamiento, condicionales excesivas y dificultades para extender funcionalidades, problemas muy comunes en sistemas reales.
