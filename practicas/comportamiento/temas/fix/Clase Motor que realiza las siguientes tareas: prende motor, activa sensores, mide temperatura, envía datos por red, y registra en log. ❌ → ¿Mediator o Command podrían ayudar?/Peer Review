@@ -1,0 +1,40 @@
+🧑‍💻 Revisión de Código - Patrones Estructurales (GoF)  
+👤 Revisor: Alejandro Huerta Espinoza  
+
+📌 PR Revisado:  
+Uso del Patrón Command para la Clase Motor (Implementación refactorizada usando Command Pattern)  
+
+---
+
+✅ Checklist Técnica
+
+| Ítem                                             | ¿Cumple?       | Comentarios                                                                                      |
+|--------------------------------------------------|----------------|------------------------------------------------------------------------------------------------|
+| 1. Identifica al menos un code smell estructural real | [x] Sí         | El código original concentra muchas responsabilidades en una sola clase (Motor), violando SRP. |
+| 2. Aplica un patrón estructural adecuado          | [x] Sí         | Se aplica el patrón Command para desacoplar las operaciones del motor, apropiado para la tarea.|
+| 3. La solución es coherente y mejora el diseño    | [x] Sí         | El diseño es más modular, fácil de extender y mantener; la lógica está separada en comandos.   |
+| 4. El código es legible y está bien estructurado  | [x] Sí         | Código claro y con una buena organización de clases y métodos.                                 |
+| 5. El PR está bien documentado y argumentado      | [x] Sí         | Se incluye introducción, justificación y ejemplos de uso, facilitando la comprensión.          |
+
+---
+
+🧠 Observaciones Técnicas
+
+El patrón Command fue implementado correctamente, encapsulando cada acción del motor en un comando específico, lo cual mejora notablemente el desacoplamiento y respeta el principio de responsabilidad única. Esto facilita agregar nuevas funcionalidades sin modificar la clase Motor directamente, además de mejorar la mantenibilidad y escalabilidad del sistema. La separación clara entre el motor y las tareas a ejecutar refleja un buen diseño orientado a objetos.
+
+---
+
+🛠️ Sugerencias de Mejora
+
+- Considerar definir un mecanismo más formal para pasar datos entre comandos (por ejemplo, un contexto o un objeto compartido) en lugar de modificar directamente atributos dentro del ciclo `operar()`. Esto mejoraría la extensibilidad para flujos más complejos.
+- Podría implementarse también un invocador o scheduler para gestionar la ejecución de comandos, aportando más flexibilidad.
+- Se recomienda añadir manejo de excepciones en la ejecución de comandos para mejorar la robustez del sistema.
+- Usar nombres más descriptivos para los comandos si el sistema crece en complejidad (ej. `ActivarSensoresCommand` podría ser `ActivarSensoresDeMotorCommand` para evitar ambigüedades).
+
+---
+
+🎯 Entrega Final
+
+Buen trabajo aplicando el patrón Command para separar responsabilidades en la clase Motor. La solución mejora la legibilidad, modularidad y facilita la extensión futura del sistema. La implementación es clara y cumple con los principios SOLID, especialmente SRP y abierto/cerrado. Con algunas mejoras en el manejo de datos compartidos y robustez, este código puede escalar muy bien en proyectos reales. Sigue así.
+
+🔚 Gracias por compartir tu código. Todo feedback busca mejorar nuestra práctica como desarrolladores.
