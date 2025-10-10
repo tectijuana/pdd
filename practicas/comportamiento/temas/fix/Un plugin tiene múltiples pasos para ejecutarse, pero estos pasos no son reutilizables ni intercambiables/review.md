@@ -4,7 +4,7 @@
 **Jaime Alonso Pérez Luna**
 
 ### 📌 PR Revisado:
-`feature/template-method-plugin`
+`fix/Un plugin tiene múltiples pasos para ejecutarse, pero estos pasos no son reutilizables ni intercambiables`
 
 ---
 
