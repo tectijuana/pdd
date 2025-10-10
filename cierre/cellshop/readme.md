@@ -88,7 +88,7 @@ Cada patrón aplicado correctamente vale **10% de la calificación**. Se valorar
   * Por qué lo elegiste
   * Qué problema resolviste
 * Capturas o evidencias de ejecución (CLI/Web/API según el caso).
-* Formato de entrega: `.zip`, enlace a repositorio, o presentación en clase.
+* Entrega URL GIST via Idoceo
 
 ---
 
