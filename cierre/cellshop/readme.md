@@ -5,6 +5,7 @@
 > 🧠 *Actividad práctica para que los estudiantes reconozcan malas prácticas en código fuente y apliquen patrones de diseño del catálogo GoF para mejorar su estructura.*
 
 ---
+<img width="1390" height="790" alt="image" src="https://github.com/user-attachments/assets/bfd49549-ffe5-4166-98f3-69cb94588229" />
 
 ---
 
