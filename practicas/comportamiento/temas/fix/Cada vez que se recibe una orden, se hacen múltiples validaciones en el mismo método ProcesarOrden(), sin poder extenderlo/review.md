@@ -1,0 +1,1 @@
+https://github.com/JohanHerrera21/pdd/edit/main/practicas/comportamiento/temas/fix/Se%20usa%20una%20clase%20Notificador%20con%20if%20para%20decidir%20si%20se%20env%C3%ADa%20correo%2C%20SMS%20o%20notificaci%C3%B3n%20push.%20%E2%9D%8C%20%E2%86%92%20Falta%20Strategy%20o%20Command./review.md
