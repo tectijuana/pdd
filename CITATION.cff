@@ -1,8 +1,0 @@
-cff-version: 1.2.0
-title: Patrones de Diseño – Curso MOOC
-message: Si usas este curso en investigación o docencia, por favor cítalo.
-authors:
-- family-names: Tec Tijuana
-given-names: Equipo Docente
-license: GPL-3.0-only
-repository-code: https://github.com/tectijuana/pdd
