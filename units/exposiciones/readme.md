@@ -1,5 +1,5 @@
 
-Para estudiantes sin tema de exposición, por NUMERO DE LISTA DE AMBAR (siempre y cuando no se repita)
+> Para estudiantes sin tema de exposición, por NUMERO DE LISTA DE AMBAR (siempre y cuando no se repita)
 🔹 Contexto de aplicación real,
 🔹 Diagrama UML,
 🔹 Explicación de los beneficios del patrón,
