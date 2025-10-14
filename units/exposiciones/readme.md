@@ -13,7 +13,7 @@
 
 ---
 
-## 🧩 **Catálogo de 45 Temas de Exposición — Patrones de Diseño GoF (.NET 8)**
+## 🧩 **Catálogo de 45 Temas de Exposición — Patrones de Diseño GoF (libre lenguaje)**
 
 | Nº | Patrón / Combinación                          | Tipo                         | Contexto / Uso Común                                              | Enfoque Didáctico Sugerido                              |
 | -- | --------------------------------------------- | ---------------------------- | ----------------------------------------------------------------- | ------------------------------------------------------- |
