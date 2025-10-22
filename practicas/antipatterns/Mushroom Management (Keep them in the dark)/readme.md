@@ -110,7 +110,7 @@ Así, el equipo comprende no solo qué hacer, sino por qué hacerlo.
 
 ---
 
-⚠️ 3. Consecuencias
+## ⚠️ 3. Consecuencias
 
 Efectos negativos:
 
@@ -125,7 +125,9 @@ Efectos negativos:
 Ejemplo:
 > En proyectos grandes, este antipatrón puede hacer que los equipos se conviertan en simples “ejecutores”, incapaces de aportar mejoras o prevenir errores críticos.
 
-✅ 4. Solución Correctiva (10 pts)
+---
+
+## ✅ 4. Solución Correctiva (10 pts)
 
 Buenas prácticas:
 
