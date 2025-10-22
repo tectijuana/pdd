@@ -1,3 +1,4 @@
+<img width="1536" height="1024" alt="ChatGPT Image Oct 21, 2025 at 05_17_54 PM" src="https://github.com/user-attachments/assets/7c7c9160-370d-4a31-8b9a-dec84ab1b1d3" />
 
 
 ## 🧠 Temas de Investigación: Antipatrones fuera de GoF
