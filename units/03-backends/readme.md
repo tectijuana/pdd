@@ -80,8 +80,6 @@ Un backend bien diseñado no solo funciona hoy: **evoluciona contigo**. Aprovech
 
 > “Diseñar un backend es como construir cimientos: **no se ve, pero todo depende de él**.”
 
-```
-
 Aquí tienes los tipos de backends más populares **en el mundo real** con ejemplos comunes:
 
 1. **REST API**
