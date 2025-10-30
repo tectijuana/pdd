@@ -1,7 +1,6 @@
 
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/3e6cb0f2-a7d4-4b02-a8b7-7fce6376afb3" />
 
-
 ### **Kanban en GitHub Projects para la Gestión de Proyectos de Software**
 
 #### Introducción
@@ -63,6 +62,11 @@ Para crear un tablero Kanban en GitHub Projects, sigue estos pasos:
 5. **Configurar los filtros y automatización**:
    GitHub Projects te permite configurar **filtros** para ver solo las tareas de ciertos miembros o aquellas con una prioridad específica. Además, puedes configurar **automatizaciones** para mover automáticamente las tareas entre columnas según ciertos eventos, como la resolución de un issue.
 
+# EJEMPLO con BackEnd  y FrontEnd
+
+https://github.com/orgs/strapi/projects/33
+
+
 ### 4. **Uso de Kanban en Proyectos Universitarios y Profesionales**
 
 #### Proyectos Universitarios
@@ -100,4 +104,71 @@ En proyectos profesionales, especialmente en el desarrollo de software a gran es
 * **Documenta cada tarea**: Asegúrate de que cada tarjeta tenga una descripción clara y esté vinculada a los commits y pull requests relevantes.
 
 GitHub Projects y Kanban son herramientas poderosas para gestionar proyectos de software, tanto en entornos académicos como profesionales. Te permiten mantener un flujo de trabajo organizado, mejorar la colaboración y asegurar que el equipo esté alineado con los objetivos del proyecto. Al aplicar estas prácticas, no solo mejorarás la eficiencia del equipo, sino que también facilitarás la entrega de productos de software de alta calidad.
+
+---
+
+Pueden generar y administrar un *Kanban Project* en GitHub mediante código**, usando directamente la **API de GitHub Projects (v2)**
+
+### 🧩 Opción 1 — Usar directamente la API REST o GraphQL de GitHub
+
+Pueden crear un *project board*, columnas, y tarjetas (issues, pull requests o notas) desde código.
+
+#### Ejemplo con Python (usando `requests`)
+
+```python
+import requests
+
+token = "ghp_tu_token_aqui"
+org = "tu_organizacion"  # o "usuario"
+headers = {
+    "Authorization": f"Bearer {token}",
+    "Accept": "application/vnd.github.inertia-preview+json"
+}
+
+# Crear un proyecto (Kanban)
+project_data = {
+    "name": "Kanban Project",
+    "body": "Gestión visual del flujo de trabajo"
+}
+response = requests.post(
+    f"https://api.github.com/orgs/{org}/projects",
+    headers=headers,
+    json=project_data
+)
+project = response.json()
+print("Proyecto creado:", project["html_url"])
+```
+
+Luego puedes crear columnas:
+
+```python
+column_data = {"name": "To do"}
+requests.post(project["columns_url"], headers=headers, json=column_data)
+```
+
+Y después añadir tarjetas (*cards*) con:
+
+```python
+card_data = {"note": "Configurar CI/CD"}
+column_id = 123456  # id de la columna “To do”
+requests.post(f"https://api.github.com/projects/columns/{column_id}/cards",
+              headers=headers, json=card_data)
+```
+
+---
+
+### ⚙️ Opción 2 — Usar un *agente* o *bot*
+
+Un **agente GitHub App** o **bot (GitHub Actions, Probot, Octokit)** puede automatizar esto:
+
+* Crear y mantener los tableros dinámicamente.
+* Mover tarjetas según estado (por ejemplo: al cerrar un *issue*, mover a “Done”).
+* Sincronizar tareas entre repositorios.
+
+Ejemplo: usar una **GitHub Action** que ejecute scripts como el anterior cuando se crea un *issue*.
+
+---
+
+
+
 
