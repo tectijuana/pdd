@@ -1,4 +1,8 @@
-### Lección sobre **Kanban en GitHub Projects para la Gestión de Proyectos de Software**
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/3e6cb0f2-a7d4-4b02-a8b7-7fce6376afb3" />
+
+
+### **Kanban en GitHub Projects para la Gestión de Proyectos de Software**
 
 #### Introducción
 
