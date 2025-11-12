@@ -1,82 +1,78 @@
-## Antipatrón: Vendor Lock-In
+# Antipatrán: Vendor Lock-In
+#
+Daniel Omar Gonzalez Martinez 21212342 
 
----
+## 1. Qué es Vendor Lock-In 
 
-### Descripción General
+Vendor Lock-In ocurre cuando tu sistema depende demasiado de un proveedor específico para servicios, herramientas o infraestructura, y cambiar a otro proveedor es difícil o costoso.
 
-El **Vendor Lock-In** (encierro o dependencia del proveedor) es un **antipatrón de arquitectura y diseño de software** que se presenta cuando una organización se vuelve dependiente de un proveedor específico de tecnología, como una plataforma en la nube, una base de datos o un conjunto de herramientas propietarias.
+Es una mala práctica porque:
+- Limita la flexibilidad de tu sistema.
+- Genera dependencia de un solo proveedor.
+- Incrementa los costos y riesgos si el proveedor cambia sus condiciones o servicios.
+- Complica la migración a otras plataformas.
 
-Esta dependencia provoca que **migrar a otra solución sea costoso, lento o incluso técnicamente inviable**, generando una falta de flexibilidad a largo plazo.
+Se presenta con frecuencia cuando se usan APIs propietarias, servicios de nube exclusivos o formatos de datos propios del proveedor.
 
-Aunque al principio puede parecer ventajoso aprovechar los servicios integrados de un proveedor, el problema aparece cuando toda la infraestructura y el código quedan atados a tecnologías exclusivas. Esto genera una **pérdida de autonomía tecnológica**, además de una **deuda técnica y económica considerable**.
 
----
+## 2. Ejemplo Técnico 
 
-### Ejemplo Técnico
-
-#### Código con dependencia directa (antipatrón)
-
-En este caso, el código depende completamente del SDK de AWS, por lo que no puede ejecutarse fuera de su ecosistema. Si la empresa quisiera migrar a Azure o Google Cloud, tendría que reescribir gran parte del código que interactúa con el almacenamiento.
-
-```python
-import boto3  # SDK de AWS
-
-def upload_to_s3(file_path, bucket_name):
-    s3 = boto3.client('s3')
-    s3.upload_file(file_path, bucket_name, file_path)
-```
-
-#### Código desacoplado (buena práctica)
-
-En este ejemplo se aplica una **capa de abstracción** mediante una interfaz que permite usar diferentes proveedores de almacenamiento sin modificar la lógica principal de la aplicación.
+Si suponemos que hay una aplicación que usa solo servicios de AWS (S3, Lambda, DynamoDB):
 
 ```python
-from storage_provider import StorageProvider
+import boto3
 
-def upload_file(file_path, provider: StorageProvider):
-    provider.upload(file_path)
+s3 = boto3.client('s3')
+s3.upload_file('archivo.txt', 'mi-bucket', 'archivo.txt')
+
+dynamodb = boto3.resource('dynamodb')
+tabla = dynamodb.Table('Usuarios')
+tabla.put_item(Item={'ID': '123', 'Nombre': 'Daniel'})
 ```
 
-Este enfoque permite implementar `StorageProvider` para distintos servicios como **AWS, Azure o GCP**, facilitando el cambio de proveedor sin afectar el resto del sistema.
+Si queremos cambiar a Google Cloud, tendriamos que reescribir mucho código, modificar infraestructura y adaptarte a nuevas APIs. Esto puede generar retrasos y costos adicionales.
 
----
 
-### Consecuencias del Vendor Lock-In
+## 3. Consecuencias 
 
-El Vendor Lock-In tiene múltiples efectos negativos en el desarrollo, la operación y la sostenibilidad de un sistema:
+- **Mantenimiento:** Cambiar o actualizar componentes es difícil.
+- **Rendimiento:** Limitado por las capacidades del proveedor.
+- **Escalabilidad:** Escalar puede ser costoso o depender de límites del proveedor.
+- **Riesgo:** Cambios de precios o discontinuidad de servicios afectan directamente al sistema.
+- **Innovación limitada:** Difícil integrar nuevas tecnologías si dependen de otros proveedores.
 
-| Impacto              | Descripción                                                                                        |
-| -------------------- | -------------------------------------------------------------------------------------------------- |
-| 🧩 **Mantenimiento** | Las actualizaciones o migraciones se vuelven costosas por la dependencia de servicios específicos. |
-| 🚀 **Rendimiento**   | Se limita la capacidad de optimizar el sistema con tecnologías más eficientes.                     |
-| ☁️ **Escalabilidad** | Dificulta la implementación de soluciones híbridas o multi-cloud.                                  |
-| 💸 **Costos**        | El proveedor puede aumentar precios sin alternativas viables.                                      |
-| 💡 **Innovación**    | La empresa pierde capacidad de adoptar nuevas herramientas o servicios emergentes.                 |
 
-En resumen, este antipatrón **reduce la flexibilidad estratégica** y puede **comprometer la sostenibilidad tecnológica** de una organización.
+## 4. Cómo evitarlo 
 
----
+1. Usar **estándares abiertos** y APIs universales.
+2. Crear **capas de abstracción** para separar tu código del proveedor.
+3. Utilizar **contenedores** como Docker o Kubernetes para facilitar la portabilidad.
+4. Diseñar pensando en **múltiples proveedores**.
+5. Aplicar patrones de diseño como **Adapter** para cambiar fácilmente de proveedor.
 
-### Soluciones y Buenas Prácticas
+Ejemplo sencillo con Adapter:
 
-Para evitar caer en este antipatrón, se recomienda adoptar un enfoque de diseño basado en **portabilidad, abstracción y estándares abiertos**:
+```python
+class StorageAdapter:
+    def upload(self, filename, bucket, object_name):
+        raise NotImplementedError
 
-| Práctica                                       | Descripción                                                                                                  |
-| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| **Diseño desacoplado**                      | Crear capas intermedias entre el código y los servicios del proveedor.                                       |
-| **Uso de estándares abiertos**              | Preferir herramientas y protocolos compatibles con múltiples plataformas (SQL estándar, Docker, Kubernetes). |
-| **Infraestructura como código multi-cloud** | Usar Terraform o Pulumi para desplegar en distintos proveedores.                                             |
-| **Estrategia de salida (Exit Strategy)**    | Planificar desde el inicio cómo migrar datos y servicios.                                                    |
-| **Evitar APIs propietarias sin wrappers**   | Envolver las llamadas específicas del proveedor dentro de funciones internas del sistema.                    |
+class S3Adapter(StorageAdapter):
+    def upload(self, filename, bucket, object_name):
+        import boto3
+        s3 = boto3.client('s3')
+        s3.upload_file(filename, bucket, object_name)
 
-Estas prácticas promueven una **arquitectura portable, flexible y sostenible**, reduciendo riesgos y costos futuros.
+class GCPStorageAdapter(StorageAdapter):
+    def upload(self, filename, bucket, object_name):
+        from google.cloud import storage
+        client = storage.Client()
+        bucket = client.bucket(bucket)
+        blob = bucket.blob(object_name)
+        blob.upload_from_filename(filename)
 
----
-
-### Conclusión
-
-El **Vendor Lock-In** es un antipatrón frecuente en proyectos modernos basados en la nube o servicios externos. Su principal riesgo radica en la **pérdida de libertad tecnológica**, lo que puede afectar directamente la **capacidad de innovación, escalabilidad y control de costos**.
-
-La mejor estrategia para prevenirlo es **diseñar pensando en la independencia**: usar estándares abiertos, aplicar principios de abstracción y documentar una **estrategia de migración** desde las primeras etapas del proyecto.
-
-De este modo, se garantiza una **arquitectura más resiliente y adaptable** frente a los cambios tecnológicos y del mercado.
+# Uso
+storage_service = S3Adapter()  # Cambiar por GCPStorageAdapter() si se necesita
+storage_service.upload('archivo.txt', 'mi-bucket', 'archivo.txt')
+```
+Esta estrategia permite cambiar de proveedor con un esfuerzo mínimo.
