@@ -1,5 +1,6 @@
 # Antipatrán: Vendor Lock-In
-## Daniel Omar Gonzalez Martinez 21212342 
+#
+Daniel Omar Gonzalez Martinez 21212342 
 
 ## 1. Qué es Vendor Lock-In 
 
